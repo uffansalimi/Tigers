@@ -147,6 +147,7 @@ section, .hero, .filters, .tiles, .grid, .card { min-width: 0; }
 .hero { padding-top: clamp(24px, 5vw, 48px); display: grid; gap: 14px; }
 .eyebrow { margin: 0; font-size: 12px; letter-spacing: .16em; text-transform: uppercase; color: var(--eyebrow); font-weight: 600; }
 h1 { margin: 0; font-family: var(--display); font-weight: 800; text-transform: uppercase; font-size: clamp(44px, 10vw, 104px); line-height: .9; letter-spacing: .005em; text-wrap: balance; }
+h1 .keep { white-space: nowrap; }
 h1 .accent { color: var(--pink); text-shadow: var(--accent-glow); }
 .takeaway { margin: 0; max-width: 62ch; font-size: clamp(16px, 2.2vw, 19px); color: var(--muted); text-wrap: pretty; }
 .takeaway b { color: var(--fg); font-weight: 600; }
@@ -291,8 +292,7 @@ footer b { color: var(--fg); }
 
 <main id="app">
   <section class="hero" id="overview" aria-labelledby="title">
-    <p class="eyebrow">London Tigers CC · Middlesex County Cricket League</p>
-    <h1 id="title">3rd XI <span class="accent">Stats</span></h1>
+    <h1 id="title">London Tigers <span class="keep">3rd XI <span class="accent">Stats</span></span></h1>
     <p class="takeaway" id="takeaway"></p>
   </section>
 
@@ -386,7 +386,6 @@ footer b { color: var(--fg); }
   </section>
 
   <footer>
-    <div><b>Sources.</b> 2022 to 2024: match-by-match records kept by Uffan. 2025 and 2026: the London Tigers CC play-cricket site (3rd XI), plus Uffan's own additions for 2025. Updated <span id="updated"></span>.</div>
     <div>Balls faced, strike rates and maidens are only recorded from 2025. An asterisk (*) means not out. Best bowling is wickets/runs in one innings.</div>
     <div>Team totals count every player who played. A few players aren't listed individually; their runs and wickets appear only in the team totals and as "Other players".</div>
   </footer>
@@ -419,7 +418,6 @@ footer b { color: var(--fg); }
   const SEASONS = Array.from(new Set(BAT.map((r) => r.Season).concat(BOWL.map((r) => r.Season)))).sort((a, b) => a - b);
   const SPAN = SEASONS[0] + '–' + SEASONS[SEASONS.length - 1];
   const PLAYERS = CAR.map((r) => r.Player).sort((a, b) => a.localeCompare(b));
-  document.getElementById('updated').textContent = D.updated;
 
   const fInt = d3.format(',');
   const f2 = d3.format('.2f');
@@ -433,11 +431,10 @@ footer b { color: var(--fg); }
   const esc = (s) => String(s);
 
   /* ---------- state ---------- */
-  const topOther = CAR.slice().sort((a, b) => b.Runs - a.Runs).find((r) => r.Player !== 'Uffan');
   const state = {
     season: 'all', player: 'all',
-    a: PLAYERS.indexOf('Uffan') >= 0 ? 'Uffan' : PLAYERS[0],
-    b: topOther ? topOther.Player : PLAYERS[1],
+    a: PLAYERS.indexOf('Zahid') >= 0 ? 'Zahid' : PLAYERS[0],
+    b: PLAYERS.indexOf('Azaher') >= 0 ? 'Azaher' : PLAYERS[1],
     heat: 'runs', share: 'runs', table: 'batting', q: '',
     sorts: { batting: { k: 'Runs', dir: -1 }, bowling: { k: 'Wickets', dir: -1 }, career: { k: 'Runs', dir: -1 } },
   };
