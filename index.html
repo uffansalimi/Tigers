@@ -157,6 +157,11 @@ h1 .accent { color: var(--pink); text-shadow: var(--accent-glow); }
 .seg::-webkit-scrollbar { display: none; }
 .pill { appearance: none; border: 0; background: transparent; color: var(--muted); padding: 7px 14px; border-radius: 999px; cursor: pointer; font-variant-numeric: tabular-nums; white-space: nowrap; font-weight: 500; transition: background .2s, color .2s; }
 .pill:hover { color: var(--fg); }
+@media (max-width: 560px) {
+  #season-pills { display: flex; width: 100%; overflow: visible; }
+  #season-pills .pill { flex: 1 1 auto; padding: 6px 5px; font-size: 13px; text-align: center; }
+}
+@media (max-width: 350px) { #season-pills .long { display: none; } }
 .pill[aria-pressed="true"] { background: var(--pink); color: #fff; box-shadow: 0 0 16px rgba(255, 0, 114, .45); }
 .select-wrap { display: inline-flex; align-items: center; gap: 8px; padding: 4px 4px 4px 14px; border-radius: 999px; background: var(--seg-bg); border: 1px solid var(--line); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); }
 .select-wrap label { font-size: 12px; letter-spacing: .1em; text-transform: uppercase; color: var(--muted); }
@@ -539,7 +544,8 @@ footer b { color: var(--fg); }
 
   function renderFilters() {
     pills.replaceChildren(...['all'].concat(SEASONS).map((s) => {
-      const b = el('button', { class: 'pill', type: 'button', text: s === 'all' ? 'All seasons' : String(s), 'aria-pressed': String(s === S()) });
+      const b = el('button', { class: 'pill', type: 'button', text: s === 'all' ? 'All' : String(s), 'aria-pressed': String(s === S()) });
+      if (s === 'all') b.append(el('span', { class: 'long', text: ' seasons' }));
       b.addEventListener('click', () => set({ season: s }));
       return b;
     }));
