@@ -36,28 +36,100 @@
   --body: "Archivo", "Helvetica Neue", Arial, sans-serif;
   --r: 16px;
   --gap: clamp(12px, 2.4vw, 20px);
-}
-* { box-sizing: border-box; }
-html { -webkit-text-size-adjust: 100%; scroll-padding-top: 64px; }
-html { background: var(--night); }
-body { margin: 0; color: var(--fg); font-family: var(--body); font-size: 15px; line-height: 1.45; background: transparent; min-height: 100vh; }
-body::before {
-  content: ""; position: fixed; inset: 0; z-index: -1; pointer-events: none;
-  background:
+  --html-bg: #121150;
+  --page-bg:
     radial-gradient(900px 520px at -10% -8%, rgba(255, 0, 114, 0.22), transparent 62%),
     radial-gradient(760px 480px at 112% 4%, rgba(0, 240, 255, 0.13), transparent 60%),
     radial-gradient(700px 500px at 50% 110%, rgba(102, 255, 0, 0.06), transparent 60%),
-    linear-gradient(180deg, var(--ink) 0%, var(--plum) 38%, var(--violet) 70%, var(--night) 100%);
+    linear-gradient(180deg, #1E1E7B 0%, #2E1F7B 38%, #361E7B 70%, #121150 100%);
+  --nav-bg: rgba(18, 17, 80, 0.82);
+  --seg-bg: rgba(18, 17, 80, 0.78);
+  --select-bg: #2E1F7B;
+  --arrow: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23fff' stroke-width='2' fill='none'/%3E%3C/svg%3E");
+  --th-bg: #1b1468;
+  --tip-bg: rgba(18, 17, 80, 0.96);
+  --tip-border: rgba(255, 255, 255, 0.22);
+  --track: rgba(255, 255, 255, 0.18);
+  --hover: rgba(255, 255, 255, 0.08);
+  --row-hover: rgba(255, 255, 255, 0.05);
+  --soft: rgba(255, 255, 255, 0.06);
+  --fighter-bg: linear-gradient(160deg, rgba(255, 255, 255, 0.07), rgba(255, 255, 255, 0.01));
+  --eyebrow: #00F0FF; --num: #00F0FF; --tipk: #00F0FF; --link: #00F0FF; --link-hover: #00F0FF;
+  --vs: #FFED29; --vs-glow: 0 0 20px rgba(255, 237, 41, 0.45);
+  --accent-glow: 0 0 32px rgba(255, 0, 114, 0.45);
+  --focus: #FFED29;
+  --base-line: rgba(255, 255, 255, 0.35);
+  --on-fg: #1E1E7B;
+  --card-shadow: none;
+}
+/* Black theme: same neon accents on pure black, near-black cards. */
+:root[data-theme="black"] {
+  --html-bg: #000000;
+  --card: #0C0C12;
+  --line: rgba(255, 255, 255, 0.11);
+  --grid: rgba(255, 255, 255, 0.08);
+  --page-bg:
+    radial-gradient(900px 520px at -10% -8%, rgba(255, 0, 114, 0.10), transparent 62%),
+    radial-gradient(760px 480px at 112% 4%, rgba(0, 240, 255, 0.06), transparent 60%),
+    #000000;
+  --nav-bg: rgba(0, 0, 0, 0.82);
+  --seg-bg: rgba(14, 14, 20, 0.85);
+  --select-bg: #15151D;
+  --th-bg: #101016;
+  --tip-bg: rgba(10, 10, 14, 0.97);
+  --fighter-bg: linear-gradient(160deg, rgba(255, 255, 255, 0.06), rgba(255, 255, 255, 0.01));
+}
+/* Light theme: navy text on near-white; neon colours kept for fills, text in navy where a neon would be unreadable. */
+:root[data-theme="light"] {
+  color-scheme: light;
+  --fg: #1E1E7B;
+  --muted: rgba(30, 30, 123, 0.72);
+  --faint: rgba(30, 30, 123, 0.45);
+  --line: rgba(30, 30, 123, 0.13);
+  --grid: rgba(30, 30, 123, 0.09);
+  --card: #FFFFFF;
+  --card-shadow: 0 1px 2px rgba(30, 30, 123, 0.05), 0 10px 30px rgba(30, 30, 123, 0.07);
+  --html-bg: #F4F3FB;
+  --page-bg:
+    radial-gradient(900px 520px at -10% -8%, rgba(255, 0, 114, 0.08), transparent 62%),
+    radial-gradient(760px 480px at 112% 4%, rgba(0, 240, 255, 0.10), transparent 60%),
+    #F4F3FB;
+  --nav-bg: rgba(255, 255, 255, 0.86);
+  --seg-bg: rgba(255, 255, 255, 0.92);
+  --select-bg: #FFFFFF;
+  --arrow: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%231E1E7B' stroke-width='2' fill='none'/%3E%3C/svg%3E");
+  --th-bg: #F1EFFA;
+  --tip-bg: rgba(255, 255, 255, 0.98);
+  --tip-border: rgba(30, 30, 123, 0.16);
+  --track: rgba(30, 30, 123, 0.12);
+  --hover: rgba(30, 30, 123, 0.06);
+  --row-hover: rgba(30, 30, 123, 0.04);
+  --soft: rgba(30, 30, 123, 0.05);
+  --fighter-bg: linear-gradient(160deg, rgba(54, 30, 123, 0.06), rgba(255, 255, 255, 0)), #FFFFFF;
+  --eyebrow: #361E7B; --num: #FF0072; --tipk: #FF0072; --link: #361E7B; --link-hover: #FF0072;
+  --vs: #FF0072; --vs-glow: none;
+  --accent-glow: none;
+  --focus: #FF0072;
+  --base-line: rgba(30, 30, 123, 0.35);
+  --on-fg: #FFFFFF;
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; scroll-padding-top: 64px; }
+html { background: var(--html-bg); }
+body { margin: 0; color: var(--fg); font-family: var(--body); font-size: 15px; line-height: 1.45; background: transparent; min-height: 100vh; }
+body::before {
+  content: ""; position: fixed; inset: 0; z-index: -1; pointer-events: none;
+  background: var(--page-bg);
 }
 [hidden] { display: none !important; }
-a { color: var(--cyan); }
+a { color: var(--link); }
 button, select, input { font: inherit; color: inherit; }
-:focus-visible { outline: 2px solid var(--yellow); outline-offset: 2px; }
+:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; }
 
 .nav {
   position: sticky; top: 0; z-index: 20;
   padding: calc(env(safe-area-inset-top, 0px) + 10px) 16px 10px;
-  background: rgba(18, 17, 80, 0.82); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px);
+  background: var(--nav-bg); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px);
   border-bottom: 1px solid var(--line);
 }
 .nav-inner { max-width: 1240px; margin: 0 auto; display: flex; align-items: center; gap: 16px; }
@@ -67,36 +139,36 @@ button, select, input { font: inherit; color: inherit; }
 .nav-links { display: flex; gap: 4px; overflow-x: auto; scrollbar-width: none; margin-left: auto; }
 .nav-links::-webkit-scrollbar { display: none; }
 .nav-links a { color: var(--muted); text-decoration: none; padding: 6px 12px; border-radius: 999px; font-size: 14px; white-space: nowrap; }
-.nav-links a:hover { color: var(--fg); background: rgba(255,255,255,.08); }
+.nav-links a:hover { color: var(--fg); background: var(--hover); }
 @media (max-width: 640px) { .brand span:last-child { display: none; } }
 
 main { max-width: 1240px; margin: 0 auto; padding: 0 16px calc(env(safe-area-inset-bottom, 0px) + 48px); display: grid; grid-template-columns: minmax(0, 1fr); gap: clamp(28px, 5vw, 48px); }
 section, .hero, .filters, .tiles, .grid, .card { min-width: 0; }
 .hero { padding-top: clamp(24px, 5vw, 48px); display: grid; gap: 14px; }
-.eyebrow { margin: 0; font-size: 12px; letter-spacing: .16em; text-transform: uppercase; color: var(--cyan); font-weight: 600; }
+.eyebrow { margin: 0; font-size: 12px; letter-spacing: .16em; text-transform: uppercase; color: var(--eyebrow); font-weight: 600; }
 h1 { margin: 0; font-family: var(--display); font-weight: 800; text-transform: uppercase; font-size: clamp(44px, 10vw, 104px); line-height: .9; letter-spacing: .005em; text-wrap: balance; }
-h1 .accent { color: var(--pink); text-shadow: 0 0 32px rgba(255, 0, 114, .45); }
+h1 .accent { color: var(--pink); text-shadow: var(--accent-glow); }
 .takeaway { margin: 0; max-width: 62ch; font-size: clamp(16px, 2.2vw, 19px); color: var(--muted); text-wrap: pretty; }
 .takeaway b { color: var(--fg); font-weight: 600; }
 
 .filters { position: sticky; top: 52px; z-index: 15; display: flex; flex-wrap: wrap; gap: 10px; align-items: center; padding: 10px 0; }
-.seg { display: inline-flex; gap: 2px; padding: 4px; background: rgba(18, 17, 80, .78); border: 1px solid var(--line); border-radius: 999px; overflow-x: auto; max-width: 100%; scrollbar-width: none; backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); }
+.seg { display: inline-flex; gap: 2px; padding: 4px; background: var(--seg-bg); border: 1px solid var(--line); border-radius: 999px; overflow-x: auto; max-width: 100%; scrollbar-width: none; backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); }
 .seg::-webkit-scrollbar { display: none; }
 .pill { appearance: none; border: 0; background: transparent; color: var(--muted); padding: 7px 14px; border-radius: 999px; cursor: pointer; font-variant-numeric: tabular-nums; white-space: nowrap; font-weight: 500; transition: background .2s, color .2s; }
 .pill:hover { color: var(--fg); }
 .pill[aria-pressed="true"] { background: var(--pink); color: #fff; box-shadow: 0 0 16px rgba(255, 0, 114, .45); }
-.select-wrap { display: inline-flex; align-items: center; gap: 8px; padding: 4px 4px 4px 14px; border-radius: 999px; background: rgba(18, 17, 80, .78); border: 1px solid var(--line); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); }
+.select-wrap { display: inline-flex; align-items: center; gap: 8px; padding: 4px 4px 4px 14px; border-radius: 999px; background: var(--seg-bg); border: 1px solid var(--line); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); }
 .select-wrap label { font-size: 12px; letter-spacing: .1em; text-transform: uppercase; color: var(--muted); }
-select { appearance: none; -webkit-appearance: none; background: var(--plum) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23fff' stroke-width='2' fill='none'/%3E%3C/svg%3E") no-repeat right 12px center; border: 1px solid var(--line); border-radius: 999px; padding: 6px 34px 6px 14px; color: var(--fg); max-width: 60vw; }
+select { appearance: none; -webkit-appearance: none; background: var(--select-bg) var(--arrow) no-repeat right 12px center; border: 1px solid var(--line); border-radius: 999px; padding: 6px 34px 6px 14px; color: var(--fg); max-width: 60vw; }
 .ghost { appearance: none; background: transparent; border: 1px solid var(--line); border-radius: 999px; padding: 7px 14px; cursor: pointer; color: var(--fg); }
-.ghost:hover { background: rgba(255,255,255,.08); }
+.ghost:hover { background: var(--hover); }
 
 .tiles { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 170px), 1fr)); gap: var(--gap); }
 @media (max-width: 560px) { .tile:first-child { grid-column: 1 / -1; } }
-.tile { position: relative; overflow: hidden; background: var(--card); border: 1px solid var(--line); border-radius: var(--r); padding: 16px 18px 18px; display: grid; gap: 4px; align-content: start; min-width: 0; }
+.tile { position: relative; overflow: hidden; background: var(--card); box-shadow: var(--card-shadow); border: 1px solid var(--line); border-radius: var(--r); padding: 16px 18px 18px; display: grid; gap: 4px; align-content: start; min-width: 0; }
 .tile::before { content: ""; position: absolute; inset: auto -30% -60% auto; width: 140px; height: 140px; border-radius: 50%; background: var(--glow, var(--pink)); opacity: .14; filter: blur(30px); }
 .tile-label { margin: 0; font-size: 12px; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); font-weight: 600; }
-.tile-value { margin: 0; font-family: var(--display); font-weight: 800; font-size: clamp(42px, 7vw, 58px); line-height: .95; color: var(--glow, var(--pink)); font-variant-numeric: tabular-nums; overflow-wrap: anywhere; }
+.tile-value { margin: 0; font-family: var(--display); font-weight: 800; font-size: clamp(42px, 7vw, 58px); line-height: .95; color: var(--glow-text, var(--glow, var(--pink))); font-variant-numeric: tabular-nums; overflow-wrap: anywhere; }
 .tile-sub { margin: 0; font-size: 13px; color: var(--muted); font-variant-numeric: tabular-nums; }
 .tile-sub b { color: var(--fg); font-weight: 600; }
 .no::after { content: "*"; }
@@ -104,10 +176,10 @@ select { appearance: none; -webkit-appearance: none; background: var(--plum) url
 section { display: grid; gap: var(--gap); min-width: 0; scroll-margin-top: 110px; }
 .sec-head { display: grid; gap: 6px; }
 h2 { margin: 0; font-family: var(--display); font-weight: 800; text-transform: uppercase; font-size: clamp(32px, 5.5vw, 48px); line-height: 1; letter-spacing: .01em; }
-h2 .num { color: var(--cyan); margin-right: 10px; }
+h2 .num { color: var(--num); margin-right: 10px; }
 .sec-note { margin: 0; color: var(--muted); max-width: 70ch; }
 .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 380px), 1fr)); gap: var(--gap); }
-.card { background: var(--card); border: 1px solid var(--line); border-radius: var(--r); padding: clamp(14px, 2.5vw, 22px); display: grid; gap: 14px; align-content: start; min-width: 0; }
+.card { background: var(--card); box-shadow: var(--card-shadow); border: 1px solid var(--line); border-radius: var(--r); padding: clamp(14px, 2.5vw, 22px); display: grid; gap: 14px; align-content: start; min-width: 0; }
 .card-head { display: flex; flex-wrap: wrap; align-items: flex-start; justify-content: space-between; gap: 10px; }
 .card-head > div:first-child { display: grid; gap: 4px; min-width: 0; flex: 1 1 14rem; }
 h3 { margin: 0; font-size: 17px; font-weight: 600; display: flex; align-items: center; gap: 8px; }
@@ -123,21 +195,21 @@ svg .big { font-family: var(--display); font-weight: 800; font-size: 15px; }
 svg .tick text { fill: var(--muted); }
 svg .tick line { stroke: var(--grid); }
 svg .tick path, svg .domain { stroke: none; }
-svg .base { stroke: rgba(255,255,255,.35); }
+svg .base { stroke: var(--base-line); }
 svg .row { cursor: pointer; }
 svg .row:hover .name { text-decoration: underline; }
 .msg { padding: 40px 10px; text-align: center; color: var(--muted); font-size: 14px; }
 .legend { display: flex; flex-wrap: wrap; gap: 6px 14px; font-size: 13px; color: var(--muted); }
 .legend span { display: inline-flex; align-items: center; gap: 6px; }
-.tip { position: absolute; pointer-events: none; z-index: 5; background: rgba(18, 17, 80, .96); border: 1px solid rgba(255,255,255,.22); border-radius: 10px; box-shadow: 0 10px 30px rgba(0,0,0,.4); padding: 8px 10px; font-size: 12px; white-space: nowrap; display: grid; gap: 2px; font-variant-numeric: tabular-nums; }
-.tip .k { color: var(--cyan); font-weight: 600; }
-.mini-seg { display: inline-flex; gap: 2px; padding: 3px; border-radius: 999px; background: rgba(255,255,255,.06); border: 1px solid var(--line); }
+.tip { position: absolute; pointer-events: none; z-index: 5; background: var(--tip-bg); border: 1px solid var(--tip-border); border-radius: 10px; box-shadow: 0 10px 30px rgba(0,0,0,.4); padding: 8px 10px; font-size: 12px; white-space: nowrap; display: grid; gap: 2px; font-variant-numeric: tabular-nums; }
+.tip .k { color: var(--tipk); font-weight: 600; }
+.mini-seg { display: inline-flex; gap: 2px; padding: 3px; border-radius: 999px; background: var(--soft); border: 1px solid var(--line); }
 .mini-seg .pill { padding: 5px 12px; font-size: 13px; }
-.mini-seg .pill[aria-pressed="true"] { background: var(--fg); color: var(--ink); box-shadow: none; }
+.mini-seg .pill[aria-pressed="true"] { background: var(--fg); color: var(--on-fg); box-shadow: none; }
 
 /* head to head */
 .h2h-pick { display: grid; grid-template-columns: 1fr auto 1fr; gap: 10px; align-items: stretch; }
-.fighter { border-radius: var(--r); padding: 14px; display: grid; gap: 8px; justify-items: start; min-width: 0; border: 1px solid var(--line); background: linear-gradient(160deg, rgba(255,255,255,.07), rgba(255,255,255,.01)); }
+.fighter { border-radius: var(--r); padding: 14px; display: grid; gap: 8px; justify-items: start; min-width: 0; border: 1px solid var(--line); background: var(--fighter-bg); }
 .fighter.a { box-shadow: inset 0 3px 0 var(--pink); }
 .fighter.b { box-shadow: inset 0 3px 0 var(--cyan); justify-items: end; text-align: right; }
 .fighter .initial { width: 46px; height: 46px; border-radius: 50%; display: grid; place-items: center; font-family: var(--display); font-weight: 800; font-size: 24px; color: var(--ink); }
@@ -146,7 +218,7 @@ svg .row:hover .name { text-decoration: underline; }
 .fighter .fname { font-family: var(--display); font-weight: 800; font-size: clamp(24px, 5vw, 34px); text-transform: uppercase; line-height: 1; overflow-wrap: anywhere; }
 .fighter .fsub { font-size: 12px; color: var(--muted); }
 .fighter select { max-width: 100%; width: 100%; }
-.vs { align-self: center; font-family: var(--display); font-weight: 800; font-size: clamp(26px, 6vw, 44px); color: var(--yellow); text-shadow: 0 0 20px rgba(255, 237, 41, .45); }
+.vs { align-self: center; font-family: var(--display); font-weight: 800; font-size: clamp(26px, 6vw, 44px); color: var(--vs); text-shadow: var(--vs-glow); }
 .h2h-score { margin: 0; font-size: 16px; color: var(--muted); }
 .h2h-score b { color: var(--fg); }
 .tape { display: grid; gap: 2px; }
@@ -158,7 +230,7 @@ svg .row:hover .name { text-decoration: underline; }
 .side.a { flex-direction: row-reverse; }
 .side .val { font-variant-numeric: tabular-nums; font-weight: 600; min-width: 3.2em; }
 .side.a .val { text-align: right; }
-.side .bar { height: 10px; border-radius: 999px; background: rgba(255,255,255,.18); transition: width .4s ease; }
+.side .bar { height: 10px; border-radius: 999px; background: var(--track); transition: width .4s ease; }
 .side.a.win .bar { background: var(--pink); box-shadow: 0 0 12px rgba(255,0,114,.5); }
 .side.b.win .bar { background: var(--cyan); box-shadow: 0 0 12px rgba(0,240,255,.45); }
 .side.win .val { color: var(--fg); }
@@ -169,23 +241,23 @@ svg .row:hover .name { text-decoration: underline; }
 /* heatmap + tables */
 .scrollx { overflow-x: auto; min-width: 0; }
 .tablebar { display: flex; flex-wrap: wrap; gap: 10px; justify-content: space-between; align-items: center; }
-.search { background: rgba(255,255,255,.06); border: 1px solid var(--line); border-radius: 999px; padding: 8px 14px; color: var(--fg); width: min(100%, 260px); min-width: 0; }
+.search { background: var(--soft); border: 1px solid var(--line); border-radius: 999px; padding: 8px 14px; color: var(--fg); width: min(100%, 260px); min-width: 0; }
 .search::placeholder { color: var(--faint); }
 .tablewrap { max-height: 560px; overflow: auto; border: 1px solid var(--line); border-radius: 12px; min-width: 0; }
 table { width: 100%; border-collapse: separate; border-spacing: 0; font-variant-numeric: tabular-nums; font-size: 14px; }
-th { position: sticky; top: 0; z-index: 1; background: #1b1468; text-align: right; padding: 0; border-bottom: 1px solid var(--line); white-space: nowrap; }
+th { position: sticky; top: 0; z-index: 1; background: var(--th-bg); text-align: right; padding: 0; border-bottom: 1px solid var(--line); white-space: nowrap; }
 th button { appearance: none; border: 0; background: transparent; width: 100%; text-align: inherit; padding: 10px 12px; cursor: pointer; font-size: 11px; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); white-space: nowrap; }
 th button:hover, th[aria-sort] button { color: var(--fg); }
 th[aria-sort="descending"] button::after { content: " ↓"; color: var(--pink); }
 th[aria-sort="ascending"] button::after { content: " ↑"; color: var(--pink); }
 td { position: relative; padding: 8px 12px; text-align: right; border-bottom: 1px solid var(--grid); white-space: nowrap; }
 .l { text-align: left; }
-tbody tr:hover td { background: rgba(255,255,255,.05); }
+tbody tr:hover td { background: var(--row-hover); }
 tbody tr.sel td { background: rgba(255, 0, 114, .12); }
 .cellbar { position: absolute; left: 0; top: 22%; bottom: 22%; border-radius: 0 6px 6px 0; opacity: .32; pointer-events: none; }
 .cv { position: relative; }
 .namebtn { appearance: none; border: 0; background: transparent; padding: 0; cursor: pointer; color: var(--fg); font-weight: 500; text-align: left; }
-.namebtn:hover { color: var(--cyan); text-decoration: underline; }
+.namebtn:hover { color: var(--link-hover); text-decoration: underline; }
 .empty td { text-align: center; color: var(--muted); padding: 24px; }
 @media (max-width: 640px) { .hide-sm { display: none; } .tape-row { grid-template-columns: 1fr minmax(70px, auto) 1fr; gap: 6px; } }
 
@@ -328,8 +400,22 @@ footer b { color: var(--fg); }
   const D = JSON.parse(document.getElementById('data').textContent);
   const BAT = D.batting, BOWL = D.bowling, CAR = D.career;
   const PINK = '#FF0072', LIME = '#66FF00', YELLOW = '#FFED29', CYAN = '#00F0FF', WHITE = '#FFFFFF', INK = '#1E1E7B', VIOLET = '#361E7B';
-  const SERIES = [PINK, CYAN, LIME, YELLOW, WHITE];
-  const MUTED_FILL = 'rgba(255,255,255,0.22)';
+  const LIGHT = document.documentElement.getAttribute('data-theme') === 'light';
+  const FG = LIGHT ? INK : WHITE;
+  const SERIES = LIGHT ? [PINK, VIOLET, CYAN, LIME, YELLOW] : [PINK, CYAN, LIME, YELLOW, WHITE];
+  const MUTED_FILL = LIGHT ? 'rgba(30,30,123,0.13)' : 'rgba(255,255,255,0.22)';
+  const MUTED_LINE = LIGHT ? 'rgba(30,30,123,0.22)' : 'rgba(255,255,255,0.28)';
+  const DIM_TEXT = LIGHT ? 'rgba(30,30,123,0.55)' : 'rgba(255,255,255,0.6)';
+  const GRID_STROKE = LIGHT ? 'rgba(30,30,123,0.14)' : 'rgba(255,255,255,0.12)';
+  const DOT_STROKE = LIGHT ? '#FFFFFF' : INK;
+  const HEAT_LOW = LIGHT ? '#ECE9FB' : '#3A2A96';
+  const TREE_A = LIGHT ? '#E4E0F8' : '#4B36A8', TREE_B = LIGHT ? '#CDC6F1' : '#2C2287';
+  const OTHER_FILL = LIGHT ? 'rgba(30,30,123,0.07)' : 'rgba(255,255,255,0.12)';
+  /* a readable text colour for an accent on this theme's background */
+  const txt = (c) => (LIGHT && [LIME, YELLOW, CYAN, WHITE].indexOf(c) >= 0 ? INK : c);
+  const glowF = (c, a) => (LIGHT ? null : 'drop-shadow(0 0 6px ' + c + (a || '88') + ')');
+  /* navy or white text, whichever reads on a given fill */
+  const onFill = (c) => { const k = d3.rgb(c); return (0.2126 * k.r + 0.7152 * k.g + 0.0722 * k.b) / 255 > 0.55 ? INK : WHITE; };
   const SEASONS = Array.from(new Set(BAT.map((r) => r.Season).concat(BOWL.map((r) => r.Season)))).sort((a, b) => a - b);
   const SPAN = SEASONS[0] + '–' + SEASONS[SEASONS.length - 1];
   const PLAYERS = CAR.map((r) => r.Player).sort((a, b) => a.localeCompare(b));
@@ -470,7 +556,9 @@ footer b { color: var(--fg); }
   /* ---------- tiles + takeaway ---------- */
   function tile(n, label, value, sub, glow, notOut) {
     const t = document.getElementById('tile-' + n);
-    t.style.setProperty('--glow', glow);
+    const g2 = LIGHT && glow === WHITE ? VIOLET : glow;
+    t.style.setProperty('--glow', g2);
+    t.style.setProperty('--glow-text', txt(g2));
     t.querySelector('.tile-label').textContent = label;
     const v = t.querySelector('.tile-value'); v.textContent = value; v.classList.toggle('no', !!notOut);
     richText(t.querySelector('.tile-sub'), sub);
@@ -522,7 +610,7 @@ footer b { color: var(--fg); }
     const g = svg.append('g').attr('transform', 'translate(' + left + ',0)');
     if (items.some((d) => d.gap)) {
       const gy = items.find((d) => d.gap).y - 8;
-      g.append('line').attr('x1', -left).attr('x2', W - left).attr('y1', gy).attr('y2', gy).style('stroke', 'rgba(255,255,255,.25)').style('stroke-dasharray', '3 4');
+      g.append('line').attr('x1', -left).attr('x2', W - left).attr('y1', gy).attr('y2', gy).style('stroke', MUTED_LINE).style('stroke-dasharray', '3 4');
     }
     const row = g.selectAll('g.row').data(items).join('g').attr('class', 'row').attr('transform', (d) => 'translate(0,' + d.y + ')');
     row.append('rect').attr('x', -left).attr('width', W).attr('height', rowH).style('fill', 'transparent');
@@ -530,10 +618,10 @@ footer b { color: var(--fg); }
     row.append('rect').attr('class', 'gbar').attr('y', (rowH - barH) / 2).attr('height', barH).attr('rx', barH / 2)
       .attr('width', (d) => Math.max(4, x(d.value)))
       .style('fill', (d) => (anySel && !d.sel ? MUTED_FILL : o.color))
-      .style('filter', (d) => (!anySel || d.sel ? 'drop-shadow(0 0 6px ' + o.color + '88)' : null))
+      .style('filter', (d) => (!anySel || d.sel ? glowF(o.color) : null))
       .style('animation-delay', (d, i) => i * 35 + 'ms');
     row.append('text').attr('class', 'big').attr('x', (d) => Math.max(4, x(d.value)) + 8).attr('y', rowH / 2).attr('dy', '0.36em')
-      .style('fill', (d) => (anySel && !d.sel ? 'rgba(255,255,255,.6)' : o.color)).text((d) => d.label);
+      .style('fill', (d) => (anySel && !d.sel ? DIM_TEXT : txt(o.color))).text((d) => d.label);
     row.on('click', (ev, d) => pick(d.name)).on('pointermove', (ev, d) => tip.show(ev, d.tip)).on('pointerleave', () => tip.hide());
   }
   function renderLeaders() {
@@ -654,10 +742,10 @@ footer b { color: var(--fg); }
     const tip = tipper(box);
     [0.25, 0.5, 0.75, 1].forEach((t) => {
       svg.append('polygon').attr('points', axes.map((a, i) => [cx + Math.cos(ang(i)) * R * t, cy + Math.sin(ang(i)) * R * t].join(',')).join(' '))
-        .style('fill', t === 1 ? 'rgba(255,255,255,.03)' : 'none').style('stroke', 'rgba(255,255,255,.12)');
+        .style('fill', t === 1 ? (LIGHT ? 'rgba(30,30,123,.03)' : 'rgba(255,255,255,.03)') : 'none').style('stroke', GRID_STROKE);
     });
     axes.forEach((a, i) => {
-      svg.append('line').attr('x1', cx).attr('y1', cy).attr('x2', cx + Math.cos(ang(i)) * R).attr('y2', cy + Math.sin(ang(i)) * R).style('stroke', 'rgba(255,255,255,.12)');
+      svg.append('line').attr('x1', cx).attr('y1', cy).attr('x2', cx + Math.cos(ang(i)) * R).attr('y2', cy + Math.sin(ang(i)) * R).style('stroke', GRID_STROKE);
       const lx = cx + Math.cos(ang(i)) * (R + 12), ly = cy + Math.sin(ang(i)) * (R + 12);
       const c = Math.cos(ang(i));
       svg.append('text').attr('class', 'muted').attr('x', lx).attr('y', ly).attr('dy', '0.35em')
@@ -667,9 +755,9 @@ footer b { color: var(--fg); }
       const pts = axes.map((a, i) => { const s = Math.max(0.02, Math.min(1, a.score(p) || 0)); return [cx + Math.cos(ang(i)) * R * s, cy + Math.sin(ang(i)) * R * s]; });
       svg.append('polygon').attr('class', 'gfade').attr('points', pts.map((q) => q.join(',')).join(' '))
         .style('fill', col).style('fill-opacity', 0.22).style('stroke', col).style('stroke-width', 2.5).style('stroke-linejoin', 'round')
-        .style('filter', 'drop-shadow(0 0 8px ' + col + '99)');
+        .style('filter', glowF(col, '99'));
       svg.append('g').selectAll('circle').data(pts.map((q, i) => ({ q: q, a: axes[i] }))).join('circle')
-        .attr('cx', (d) => d.q[0]).attr('cy', (d) => d.q[1]).attr('r', 4).style('fill', col).style('stroke', INK).style('stroke-width', 1.5)
+        .attr('cx', (d) => d.q[0]).attr('cy', (d) => d.q[1]).attr('r', 4).style('fill', col).style('stroke', DOT_STROKE).style('stroke-width', 1.5)
         .on('pointermove', (ev, d) => tip.show(ev, [d.a.label, A.name + ': ' + d.a.show(A), B.name + ': ' + d.a.show(B)]))
         .on('pointerleave', () => tip.hide());
     });
@@ -694,8 +782,8 @@ footer b { color: var(--fg); }
           return;
         }
         g.append('rect').attr('class', 'gcol').attr('x', xi(i)).attr('width', xi.bandwidth()).attr('y', y(v)).attr('height', Math.max(1, H - m.b - y(v))).attr('rx', 4)
-          .style('fill', ser.color).style('filter', 'drop-shadow(0 0 5px ' + ser.color + '77)');
-        if (xi.bandwidth() > 18) g.append('text').attr('class', 'strong').attr('x', xi(i) + xi.bandwidth() / 2).attr('y', y(v) - 5).attr('text-anchor', 'middle').style('fill', ser.color).text(fInt(v));
+          .style('fill', ser.color).style('filter', glowF(ser.color, '77'));
+        if (xi.bandwidth() > 18) g.append('text').attr('class', 'strong').attr('x', xi(i) + xi.bandwidth() / 2).attr('y', y(v) - 5).attr('text-anchor', 'middle').style('fill', txt(ser.color)).text(fInt(v));
       });
       g.append('text').attr('class', 'muted').attr('x', x.bandwidth() / 2).attr('y', H - 6).attr('text-anchor', 'middle').text(s);
       g.append('rect').attr('x', -(x.step() - x.bandwidth()) / 2).attr('width', x.step()).attr('y', 0).attr('height', H).style('fill', 'transparent')
@@ -720,15 +808,15 @@ footer b { color: var(--fg); }
       const g = svg.append('g');
       const sel = S() === s;
       g.append('rect').attr('class', 'gcol').attr('x', x(s)).attr('width', x.bandwidth()).attr('y', y(team[i])).attr('height', H - m.b - y(team[i])).attr('rx', 6)
-        .style('fill', mine ? 'rgba(255,255,255,.16)' : color).style('fill-opacity', mine ? 1 : S() === 'all' || sel ? 1 : 0.4)
-        .style('filter', !mine && (S() === 'all' || sel) ? 'drop-shadow(0 0 8px ' + color + '66)' : null);
+        .style('fill', mine ? MUTED_FILL : color).style('fill-opacity', mine ? 1 : S() === 'all' || sel ? 1 : 0.4)
+        .style('filter', !mine && (S() === 'all' || sel) ? glowF(color, '66') : null);
       g.append('text').attr('class', mine ? 'muted' : 'big').attr('x', x(s) + x.bandwidth() / 2).attr('y', y(team[i]) - 7).attr('text-anchor', 'middle')
-        .style('fill', mine ? null : color).text(fInt(team[i]));
+        .style('fill', mine ? null : txt(color)).text(fInt(team[i]));
       if (mine) {
         const bw = x.bandwidth() * 0.5, v = mine[i];
         if (v !== null) g.append('rect').attr('class', 'gcol').attr('x', x(s) + (x.bandwidth() - bw) / 2).attr('width', bw).attr('y', y(v)).attr('height', Math.max(1, H - m.b - y(v))).attr('rx', 4)
-          .style('fill', color).style('filter', 'drop-shadow(0 0 6px ' + color + '88)');
-        g.append('text').attr('class', 'big').attr('x', x(s) + x.bandwidth() / 2).attr('y', H - m.b + 36).attr('text-anchor', 'middle').style('fill', color).text(v === null ? '–' : fInt(v));
+          .style('fill', color).style('filter', glowF(color));
+        g.append('text').attr('class', 'big').attr('x', x(s) + x.bandwidth() / 2).attr('y', H - m.b + 36).attr('text-anchor', 'middle').style('fill', txt(color)).text(v === null ? '–' : fInt(v));
       }
       g.append('text').attr('class', sel ? 'strong' : 'muted').attr('x', x(s) + x.bandwidth() / 2).attr('y', H - m.b + 17).attr('text-anchor', 'middle').text(s);
       g.append('rect').attr('x', x(s) - (x.step() - x.bandwidth()) / 2).attr('width', x.step()).attr('height', H).style('fill', 'transparent').style('cursor', 'pointer')
@@ -760,27 +848,29 @@ footer b { color: var(--fg); }
     const ticks = y.ticks(5);
     const lw = textW(svg, ticks.map(fInt));
     const nameW = Math.min(W * 0.28, textW(svg, series.map((s) => s.name), 'strong'));
-    const m = { t: 14, r: nameW + 18, b: 30, l: lw + 10 };
+    const m = { t: 14, r: nameW + 30, b: 30, l: lw + 10 };
     const x = d3.scalePoint(SEASONS, [m.l, W - m.r]).padding(0.25);
     svg.append('g').attr('transform', 'translate(' + m.l + ',0)').call(d3.axisLeft(y).tickValues(ticks).tickFormat(fInt).tickSize(-(W - m.l - m.r)).tickPadding(8)).call(strip);
     svg.append('g').attr('transform', 'translate(0,' + (H - m.b) + ')').call(d3.axisBottom(x).tickSize(0).tickPadding(10)).call(strip);
     const anySel = P !== 'all';
-    const colorOf = (s, i) => (anySel ? (s.name === P ? PINK : 'rgba(255,255,255,.28)') : i < SERIES.length ? SERIES[i] : CYAN);
+    const colorOf = (s, i) => (anySel ? (s.name === P ? PINK : MUTED_LINE) : i < SERIES.length ? SERIES[i] : CYAN);
     const line = d3.line().defined((p) => p.v !== null).x((p) => x(p.s)).y((p) => y(p.v));
     const tip = tipper(box);
     series.map((s, i) => ({ s: s, i: i })).sort((a, b) => (a.s.name === P) - (b.s.name === P)).forEach(({ s, i }) => {
       const c = colorOf(s, i), hot = !anySel || s.name === P;
+      if (LIGHT) svg.append('path').attr('d', line(s.pts)).style('fill', 'none').style('stroke', INK).style('stroke-opacity', 0.16).style('stroke-width', (s.name === P ? 3.5 : 2.5) + 2.5).style('stroke-linecap', 'round').style('stroke-linejoin', 'round');
       svg.append('path').attr('class', 'gfade').attr('d', line(s.pts)).style('fill', 'none').style('stroke', c).style('stroke-width', s.name === P ? 3.5 : 2.5)
-        .style('stroke-linecap', 'round').style('stroke-linejoin', 'round').style('filter', hot ? 'drop-shadow(0 0 6px ' + c + '88)' : null);
+        .style('stroke-linecap', 'round').style('stroke-linejoin', 'round').style('filter', hot ? glowF(c) : null);
       svg.append('g').selectAll('circle').data(s.pts.filter((p) => p.v !== null)).join('circle').attr('class', 'gfade')
-        .attr('cx', (p) => x(p.s)).attr('cy', (p) => y(p.v)).attr('r', s.name === P ? 5 : 4).style('fill', c).style('stroke', INK).style('stroke-width', 2);
+        .attr('cx', (p) => x(p.s)).attr('cy', (p) => y(p.v)).attr('r', s.name === P ? 5 : 4).style('fill', c).style('stroke', DOT_STROKE).style('stroke-width', 2);
     });
     const labels = series.map((s, i) => { const last = s.pts.filter((p) => p.v !== null).slice(-1)[0]; return { s: s, i: i, y: last ? y(last.v) : y(0) }; }).sort((a, b) => a.y - b.y);
     for (let k = 1; k < labels.length; k++) if (labels[k].y - labels[k - 1].y < 16) labels[k].y = labels[k - 1].y + 16;
     const over = labels.length ? labels[labels.length - 1].y - (H - m.b) : 0;
     if (over > 0) labels.forEach((l) => { l.y -= over; });
     labels.forEach((l) => {
-      svg.append('text').attr('class', 'strong').attr('x', W - m.r + 12).attr('y', l.y).attr('dy', '0.35em').style('fill', colorOf(l.s, l.i)).style('cursor', 'pointer')
+      svg.append('circle').attr('cx', W - m.r + 12).attr('cy', l.y).attr('r', 4.5).style('fill', colorOf(l.s, l.i)).style('stroke', DOT_STROKE).style('stroke-width', 1.5);
+      svg.append('text').attr('class', 'strong').attr('x', W - m.r + 22).attr('y', l.y).attr('dy', '0.35em').style('fill', txt(colorOf(l.s, l.i))).style('cursor', 'pointer')
         .text(l.s.name).on('click', () => pick(l.s.name));
     });
     const hits = series.flatMap((s) => s.pts.filter((p) => p.v !== null).map((p) => ({ name: s.name, s: p.s, v: p.v })));
@@ -806,7 +896,7 @@ footer b { color: var(--fg); }
     const Wd = nameW + cellW * SEASONS.length + totW;
     const H = 26 + names.length * rowH;
     const svg = svgIn(box, Wd, H, 'Season heatmap of ' + (isRuns ? 'runs' : 'wickets'));
-    const ramp = d3.interpolateRgb('#3A2A96', color);
+    const ramp = d3.interpolateRgb(HEAT_LOW, color);
     const tip = tipper(box);
     SEASONS.forEach((s, j) => svg.append('text').attr('class', S() === s ? 'strong' : 'muted').attr('x', nameW + cellW * j + cellW / 2).attr('y', 14).attr('text-anchor', 'middle').text(s));
     svg.append('text').attr('class', 'muted').attr('x', nameW + cellW * SEASONS.length + totW / 2).attr('y', 14).attr('text-anchor', 'middle').text('Total');
@@ -821,13 +911,13 @@ footer b { color: var(--fg); }
         const x0 = nameW + cellW * j;
         if (v === undefined) { g.append('text').attr('class', 'faint').attr('x', x0 + cellW / 2).attr('y', y0 + rowH / 2).attr('dy', '0.35em').attr('text-anchor', 'middle').text('·'); return; }
         const t = Math.pow(v / mx, 0.6);
-        g.append('rect').attr('x', x0 + 2).attr('y', y0 + 2).attr('width', cellW - 4).attr('height', rowH - 4).attr('rx', 5).style('fill', v === 0 ? 'rgba(255,255,255,.05)' : ramp(t))
-          .style('stroke', S() === s ? 'rgba(255,255,255,.6)' : 'none')
+        g.append('rect').attr('x', x0 + 2).attr('y', y0 + 2).attr('width', cellW - 4).attr('height', rowH - 4).attr('rx', 5).style('fill', v === 0 ? (LIGHT ? 'rgba(30,30,123,.05)' : 'rgba(255,255,255,.05)') : ramp(t))
+          .style('stroke', S() === s ? (LIGHT ? INK : 'rgba(255,255,255,.6)') : 'none')
           .on('pointermove', (ev) => tip.show(ev, [name + ', ' + s, fInt(v) + (isRuns ? ' runs' : ' wickets')])).on('pointerleave', () => tip.hide());
         g.append('text').attr('x', x0 + cellW / 2).attr('y', y0 + rowH / 2).attr('dy', '0.35em').attr('text-anchor', 'middle').style('pointer-events', 'none')
-          .style('fill', !isRuns && t > 0.62 ? INK : WHITE).style('font-weight', 600).text(fInt(v));
+          .style('fill', v === 0 ? FG : onFill(ramp(t))).style('font-weight', 600).text(fInt(v));
       });
-      g.append('text').attr('class', 'big').attr('x', nameW + cellW * SEASONS.length + totW / 2).attr('y', y0 + rowH / 2).attr('dy', '0.36em').attr('text-anchor', 'middle').style('fill', color).text(fInt(totals.get(name)));
+      g.append('text').attr('class', 'big').attr('x', nameW + cellW * SEASONS.length + totW / 2).attr('y', y0 + rowH / 2).attr('dy', '0.36em').attr('text-anchor', 'middle').style('fill', txt(color)).text(fInt(totals.get(name)));
     });
   }
 
@@ -849,8 +939,8 @@ footer b { color: var(--fg); }
     const root = d3.hierarchy({ children: kids }).sum((d) => d.v || 0).sort((a, b) => b.value - a.value);
     d3.treemap().size([W, H]).paddingInner(3).round(true)(root);
     const P = state.player;
-    const accents = [PINK, CYAN, LIME, YELLOW, WHITE];
-    const purples = d3.interpolateRgb('#4B36A8', '#2C2287');
+    const accents = SERIES;
+    const purples = d3.interpolateRgb(TREE_A, TREE_B);
     const leaves = root.leaves();
     let rank = 0;
     leaves.forEach((d) => { d.rank = d.data.other ? -1 : rank++; });
@@ -858,21 +948,20 @@ footer b { color: var(--fg); }
     const g = svg.selectAll('g').data(leaves).join('g').attr('class', 'row').attr('transform', (d) => 'translate(' + d.x0 + ',' + d.y0 + ')')
       .on('click', (ev, d) => { if (!d.data.other) pick(d.data.name); })
       .on('pointermove', (ev, d) => tip.show(ev, [d.data.name, fInt(d.value) + (isRuns ? ' runs' : ' wickets'), fPct(d.value / total) + ' of the team'])).on('pointerleave', () => tip.hide());
-    const fillOf = (d, i) => d.data.other ? 'rgba(255,255,255,.12)' : (P !== 'all' ? (d.data.name === P ? PINK : purples(i / Math.max(1, leaves.length - 1))) : i < accents.length ? accents[i] : purples((i - accents.length) / Math.max(1, leaves.length - accents.length)));
-    const darkText = (c) => [CYAN, LIME, YELLOW, WHITE].indexOf(c) >= 0;
+    const fillOf = (d, i) => d.data.other ? OTHER_FILL : (P !== 'all' ? (d.data.name === P ? PINK : purples(i / Math.max(1, leaves.length - 1))) : i < accents.length ? accents[i] : purples((i - accents.length) / Math.max(1, leaves.length - accents.length)));
     g.append('rect').attr('class', 'gfade').attr('width', (d) => Math.max(0, d.x1 - d.x0)).attr('height', (d) => Math.max(0, d.y1 - d.y0)).attr('rx', 6)
       .style('fill', (d) => fillOf(d, d.rank)).style('cursor', (d) => (d.data.other ? 'default' : null));
     g.each(function (d) {
       const i = d.rank;
       const w = d.x1 - d.x0, h = d.y1 - d.y0;
       if (w < 44 || h < 28) return;
-      const c = fillOf(d, i), txt = darkText(c) ? INK : WHITE;
+      const c = fillOf(d, i), tc = d.data.other ? FG : onFill(c);
       const sel = d3.select(this);
       const big = w > 110 && h > 70;
-      sel.append('text').attr('x', 8).attr('y', big ? 24 : 16).style('fill', txt).style('font-weight', 700).style('font-size', big ? '15px' : '12px').text(d.data.name);
-      if (h > 44) sel.append('text').attr('x', 8).attr('y', big ? 50 : 32).style('fill', txt).style('font-family', 'var(--display)').style('font-weight', 800).style('font-size', big ? '26px' : '16px')
+      sel.append('text').attr('x', 8).attr('y', big ? 24 : 16).style('fill', tc).style('font-weight', 700).style('font-size', big ? '15px' : '12px').text(d.data.name);
+      if (h > 44) sel.append('text').attr('x', 8).attr('y', big ? 50 : 32).style('fill', tc).style('font-family', 'var(--display)').style('font-weight', 800).style('font-size', big ? '26px' : '16px')
         .text(fPct(d.value / total));
-      if (big && h > 86) sel.append('text').attr('x', 8).attr('y', 70).style('fill', txt).style('opacity', 0.85).text(fInt(d.value) + (isRuns ? ' runs' : ' wkts'));
+      if (big && h > 86) sel.append('text').attr('x', 8).attr('y', 70).style('fill', tc).style('opacity', 0.85).text(fInt(d.value) + (isRuns ? ' runs' : ' wkts'));
     });
   }
 
@@ -930,13 +1019,13 @@ footer b { color: var(--fg); }
     svg.append('g').attr('transform', 'translate(0,' + (H - m.b) + ')').call(d3.axisBottom(x).ticks(Math.max(3, Math.floor(W / 90))).tickSize(-(H - m.b - m.t)).tickPadding(8)).call(strip);
     svg.append('text').attr('class', 'muted').attr('x', W - m.r).attr('y', H - 4).attr('text-anchor', 'end').text(o.xLabel);
     svg.append('text').attr('class', 'muted').attr('x', m.l + 6).attr('y', m.t + 10).text(o.yLabel);
-    svg.append('text').attr('x', o.hintRight ? W - m.r - 6 : m.l + 8).attr('y', o.hintTop ? m.t + 30 : H - m.b - 10).attr('text-anchor', o.hintRight ? 'end' : 'start').style('fill', YELLOW).style('font-weight', 600).text(o.hint);
+    svg.append('text').attr('x', o.hintRight ? W - m.r - 6 : m.l + 8).attr('y', o.hintTop ? m.t + 30 : H - m.b - 10).attr('text-anchor', o.hintRight ? 'end' : 'start').style('fill', LIGHT ? PINK : YELLOW).style('font-weight', 600).text(o.hint);
     const anySel = pts.some((p) => p.sel);
     const tip = tipper(box);
     svg.append('g').selectAll('circle').data(pts.slice().sort((a, b) => (a.sel - b.sel) || (b.size - a.size))).join('circle').attr('class', 'gfade')
       .attr('cx', (p) => x(p.x)).attr('cy', (p) => y(p.y)).attr('r', (p) => r(p.size))
-      .style('fill', (p) => (anySel && !p.sel ? 'rgba(255,255,255,.18)' : p.color || o.color)).style('fill-opacity', (p) => (p.sel ? 0.95 : 0.55))
-      .style('stroke', (p) => (p.sel ? WHITE : anySel ? 'rgba(255,255,255,.3)' : p.color || o.color)).style('stroke-width', (p) => (p.sel ? 2.5 : 1.2)).style('cursor', 'pointer')
+      .style('fill', (p) => (anySel && !p.sel ? MUTED_FILL : p.color || o.color)).style('fill-opacity', (p) => (p.sel ? 0.95 : 0.55))
+      .style('stroke', (p) => (p.sel ? FG : anySel ? MUTED_LINE : p.color || o.color)).style('stroke-width', (p) => (p.sel ? 2.5 : 1.2)).style('cursor', 'pointer')
       .on('pointermove', (ev, p) => tip.show(ev, p.tip)).on('pointerleave', () => tip.hide()).on('click', (ev, p) => pick(p.name));
     const toLabel = pts.filter((p) => p.sel).concat(pts.filter((p) => !p.sel).sort((a, b) => b.size - a.size).slice(0, anySel ? 3 : W < 500 ? 4 : (o.maxLabels || 8)));
     const placed = [];
@@ -951,7 +1040,7 @@ footer b { color: var(--fg); }
   }
   function renderQuality() {
     const P = state.player, all = S() === 'all';
-    const seasonColor = d3.scaleOrdinal(SEASONS, [WHITE, YELLOW, LIME, PINK, CYAN]);
+    const seasonColor = d3.scaleOrdinal(SEASONS, LIGHT ? [VIOLET, YELLOW, LIME, PINK, CYAN] : [WHITE, YELLOW, LIME, PINK, CYAN]);
     const bp = BAT.filter((r) => inScope(r) && r.Inns >= 3 && r['Strike Rate'] !== null && r.Average !== null).map((r) => ({
       season: r.Season, x: r['Strike Rate'], y: r.Average, size: r.Runs, name: r.Player, sel: r.Player === P, color: all ? (r.Season === SEASONS[SEASONS.length - 1] ? PINK : CYAN) : PINK,
       label: all ? r.Player + ' ’' + String(r.Season).slice(2) : r.Player,
