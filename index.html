@@ -1,0 +1,1051 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>London Tigers 3rd XI Stats</title>
+<meta name="description" content="Batting, bowling, head-to-heads and season-by-season stats for London Tigers CC 3rd XI, 2022 to 2026.">
+<meta name="theme-color" content="#1E1E7B">
+<meta property="og:title" content="London Tigers 3rd XI Stats">
+<meta property="og:description" content="Batting, bowling, head-to-heads and season-by-season stats, 2022 to 2026.">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231E1E7B'/%3E%3Ccircle cx='32' cy='32' r='17' fill='%23FF0072'/%3E%3Cpath d='M20 24c8 5 16 5 24 0M20 40c8-5 16-5 24 0' stroke='%23fff' stroke-width='2.5' fill='none' stroke-dasharray='3 3'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=Big+Shoulders+Display:wght@600;700;800&display=swap">
+<style>
+/* Layout: a single dark scroll page — sticky section nav, filter bar, headline strip, then sections of cards that stack to one column on a phone. */
+:root {
+  color-scheme: dark;
+  --ink: #1E1E7B;
+  --plum: #2E1F7B;
+  --violet: #361E7B;
+  --night: #121150;
+  --pink: #FF0072;
+  --lime: #66FF00;
+  --yellow: #FFED29;
+  --cyan: #00F0FF;
+  --fg: #FFFFFF;
+  --muted: rgba(255, 255, 255, 0.70);
+  --faint: rgba(255, 255, 255, 0.42);
+  --line: rgba(255, 255, 255, 0.14);
+  --grid: rgba(255, 255, 255, 0.09);
+  --card: rgba(14, 12, 64, 0.55);
+  --card-hi: rgba(54, 30, 123, 0.75);
+  --display: "Big Shoulders Display", "Arial Narrow", "Roboto Condensed", sans-serif;
+  --body: "Archivo", "Helvetica Neue", Arial, sans-serif;
+  --r: 16px;
+  --gap: clamp(12px, 2.4vw, 20px);
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; scroll-padding-top: 64px; }
+html { background: var(--night); }
+body { margin: 0; color: var(--fg); font-family: var(--body); font-size: 15px; line-height: 1.45; background: transparent; min-height: 100vh; }
+body::before {
+  content: ""; position: fixed; inset: 0; z-index: -1; pointer-events: none;
+  background:
+    radial-gradient(900px 520px at -10% -8%, rgba(255, 0, 114, 0.22), transparent 62%),
+    radial-gradient(760px 480px at 112% 4%, rgba(0, 240, 255, 0.13), transparent 60%),
+    radial-gradient(700px 500px at 50% 110%, rgba(102, 255, 0, 0.06), transparent 60%),
+    linear-gradient(180deg, var(--ink) 0%, var(--plum) 38%, var(--violet) 70%, var(--night) 100%);
+}
+[hidden] { display: none !important; }
+a { color: var(--cyan); }
+button, select, input { font: inherit; color: inherit; }
+:focus-visible { outline: 2px solid var(--yellow); outline-offset: 2px; }
+
+.nav {
+  position: sticky; top: 0; z-index: 20;
+  padding: calc(env(safe-area-inset-top, 0px) + 10px) 16px 10px;
+  background: rgba(18, 17, 80, 0.82); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px);
+  border-bottom: 1px solid var(--line);
+}
+.nav-inner { max-width: 1240px; margin: 0 auto; display: flex; align-items: center; gap: 16px; }
+.brand { display: flex; align-items: center; gap: 10px; font-family: var(--display); font-weight: 800; font-size: 20px; letter-spacing: .02em; text-transform: uppercase; white-space: nowrap; }
+.brand-ball { width: 22px; height: 22px; border-radius: 50%; background: var(--pink); box-shadow: 0 0 18px rgba(255, 0, 114, .7); flex: none; position: relative; }
+.brand-ball::after { content: ""; position: absolute; inset: 4px 9px; border-left: 1.5px dashed rgba(255,255,255,.9); border-right: 1.5px dashed rgba(255,255,255,.9); }
+.nav-links { display: flex; gap: 4px; overflow-x: auto; scrollbar-width: none; margin-left: auto; }
+.nav-links::-webkit-scrollbar { display: none; }
+.nav-links a { color: var(--muted); text-decoration: none; padding: 6px 12px; border-radius: 999px; font-size: 14px; white-space: nowrap; }
+.nav-links a:hover { color: var(--fg); background: rgba(255,255,255,.08); }
+@media (max-width: 640px) { .brand span:last-child { display: none; } }
+
+main { max-width: 1240px; margin: 0 auto; padding: 0 16px calc(env(safe-area-inset-bottom, 0px) + 48px); display: grid; grid-template-columns: minmax(0, 1fr); gap: clamp(28px, 5vw, 48px); }
+section, .hero, .filters, .tiles, .grid, .card { min-width: 0; }
+.hero { padding-top: clamp(24px, 5vw, 48px); display: grid; gap: 14px; }
+.eyebrow { margin: 0; font-size: 12px; letter-spacing: .16em; text-transform: uppercase; color: var(--cyan); font-weight: 600; }
+h1 { margin: 0; font-family: var(--display); font-weight: 800; text-transform: uppercase; font-size: clamp(44px, 10vw, 104px); line-height: .9; letter-spacing: .005em; text-wrap: balance; }
+h1 .accent { color: var(--pink); text-shadow: 0 0 32px rgba(255, 0, 114, .45); }
+.takeaway { margin: 0; max-width: 62ch; font-size: clamp(16px, 2.2vw, 19px); color: var(--muted); text-wrap: pretty; }
+.takeaway b { color: var(--fg); font-weight: 600; }
+
+.filters { position: sticky; top: 52px; z-index: 15; display: flex; flex-wrap: wrap; gap: 10px; align-items: center; padding: 10px 0; }
+.seg { display: inline-flex; gap: 2px; padding: 4px; background: rgba(18, 17, 80, .78); border: 1px solid var(--line); border-radius: 999px; overflow-x: auto; max-width: 100%; scrollbar-width: none; backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); }
+.seg::-webkit-scrollbar { display: none; }
+.pill { appearance: none; border: 0; background: transparent; color: var(--muted); padding: 7px 14px; border-radius: 999px; cursor: pointer; font-variant-numeric: tabular-nums; white-space: nowrap; font-weight: 500; transition: background .2s, color .2s; }
+.pill:hover { color: var(--fg); }
+.pill[aria-pressed="true"] { background: var(--pink); color: #fff; box-shadow: 0 0 16px rgba(255, 0, 114, .45); }
+.select-wrap { display: inline-flex; align-items: center; gap: 8px; padding: 4px 4px 4px 14px; border-radius: 999px; background: rgba(18, 17, 80, .78); border: 1px solid var(--line); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); }
+.select-wrap label { font-size: 12px; letter-spacing: .1em; text-transform: uppercase; color: var(--muted); }
+select { appearance: none; -webkit-appearance: none; background: var(--plum) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23fff' stroke-width='2' fill='none'/%3E%3C/svg%3E") no-repeat right 12px center; border: 1px solid var(--line); border-radius: 999px; padding: 6px 34px 6px 14px; color: var(--fg); max-width: 60vw; }
+.ghost { appearance: none; background: transparent; border: 1px solid var(--line); border-radius: 999px; padding: 7px 14px; cursor: pointer; color: var(--fg); }
+.ghost:hover { background: rgba(255,255,255,.08); }
+
+.tiles { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 170px), 1fr)); gap: var(--gap); }
+@media (max-width: 560px) { .tile:first-child { grid-column: 1 / -1; } }
+.tile { position: relative; overflow: hidden; background: var(--card); border: 1px solid var(--line); border-radius: var(--r); padding: 16px 18px 18px; display: grid; gap: 4px; align-content: start; min-width: 0; }
+.tile::before { content: ""; position: absolute; inset: auto -30% -60% auto; width: 140px; height: 140px; border-radius: 50%; background: var(--glow, var(--pink)); opacity: .14; filter: blur(30px); }
+.tile-label { margin: 0; font-size: 12px; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); font-weight: 600; }
+.tile-value { margin: 0; font-family: var(--display); font-weight: 800; font-size: clamp(42px, 7vw, 58px); line-height: .95; color: var(--glow, var(--pink)); font-variant-numeric: tabular-nums; overflow-wrap: anywhere; }
+.tile-sub { margin: 0; font-size: 13px; color: var(--muted); font-variant-numeric: tabular-nums; }
+.tile-sub b { color: var(--fg); font-weight: 600; }
+.no::after { content: "*"; }
+
+section { display: grid; gap: var(--gap); min-width: 0; scroll-margin-top: 110px; }
+.sec-head { display: grid; gap: 6px; }
+h2 { margin: 0; font-family: var(--display); font-weight: 800; text-transform: uppercase; font-size: clamp(32px, 5.5vw, 48px); line-height: 1; letter-spacing: .01em; }
+h2 .num { color: var(--cyan); margin-right: 10px; }
+.sec-note { margin: 0; color: var(--muted); max-width: 70ch; }
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 380px), 1fr)); gap: var(--gap); }
+.card { background: var(--card); border: 1px solid var(--line); border-radius: var(--r); padding: clamp(14px, 2.5vw, 22px); display: grid; gap: 14px; align-content: start; min-width: 0; }
+.card-head { display: flex; flex-wrap: wrap; align-items: flex-start; justify-content: space-between; gap: 10px; }
+.card-head > div:first-child { display: grid; gap: 4px; min-width: 0; flex: 1 1 14rem; }
+h3 { margin: 0; font-size: 17px; font-weight: 600; display: flex; align-items: center; gap: 8px; }
+.note { margin: 0; font-size: 13px; color: var(--muted); }
+.dot { width: 10px; height: 10px; border-radius: 50%; flex: none; }
+.chart { position: relative; min-width: 0; }
+.chart svg { display: block; width: 100%; height: auto; overflow: visible; }
+svg text { fill: var(--fg); font-family: var(--body); font-size: 12px; }
+svg .muted { fill: var(--muted); }
+svg .faint { fill: var(--faint); }
+svg .strong { font-weight: 700; }
+svg .big { font-family: var(--display); font-weight: 800; font-size: 15px; }
+svg .tick text { fill: var(--muted); }
+svg .tick line { stroke: var(--grid); }
+svg .tick path, svg .domain { stroke: none; }
+svg .base { stroke: rgba(255,255,255,.35); }
+svg .row { cursor: pointer; }
+svg .row:hover .name { text-decoration: underline; }
+.msg { padding: 40px 10px; text-align: center; color: var(--muted); font-size: 14px; }
+.legend { display: flex; flex-wrap: wrap; gap: 6px 14px; font-size: 13px; color: var(--muted); }
+.legend span { display: inline-flex; align-items: center; gap: 6px; }
+.tip { position: absolute; pointer-events: none; z-index: 5; background: rgba(18, 17, 80, .96); border: 1px solid rgba(255,255,255,.22); border-radius: 10px; box-shadow: 0 10px 30px rgba(0,0,0,.4); padding: 8px 10px; font-size: 12px; white-space: nowrap; display: grid; gap: 2px; font-variant-numeric: tabular-nums; }
+.tip .k { color: var(--cyan); font-weight: 600; }
+.mini-seg { display: inline-flex; gap: 2px; padding: 3px; border-radius: 999px; background: rgba(255,255,255,.06); border: 1px solid var(--line); }
+.mini-seg .pill { padding: 5px 12px; font-size: 13px; }
+.mini-seg .pill[aria-pressed="true"] { background: var(--fg); color: var(--ink); box-shadow: none; }
+
+/* head to head */
+.h2h-pick { display: grid; grid-template-columns: 1fr auto 1fr; gap: 10px; align-items: stretch; }
+.fighter { border-radius: var(--r); padding: 14px; display: grid; gap: 8px; justify-items: start; min-width: 0; border: 1px solid var(--line); background: linear-gradient(160deg, rgba(255,255,255,.07), rgba(255,255,255,.01)); }
+.fighter.a { box-shadow: inset 0 3px 0 var(--pink); }
+.fighter.b { box-shadow: inset 0 3px 0 var(--cyan); justify-items: end; text-align: right; }
+.fighter .initial { width: 46px; height: 46px; border-radius: 50%; display: grid; place-items: center; font-family: var(--display); font-weight: 800; font-size: 24px; color: var(--ink); }
+.fighter.a .initial { background: var(--pink); color: #fff; box-shadow: 0 0 22px rgba(255,0,114,.55); }
+.fighter.b .initial { background: var(--cyan); box-shadow: 0 0 22px rgba(0,240,255,.45); }
+.fighter .fname { font-family: var(--display); font-weight: 800; font-size: clamp(24px, 5vw, 34px); text-transform: uppercase; line-height: 1; overflow-wrap: anywhere; }
+.fighter .fsub { font-size: 12px; color: var(--muted); }
+.fighter select { max-width: 100%; width: 100%; }
+.vs { align-self: center; font-family: var(--display); font-weight: 800; font-size: clamp(26px, 6vw, 44px); color: var(--yellow); text-shadow: 0 0 20px rgba(255, 237, 41, .45); }
+.h2h-score { margin: 0; font-size: 16px; color: var(--muted); }
+.h2h-score b { color: var(--fg); }
+.tape { display: grid; gap: 2px; }
+.tape-row { display: grid; grid-template-columns: 1fr minmax(84px, auto) 1fr; align-items: center; gap: 10px; padding: 7px 0; border-bottom: 1px solid var(--grid); }
+.tape-row:last-child { border-bottom: 0; }
+.tape-label { text-align: center; font-size: 12px; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); white-space: nowrap; }
+.tape-label small { display: block; font-size: 10px; letter-spacing: .04em; text-transform: none; color: var(--faint); }
+.side { display: flex; align-items: center; gap: 8px; min-width: 0; }
+.side.a { flex-direction: row-reverse; }
+.side .val { font-variant-numeric: tabular-nums; font-weight: 600; min-width: 3.2em; }
+.side.a .val { text-align: right; }
+.side .bar { height: 10px; border-radius: 999px; background: rgba(255,255,255,.18); transition: width .4s ease; }
+.side.a.win .bar { background: var(--pink); box-shadow: 0 0 12px rgba(255,0,114,.5); }
+.side.b.win .bar { background: var(--cyan); box-shadow: 0 0 12px rgba(0,240,255,.45); }
+.side.win .val { color: var(--fg); }
+.side:not(.win) .val { color: var(--muted); }
+.track { flex: 1; display: flex; min-width: 0; }
+.side.a .track { justify-content: flex-end; }
+
+/* heatmap + tables */
+.scrollx { overflow-x: auto; min-width: 0; }
+.tablebar { display: flex; flex-wrap: wrap; gap: 10px; justify-content: space-between; align-items: center; }
+.search { background: rgba(255,255,255,.06); border: 1px solid var(--line); border-radius: 999px; padding: 8px 14px; color: var(--fg); width: min(100%, 260px); min-width: 0; }
+.search::placeholder { color: var(--faint); }
+.tablewrap { max-height: 560px; overflow: auto; border: 1px solid var(--line); border-radius: 12px; min-width: 0; }
+table { width: 100%; border-collapse: separate; border-spacing: 0; font-variant-numeric: tabular-nums; font-size: 14px; }
+th { position: sticky; top: 0; z-index: 1; background: #1b1468; text-align: right; padding: 0; border-bottom: 1px solid var(--line); white-space: nowrap; }
+th button { appearance: none; border: 0; background: transparent; width: 100%; text-align: inherit; padding: 10px 12px; cursor: pointer; font-size: 11px; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); white-space: nowrap; }
+th button:hover, th[aria-sort] button { color: var(--fg); }
+th[aria-sort="descending"] button::after { content: " ↓"; color: var(--pink); }
+th[aria-sort="ascending"] button::after { content: " ↑"; color: var(--pink); }
+td { position: relative; padding: 8px 12px; text-align: right; border-bottom: 1px solid var(--grid); white-space: nowrap; }
+.l { text-align: left; }
+tbody tr:hover td { background: rgba(255,255,255,.05); }
+tbody tr.sel td { background: rgba(255, 0, 114, .12); }
+.cellbar { position: absolute; left: 0; top: 22%; bottom: 22%; border-radius: 0 6px 6px 0; opacity: .32; pointer-events: none; }
+.cv { position: relative; }
+.namebtn { appearance: none; border: 0; background: transparent; padding: 0; cursor: pointer; color: var(--fg); font-weight: 500; text-align: left; }
+.namebtn:hover { color: var(--cyan); text-decoration: underline; }
+.empty td { text-align: center; color: var(--muted); padding: 24px; }
+@media (max-width: 640px) { .hide-sm { display: none; } .tape-row { grid-template-columns: 1fr minmax(70px, auto) 1fr; gap: 6px; } }
+
+footer { color: var(--muted); font-size: 13px; line-height: 1.6; border-top: 1px solid var(--line); padding-top: 20px; display: grid; gap: 6px; }
+footer b { color: var(--fg); }
+
+@media (prefers-reduced-motion: no-preference) {
+  @keyframes grow { from { transform: scaleX(0); } to { transform: scaleX(1); } }
+  @keyframes rise { from { transform: scaleY(0); } to { transform: scaleY(1); } }
+  @keyframes fade { from { opacity: 0; } to { opacity: 1; } }
+  .intro .gbar { transform-box: fill-box; transform-origin: left center; animation: grow .7s cubic-bezier(.2,.8,.2,1) both; }
+  .intro .gcol { transform-box: fill-box; transform-origin: center bottom; animation: rise .7s cubic-bezier(.2,.8,.2,1) both; }
+  .intro .gfade { animation: fade .8s ease both; }
+}
+</style>
+</head>
+<body>
+<header class="nav">
+  <div class="nav-inner">
+    <div class="brand"><span class="brand-ball" aria-hidden="true"></span><span>Tigers 3rd XI</span></div>
+    <nav class="nav-links" aria-label="Sections">
+      <a href="#overview">Overview</a>
+      <a href="#head-to-head">Head to head</a>
+      <a href="#seasons">Seasons</a>
+      <a href="#shares">Shares</a>
+      <a href="#quality">Quality</a>
+      <a href="#numbers">Tables</a>
+    </nav>
+  </div>
+</header>
+
+<main id="app">
+  <section class="hero" id="overview" aria-labelledby="title">
+    <p class="eyebrow">London Tigers CC · Middlesex County Cricket League</p>
+    <h1 id="title">3rd XI <span class="accent">Stats</span></h1>
+    <p class="takeaway" id="takeaway"></p>
+  </section>
+
+  <div class="filters" id="filters">
+    <div class="seg" id="season-pills" role="group" aria-label="Season"></div>
+    <div class="select-wrap"><label for="player-select">Player</label><select id="player-select"></select></div>
+    <button class="ghost" id="clear" type="button" hidden>Clear</button>
+  </div>
+
+  <div class="tiles" id="tiles">
+    <article class="tile" id="tile-1"><p class="tile-label"></p><p class="tile-value"></p><p class="tile-sub"></p></article>
+    <article class="tile" id="tile-2"><p class="tile-label"></p><p class="tile-value"></p><p class="tile-sub"></p></article>
+    <article class="tile" id="tile-3"><p class="tile-label"></p><p class="tile-value"></p><p class="tile-sub"></p></article>
+    <article class="tile" id="tile-4"><p class="tile-label"></p><p class="tile-value"></p><p class="tile-sub"></p></article>
+    <article class="tile" id="tile-5"><p class="tile-label"></p><p class="tile-value"></p><p class="tile-sub"></p></article>
+  </div>
+
+  <section id="leaders" aria-labelledby="leaders-title">
+    <div class="sec-head"><h2 id="leaders-title"><span class="num">01</span>Leaders</h2><p class="sec-note">Tap a name to focus the whole page on that player.</p></div>
+    <div class="grid">
+      <article class="card"><div class="card-head"><div><h3><span class="dot" style="background:var(--pink)"></span>Most runs</h3><p class="note" id="runs-note"></p></div></div><div class="chart" id="c-runs"></div></article>
+      <article class="card"><div class="card-head"><div><h3><span class="dot" style="background:var(--lime)"></span>Most wickets</h3><p class="note" id="wkts-note"></p></div></div><div class="chart" id="c-wkts"></div></article>
+    </div>
+  </section>
+
+  <section id="head-to-head" aria-labelledby="h2h-title">
+    <div class="sec-head"><h2 id="h2h-title"><span class="num">02</span>Head to head</h2><p class="sec-note" id="h2h-note">Pick any two players. Uses the season chosen above.</p></div>
+    <div class="h2h-pick">
+      <div class="fighter a"><div class="initial" id="a-initial"></div><div class="fname" id="a-name"></div><div class="fsub" id="a-sub"></div><select id="a-select" aria-label="First player"></select></div>
+      <div class="vs" aria-hidden="true">VS</div>
+      <div class="fighter b"><div class="initial" id="b-initial"></div><div class="fname" id="b-name"></div><div class="fsub" id="b-sub"></div><select id="b-select" aria-label="Second player"></select></div>
+    </div>
+    <p class="h2h-score" id="h2h-score"></p>
+    <div class="grid">
+      <article class="card"><div class="card-head"><div><h3>Tale of the tape</h3><p class="note">The brighter bar wins each row. For bowling average and economy, lower is better.</p></div></div><div class="tape" id="tape"></div></article>
+      <article class="card"><div class="card-head"><div><h3>Player profile</h3><p class="note">Each spoke is scaled against the best in the squad for the same period, so a bigger shape is a stronger all-round season.</p></div></div><div class="legend" id="radar-legend"></div><div class="chart" id="c-radar"></div></article>
+    </div>
+    <div class="grid">
+      <article class="card"><div class="card-head"><div><h3><span class="dot" style="background:var(--pink)"></span>Runs by season</h3><p class="note">Both players, every season.</p></div></div><div class="chart" id="c-h2h-runs"></div></article>
+      <article class="card"><div class="card-head"><div><h3><span class="dot" style="background:var(--lime)"></span>Wickets by season</h3><p class="note">Both players, every season.</p></div></div><div class="chart" id="c-h2h-wkts"></div></article>
+    </div>
+  </section>
+
+  <section id="seasons" aria-labelledby="seasons-title">
+    <div class="sec-head"><h2 id="seasons-title"><span class="num">03</span>Season by season</h2><p class="sec-note">How the team and its players have done over the years.</p></div>
+    <div class="grid">
+      <article class="card"><div class="card-head"><div><h3><span class="dot" style="background:var(--pink)"></span>Runs each season</h3><p class="note" id="sr-note"></p></div></div><div class="chart" id="c-season-runs"></div></article>
+      <article class="card"><div class="card-head"><div><h3><span class="dot" style="background:var(--lime)"></span>Wickets each season</h3><p class="note" id="sw-note"></p></div></div><div class="chart" id="c-season-wkts"></div></article>
+    </div>
+    <article class="card"><div class="card-head"><div><h3>Leading run-scorers over the years</h3><p class="note" id="form-note"></p></div></div><div class="chart" id="c-form"></div></article>
+    <article class="card">
+      <div class="card-head"><div><h3>Season heatmap</h3><p class="note" id="heat-note"></p></div>
+        <div class="mini-seg" role="group" aria-label="Heatmap measure"><button class="pill" type="button" id="heat-runs" aria-pressed="true">Runs</button><button class="pill" type="button" id="heat-wkts" aria-pressed="false">Wickets</button></div></div>
+      <div class="chart scrollx" id="c-heat"></div>
+    </article>
+  </section>
+
+  <section id="shares" aria-labelledby="shares-title">
+    <div class="sec-head"><h2 id="shares-title"><span class="num">04</span>Shares and milestones</h2><p class="sec-note">Who carried the load, and who reached the big numbers.</p></div>
+    <div class="grid">
+      <article class="card">
+        <div class="card-head"><div><h3>Share of the team's <span id="share-word">runs</span></h3><p class="note" id="share-note"></p></div>
+          <div class="mini-seg" role="group" aria-label="Share measure"><button class="pill" type="button" id="share-runs" aria-pressed="true">Runs</button><button class="pill" type="button" id="share-wkts" aria-pressed="false">Wickets</button></div></div>
+        <div class="chart" id="c-share"></div>
+      </article>
+      <article class="card">
+        <div class="card-head"><div><h3>Milestones</h3><p class="note" id="mile-note"></p></div></div>
+        <div class="legend"><span><i class="dot" style="background:var(--yellow)"></i>Fifties</span><span><i class="dot" style="background:var(--pink)"></i>Hundreds</span><span><i class="dot" style="background:var(--lime)"></i>Five-wicket hauls</span></div>
+        <div class="chart" id="c-miles"></div>
+      </article>
+    </div>
+  </section>
+
+  <section id="quality" aria-labelledby="quality-title">
+    <div class="sec-head"><h2 id="quality-title"><span class="num">05</span>How they score and bowl</h2><p class="sec-note">Each bubble is one player's season. Bigger bubbles mean more runs or wickets.</p></div>
+    <div class="grid">
+      <article class="card"><div class="card-head"><div><h3><span class="dot" style="background:var(--pink)"></span>Average against strike rate</h3><p class="note">Players with 3 or more innings. Strike rates are only recorded from 2025.</p></div></div><div class="legend" id="bat-legend"></div><div class="chart" id="c-bat-scatter"></div></article>
+      <article class="card"><div class="card-head"><div><h3><span class="dot" style="background:var(--lime)"></span>Bowling average against economy</h3><p class="note">Players with 3 or more wickets. Lower and further left is better.</p></div></div><div class="legend" id="bowl-legend"></div><div class="chart" id="c-bowl-scatter"></div></article>
+    </div>
+  </section>
+
+  <section id="numbers" aria-labelledby="numbers-title">
+    <div class="sec-head"><h2 id="numbers-title"><span class="num">06</span>All the numbers</h2><p class="sec-note">Tap any heading to sort. Tap a name to focus on that player.</p></div>
+    <article class="card">
+      <div class="tablebar">
+        <div class="mini-seg" role="group" aria-label="Table"><button class="pill" type="button" id="tab-batting" aria-pressed="true">Batting</button><button class="pill" type="button" id="tab-bowling" aria-pressed="false">Bowling</button><button class="pill" type="button" id="tab-career" aria-pressed="false">Career</button></div>
+        <input class="search" id="search" type="search" placeholder="Search players" aria-label="Search players">
+      </div>
+      <div class="tablewrap" id="tablewrap"><table id="table"><thead></thead><tbody></tbody></table></div>
+    </article>
+  </section>
+
+  <footer>
+    <div><b>Sources.</b> 2022 to 2024: match-by-match records kept by Uffan. 2025 and 2026: the London Tigers CC play-cricket site (3rd XI), plus Uffan's own additions for 2025. Updated <span id="updated"></span>.</div>
+    <div>Balls faced, strike rates and maidens are only recorded from 2025. An asterisk (*) means not out. Best bowling is wickets/runs in one innings.</div>
+  </footer>
+</main>
+
+<script id="data" type="application/json">{"batting":[{"Season":2026,"Player":"Abbas","Play-Cricket name":"Mahammad Abbas Akhtar","Matches":13,"Inns":13,"Not Outs":0,"Runs":316,"High Score":63,"Average":24.31,"Balls Faced":496,"Strike Rate":63.71,"100s":0,"50s":3,"Source":"Play-Cricket","HS Not Out":0},{"Season":2026,"Player":"Ali Yash","Play-Cricket name":"Ali Yashab","Matches":8,"Inns":8,"Not Outs":1,"Runs":297,"High Score":152,"Average":42.43,"Balls Faced":215,"Strike Rate":138.14,"100s":1,"50s":0,"Source":"Play-Cricket","HS Not Out":1},{"Season":2026,"Player":"Umar","Play-Cricket name":"Umar Aziz / Omar Aziz","Matches":8,"Inns":8,"Not Outs":1,"Runs":203,"High Score":56,"Average":29.0,"Balls Faced":301,"Strike Rate":67.44,"100s":0,"50s":1,"Source":"Play-Cricket","HS Not Out":0},{"Season":2026,"Player":"Hamza","Play-Cricket name":"Syed Ali","Matches":6,"Inns":6,"Not Outs":0,"Runs":186,"High Score":61,"Average":31.0,"Balls Faced":136,"Strike Rate":136.76,"100s":0,"50s":1,"Source":"Play-Cricket","HS Not Out":0},{"Season":2026,"Player":"Rahul Chauhan","Play-Cricket name":"Rahul Chauhan","Matches":10,"Inns":10,"Not Outs":1,"Runs":183,"High Score":36,"Average":20.33,"Balls Faced":210,"Strike Rate":87.14,"100s":0,"50s":0,"Source":"Play-Cricket","HS Not Out":0},{"Season":2026,"Player":"Lovepreet Singh","Play-Cricket name":"Lovepreet Singh","Matches":4,"Inns":4,"Not Outs":0,"Runs":169,"High Score":129,"Average":42.25,"Balls Faced":170,"Strike Rate":99.41,"100s":1,"50s":0,"Source":"Play-Cricket","HS Not Out":0},{"Season":2026,"Player":"Uffan","Play-Cricket name":"Uffan Salimi","Matches":11,"Inns":11,"Not Outs":1,"Runs":159,"High Score":40,"Average":15.9,"Balls Faced":224,"Strike Rate":70.98,"100s":0,"50s":0,"Source":"Play-Cricket","HS Not Out":0},{"Season":2026,"Player":"Jashandeep Singh","Play-Cricket name":"Jashandeep Singh","Matches":7,"Inns":7,"Not Outs":0,"Runs":156,"High Score":51,"Average":22.29,"Balls Faced":167,"Strike Rate":93.41,"100s":0,"50s":1,"Source":"Play-Cricket","HS Not Out":0},{"Season":2026,"Player":"Ramos","Play-Cricket name":"Ramuz Maqsood","Matches":5,"Inns":5,"Not Outs":0,"Runs":72,"High Score":40,"Average":14.4,"Balls Faced":138,"Strike Rate":52.17,"100s":0,"50s":0,"Source":"Play-Cricket","HS Not Out":0},{"Season":2026,"Player":"Mayank Kumar","Play-Cricket name":"Mayank Kumar","Matches":5,"Inns":4,"Not Outs":1,"Runs":71,"High Score":39,"Average":23.67,"Balls Faced":76,"Strike Rate":93.42,"100s":0,"50s":0,"Source":"Play-Cricket","HS Not Out":1},{"Season":2026,"Player":"Zahid","Play-Cricket name":"Zahid Hussain","Matches":8,"Inns":6,"Not Outs":2,"Runs":65,"High Score":20,"Average":16.25,"Balls Faced":105,"Strike Rate":61.9,"100s":0,"50s":0,"Source":"Play-Cricket","HS Not Out":0},{"Season":2026,"Player":"Habibullah","Play-Cricket name":"Habibullah Syed","Matches":5,"Inns":5,"Not Outs":0,"Runs":63,"High Score":40,"Average":12.6,"Balls Faced":140,"Strike Rate":45.0,"100s":0,"50s":0,"Source":"Play-Cricket","HS Not Out":0},{"Season":2026,"Player":"Abdullah","Play-Cricket name":"Abdullah Syed","Matches":12,"Inns":10,"Not Outs":2,"Runs":58,"High Score":29,"Average":7.25,"Balls Faced":121,"Strike Rate":47.93,"100s":0,"50s":0,"Source":"Play-Cricket","HS Not Out":1},{"Season":2026,"Player":"Usman","Play-Cricket name":"Usman Khan","Matches":9,"Inns":8,"Not Outs":0,"Runs":46,"High Score":28,"Average":5.75,"Balls Faced":145,"Strike Rate":31.72,"100s":0,"50s":0,"Source":"Play-Cricket","HS Not Out":0},{"Season":2026,"Player":"Prabhdit Singh","Play-Cricket name":"Prabhdit Singh","Matches":2,"Inns":2,"Not Outs":0,"Runs":41,"High Score":26,"Average":20.5,"Balls Faced":30,"Strike Rate":136.67,"100s":0,"50s":0,"Source":"Play-Cricket","HS Not Out":0},{"Season":2026,"Player":"Ishan Sutar","Play-Cricket name":"Ishan Sutar","Matches":5,"Inns":5,"Not Outs":1,"Runs":35,"High Score":15,"Average":8.75,"Balls Faced":78,"Strike Rate":44.87,"100s":0,"50s":0,"Source":"Play-Cricket","HS Not Out":0},{"Season":2026,"Player":"Ali Hashmat","Play-Cricket name":"Ali Hashmat","Matches":6,"Inns":5,"Not Outs":1,"Runs":25,"High Score":13,"Average":6.25,"Balls Faced":56,"Strike Rate":44.64,"100s":0,"50s":0,"Source":"Play-Cricket","HS Not Out":0},{"Season":2026,"Player":"Ahmad","Play-Cricket name":"Ahmad Syed","Matches":9,"Inns":6,"Not Outs":5,"Runs":23,"High Score":14,"Average":23.0,"Balls Faced":42,"Strike Rate":54.76,"100s":0,"50s":0,"Source":"Play-Cricket","HS Not Out":1},{"Season":2026,"Player":"Sayed Bukhari","Play-Cricket name":"Sayed Bukhari","Matches":1,"Inns":1,"Not Outs":0,"Runs":23,"High Score":23,"Average":23.0,"Balls Faced":40,"Strike Rate":57.5,"100s":0,"50s":0,"Source":"Play-Cricket","HS Not Out":0},{"Season":2026,"Player":"Yuvraj Singh","Play-Cricket name":"Yuvraj Singh","Matches":3,"Inns":3,"Not Outs":0,"Runs":16,"High Score":9,"Average":5.33,"Balls Faced":56,"Strike Rate":28.57,"100s":0,"50s":0,"Source":"Play-Cricket","HS Not Out":0},{"Season":2026,"Player":"Diago Dsouza","Play-Cricket name":"Diago Dsouza","Matches":1,"Inns":1,"Not Outs":0,"Runs":15,"High Score":15,"Average":15.0,"Balls Faced":30,"Strike Rate":50.0,"100s":0,"50s":0,"Source":"Play-Cricket","HS Not Out":0},{"Season":2026,"Player":"Zain","Play-Cricket name":"Zain Javed","Matches":8,"Inns":6,"Not Outs":1,"Runs":12,"High Score":5,"Average":2.4,"Balls Faced":84,"Strike Rate":14.29,"100s":0,"50s":0,"Source":"Play-Cricket","HS Not Out":0},{"Season":2026,"Player":"Aarush Garg","Play-Cricket name":"Aarush Garg","Matches":1,"Inns":1,"Not Outs":0,"Runs":6,"High Score":6,"Average":6.0,"Balls Faced":19,"Strike Rate":31.58,"100s":0,"50s":0,"Source":"Play-Cricket","HS Not Out":0},{"Season":2026,"Player":"Abdul Qadir Syed","Play-Cricket name":"Abdul Qadir Syed","Matches":1,"Inns":1,"Not Outs":0,"Runs":3,"High Score":3,"Average":3.0,"Balls Faced":8,"Strike Rate":37.5,"100s":0,"50s":0,"Source":"Play-Cricket","HS Not Out":0},{"Season":2026,"Player":"Amrit Singh","Play-Cricket name":"Amrit Singh","Matches":2,"Inns":2,"Not Outs":0,"Runs":1,"High Score":1,"Average":0.5,"Balls Faced":7,"Strike Rate":14.29,"100s":0,"50s":0,"Source":"Play-Cricket","HS Not Out":0},{"Season":2026,"Player":"Easa Aziz","Play-Cricket name":"Easa Aziz","Matches":1,"Inns":1,"Not Outs":1,"Runs":0,"High Score":0,"Average":null,"Balls Faced":0,"Strike Rate":0.0,"100s":0,"50s":0,"Source":"Play-Cricket","HS Not Out":1},{"Season":2026,"Player":"Faz","Play-Cricket name":"Farrakh Chaudhry","Matches":3,"Inns":2,"Not Outs":1,"Runs":0,"High Score":0,"Average":0.0,"Balls Faced":0,"Strike Rate":0.0,"100s":0,"50s":0,"Source":"Play-Cricket","HS Not Out":1},{"Season":2025,"Player":"Uffan","Play-Cricket name":"Uffan Salimi","Matches":18,"Inns":18,"Not Outs":1,"Runs":558,"High Score":99,"Average":32.82,"Balls Faced":752,"Strike Rate":67.55,"100s":0,"50s":3,"Source":"Play-Cricket + added by you","HS Not Out":0},{"Season":2025,"Player":"Ali Yash","Play-Cricket name":"Ali Yashab","Matches":14,"Inns":14,"Not Outs":1,"Runs":378,"High Score":62,"Average":29.08,"Balls Faced":359,"Strike Rate":105.29,"100s":0,"50s":2,"Source":"Play-Cricket","HS Not Out":1},{"Season":2025,"Player":"Hamza","Play-Cricket name":"Syed Ali","Matches":14,"Inns":14,"Not Outs":0,"Runs":301,"High Score":59,"Average":21.5,"Balls Faced":260,"Strike Rate":115.77,"100s":0,"50s":2,"Source":"Play-Cricket","HS Not Out":0},{"Season":2025,"Player":"Umar","Play-Cricket name":"Umar Aziz / Omar Aziz","Matches":12,"Inns":12,"Not Outs":0,"Runs":221,"High Score":52,"Average":18.42,"Balls Faced":400,"Strike Rate":55.25,"100s":0,"50s":2,"Source":"Play-Cricket","HS Not Out":0},{"Season":2025,"Player":"Ramos","Play-Cricket name":"Ramuz Maqsood","Matches":13,"Inns":13,"Not Outs":0,"Runs":214,"High Score":37,"Average":16.46,"Balls Faced":406,"Strike Rate":52.71,"100s":0,"50s":0,"Source":"Play-Cricket","HS Not Out":0},{"Season":2025,"Player":"Abbas","Play-Cricket name":"Mahammad Abbas Akhtar","Matches":10,"Inns":10,"Not Outs":0,"Runs":171,"High Score":30,"Average":17.1,"Balls Faced":281,"Strike Rate":60.85,"100s":0,"50s":0,"Source":"Play-Cricket","HS Not Out":0},{"Season":2025,"Player":"Abdullah","Play-Cricket name":"Abdullah Syed","Matches":14,"Inns":14,"Not Outs":1,"Runs":161,"High Score":33,"Average":12.38,"Balls Faced":365,"Strike Rate":44.11,"100s":0,"50s":0,"Source":"Play-Cricket","HS Not Out":0},{"Season":2025,"Player":"Ali Hashmat","Play-Cricket name":"Ali Hashmat","Matches":14,"Inns":13,"Not Outs":2,"Runs":124,"High Score":34,"Average":11.27,"Balls Faced":199,"Strike Rate":62.31,"100s":0,"50s":0,"Source":"Play-Cricket","HS Not Out":0},{"Season":2025,"Player":"Habibullah","Play-Cricket name":"Habibullah Syed","Matches":8,"Inns":8,"Not Outs":0,"Runs":120,"High Score":32,"Average":15.0,"Balls Faced":199,"Strike Rate":60.3,"100s":0,"50s":0,"Source":"Play-Cricket","HS Not Out":0},{"Season":2025,"Player":"Faisal Jalaludin","Play-Cricket name":"Faisal Jalaludin","Matches":2,"Inns":2,"Not Outs":0,"Runs":92,"High Score":90,"Average":46.0,"Balls Faced":108,"Strike Rate":85.19,"100s":0,"50s":1,"Source":"Play-Cricket","HS Not Out":0},{"Season":2025,"Player":"Zahid","Play-Cricket name":"Zahid Hussain","Matches":8,"Inns":8,"Not Outs":0,"Runs":34,"High Score":9,"Average":4.25,"Balls Faced":132,"Strike Rate":25.76,"100s":0,"50s":0,"Source":"Play-Cricket","HS Not Out":0},{"Season":2025,"Player":"Usman","Play-Cricket name":"Usman Khan","Matches":5,"Inns":5,"Not Outs":0,"Runs":28,"High Score":20,"Average":5.6,"Balls Faced":59,"Strike Rate":47.46,"100s":0,"50s":0,"Source":"Play-Cricket","HS Not Out":0},{"Season":2025,"Player":"Faisal Shahzad","Play-Cricket name":"Faisal Shahzad","Matches":2,"Inns":2,"Not Outs":0,"Runs":26,"High Score":26,"Average":13.0,"Balls Faced":31,"Strike Rate":83.87,"100s":0,"50s":0,"Source":"Play-Cricket","HS Not Out":0},{"Season":2025,"Player":"Ahmad","Play-Cricket name":"Ahmad Syed","Matches":10,"Inns":10,"Not Outs":4,"Runs":10,"High Score":5,"Average":1.67,"Balls Faced":49,"Strike Rate":20.41,"100s":0,"50s":0,"Source":"Play-Cricket","HS Not Out":0},{"Season":2025,"Player":"Mohammad Adeel","Play-Cricket name":"Mohammad Adeel","Matches":1,"Inns":1,"Not Outs":0,"Runs":8,"High Score":8,"Average":8.0,"Balls Faced":6,"Strike Rate":133.33,"100s":0,"50s":0,"Source":"Play-Cricket","HS Not Out":0},{"Season":2025,"Player":"Pavan","Play-Cricket name":"Pratyaksh Patel","Matches":1,"Inns":1,"Not Outs":0,"Runs":3,"High Score":3,"Average":3.0,"Balls Faced":3,"Strike Rate":100.0,"100s":0,"50s":0,"Source":"Play-Cricket","HS Not Out":0},{"Season":2025,"Player":"Zain","Play-Cricket name":"Zain Javed","Matches":14,"Inns":13,"Not Outs":7,"Runs":3,"High Score":1,"Average":0.5,"Balls Faced":121,"Strike Rate":2.48,"100s":0,"50s":0,"Source":"Play-Cricket","HS Not Out":0},{"Season":2025,"Player":"Hamza Iqbal","Play-Cricket name":"Hamza Iqbal","Matches":3,"Inns":3,"Not Outs":0,"Runs":1,"High Score":1,"Average":0.33,"Balls Faced":19,"Strike Rate":5.26,"100s":0,"50s":0,"Source":"Play-Cricket","HS Not Out":0},{"Season":2025,"Player":"Faz","Play-Cricket name":"Farrakh Chaudhry","Matches":3,"Inns":3,"Not Outs":0,"Runs":0,"High Score":0,"Average":0.0,"Balls Faced":0,"Strike Rate":0.0,"100s":0,"50s":0,"Source":"Play-Cricket","HS Not Out":0},{"Season":2024,"Player":"Hamza","Play-Cricket name":"Syed Ali","Matches":null,"Inns":15,"Not Outs":1,"Runs":809,"High Score":210,"Average":57.79,"Balls Faced":null,"Strike Rate":null,"100s":2,"50s":4,"Source":"Your sheet","HS Not Out":0},{"Season":2024,"Player":"Ali Yash","Play-Cricket name":"Ali Yashab","Matches":null,"Inns":13,"Not Outs":1,"Runs":314,"High Score":104,"Average":26.17,"Balls Faced":null,"Strike Rate":null,"100s":1,"50s":0,"Source":"Your sheet","HS Not Out":0},{"Season":2024,"Player":"Ramos","Play-Cricket name":"Ramuz Maqsood","Matches":null,"Inns":13,"Not Outs":0,"Runs":197,"High Score":57,"Average":15.15,"Balls Faced":null,"Strike Rate":null,"100s":0,"50s":1,"Source":"Your sheet","HS Not Out":0},{"Season":2024,"Player":"Abbas","Play-Cricket name":"Mahammad Abbas Akhtar","Matches":null,"Inns":15,"Not Outs":0,"Runs":194,"High Score":38,"Average":12.93,"Balls Faced":null,"Strike Rate":null,"100s":0,"50s":0,"Source":"Your sheet","HS Not Out":0},{"Season":2024,"Player":"Uffan","Play-Cricket name":"Uffan Salimi","Matches":null,"Inns":14,"Not Outs":5,"Runs":176,"High Score":68,"Average":19.56,"Balls Faced":null,"Strike Rate":null,"100s":0,"50s":1,"Source":"Your sheet","HS Not Out":0},{"Season":2024,"Player":"Pavan","Play-Cricket name":"Pratyaksh Patel","Matches":null,"Inns":7,"Not Outs":0,"Runs":151,"High Score":42,"Average":21.57,"Balls Faced":null,"Strike Rate":null,"100s":0,"50s":0,"Source":"Your sheet","HS Not Out":0},{"Season":2024,"Player":"Habibullah","Play-Cricket name":"Habibullah Syed","Matches":null,"Inns":7,"Not Outs":0,"Runs":131,"High Score":62,"Average":18.71,"Balls Faced":null,"Strike Rate":null,"100s":0,"50s":1,"Source":"Your sheet","HS Not Out":0},{"Season":2024,"Player":"Umar","Play-Cricket name":"Umar Aziz / Omar Aziz","Matches":null,"Inns":6,"Not Outs":0,"Runs":88,"High Score":29,"Average":14.67,"Balls Faced":null,"Strike Rate":null,"100s":0,"50s":0,"Source":"Your sheet","HS Not Out":0},{"Season":2024,"Player":"Abdullah","Play-Cricket name":"Abdullah Syed","Matches":null,"Inns":11,"Not Outs":3,"Runs":86,"High Score":23,"Average":10.75,"Balls Faced":null,"Strike Rate":null,"100s":0,"50s":0,"Source":"Your sheet","HS Not Out":0},{"Season":2024,"Player":"Vinod","Play-Cricket name":"Vinod Kumar","Matches":null,"Inns":6,"Not Outs":0,"Runs":83,"High Score":44,"Average":13.83,"Balls Faced":null,"Strike Rate":null,"100s":0,"50s":0,"Source":"Your sheet","HS Not Out":0},{"Season":2024,"Player":"Zahid","Play-Cricket name":"Zahid Hussain","Matches":null,"Inns":10,"Not Outs":0,"Runs":55,"High Score":26,"Average":5.5,"Balls Faced":null,"Strike Rate":null,"100s":0,"50s":0,"Source":"Your sheet","HS Not Out":0},{"Season":2024,"Player":"Azaher","Play-Cricket name":"Azahar Sarwar","Matches":null,"Inns":10,"Not Outs":1,"Runs":51,"High Score":20,"Average":5.67,"Balls Faced":null,"Strike Rate":null,"100s":0,"50s":0,"Source":"Your sheet","HS Not Out":0},{"Season":2024,"Player":"Mohsin","Play-Cricket name":"Moshin Khan","Matches":null,"Inns":4,"Not Outs":0,"Runs":26,"High Score":12,"Average":6.5,"Balls Faced":null,"Strike Rate":null,"100s":0,"50s":0,"Source":"Your sheet","HS Not Out":0},{"Season":2024,"Player":"Asim","Play-Cricket name":"(no play-cricket match)","Matches":null,"Inns":3,"Not Outs":0,"Runs":22,"High Score":13,"Average":7.33,"Balls Faced":null,"Strike Rate":null,"100s":0,"50s":0,"Source":"Your sheet","HS Not Out":0},{"Season":2024,"Player":"Ahmad","Play-Cricket name":"Ahmad Syed","Matches":null,"Inns":6,"Not Outs":1,"Runs":14,"High Score":8,"Average":2.8,"Balls Faced":null,"Strike Rate":null,"100s":0,"50s":0,"Source":"Your sheet","HS Not Out":0},{"Season":2024,"Player":"Usman","Play-Cricket name":"Usman Khan","Matches":null,"Inns":6,"Not Outs":0,"Runs":8,"High Score":6,"Average":1.33,"Balls Faced":null,"Strike Rate":null,"100s":0,"50s":0,"Source":"Your sheet","HS Not Out":0},{"Season":2024,"Player":"Zain","Play-Cricket name":"Zain Javed","Matches":null,"Inns":7,"Not Outs":2,"Runs":2,"High Score":1,"Average":0.4,"Balls Faced":null,"Strike Rate":null,"100s":0,"50s":0,"Source":"Your sheet","HS Not Out":0},{"Season":2023,"Player":"Ramos","Play-Cricket name":"Ramuz Maqsood","Matches":null,"Inns":11,"Not Outs":3,"Runs":343,"High Score":110,"Average":42.88,"Balls Faced":null,"Strike Rate":null,"100s":1,"50s":1,"Source":"Your sheet","HS Not Out":0},{"Season":2023,"Player":"Abbas","Play-Cricket name":"Mahammad Abbas Akhtar","Matches":null,"Inns":13,"Not Outs":0,"Runs":338,"High Score":69,"Average":26.0,"Balls Faced":null,"Strike Rate":null,"100s":0,"50s":2,"Source":"Your sheet","HS Not Out":0},{"Season":2023,"Player":"Uffan","Play-Cricket name":"Uffan Salimi","Matches":null,"Inns":11,"Not Outs":3,"Runs":264,"High Score":51,"Average":33.0,"Balls Faced":null,"Strike Rate":null,"100s":0,"50s":2,"Source":"Your sheet","HS Not Out":0},{"Season":2023,"Player":"Pavan","Play-Cricket name":"Pratyaksh Patel","Matches":null,"Inns":7,"Not Outs":0,"Runs":183,"High Score":56,"Average":26.14,"Balls Faced":null,"Strike Rate":null,"100s":0,"50s":1,"Source":"Your sheet","HS Not Out":0},{"Season":2023,"Player":"Umar","Play-Cricket name":"Umar Aziz / Omar Aziz","Matches":null,"Inns":2,"Not Outs":2,"Runs":152,"High Score":119,"Average":null,"Balls Faced":null,"Strike Rate":null,"100s":1,"50s":0,"Source":"Your sheet","HS Not Out":0},{"Season":2023,"Player":"Vinod","Play-Cricket name":"Vinod Kumar","Matches":null,"Inns":8,"Not Outs":2,"Runs":137,"High Score":36,"Average":22.83,"Balls Faced":null,"Strike Rate":null,"100s":0,"50s":0,"Source":"Your sheet","HS Not Out":0},{"Season":2023,"Player":"Zahid","Play-Cricket name":"Zahid Hussain","Matches":null,"Inns":9,"Not Outs":0,"Runs":70,"High Score":15,"Average":7.78,"Balls Faced":null,"Strike Rate":null,"100s":0,"50s":0,"Source":"Your sheet","HS Not Out":0},{"Season":2023,"Player":"Mohsin","Play-Cricket name":"Moshin Khan","Matches":null,"Inns":4,"Not Outs":0,"Runs":66,"High Score":48,"Average":16.5,"Balls Faced":null,"Strike Rate":null,"100s":0,"50s":0,"Source":"Your sheet","HS Not Out":0},{"Season":2023,"Player":"Hamza","Play-Cricket name":"Syed Ali","Matches":null,"Inns":6,"Not Outs":0,"Runs":61,"High Score":27,"Average":10.17,"Balls Faced":null,"Strike Rate":null,"100s":0,"50s":0,"Source":"Your sheet","HS Not Out":0},{"Season":2023,"Player":"Ali Yash","Play-Cricket name":"Ali Yashab","Matches":null,"Inns":3,"Not Outs":0,"Runs":59,"High Score":53,"Average":19.67,"Balls Faced":null,"Strike Rate":null,"100s":0,"50s":1,"Source":"Your sheet","HS Not Out":0},{"Season":2023,"Player":"Ali Hashmat","Play-Cricket name":"Ali Hashmat","Matches":null,"Inns":3,"Not Outs":0,"Runs":56,"High Score":35,"Average":18.67,"Balls Faced":null,"Strike Rate":null,"100s":0,"50s":0,"Source":"Your sheet","HS Not Out":0},{"Season":2023,"Player":"Abdullah","Play-Cricket name":"Abdullah Syed","Matches":null,"Inns":8,"Not Outs":2,"Runs":48,"High Score":10,"Average":8.0,"Balls Faced":null,"Strike Rate":null,"100s":0,"50s":0,"Source":"Your sheet","HS Not Out":0},{"Season":2023,"Player":"Azaher","Play-Cricket name":"Azahar Sarwar","Matches":null,"Inns":4,"Not Outs":0,"Runs":31,"High Score":16,"Average":7.75,"Balls Faced":null,"Strike Rate":null,"100s":0,"50s":0,"Source":"Your sheet","HS Not Out":0},{"Season":2023,"Player":"Ahmad","Play-Cricket name":"Ahmad Syed","Matches":null,"Inns":4,"Not Outs":0,"Runs":13,"High Score":6,"Average":3.25,"Balls Faced":null,"Strike Rate":null,"100s":0,"50s":0,"Source":"Your sheet","HS Not Out":0},{"Season":2023,"Player":"Faz","Play-Cricket name":"Farrakh Chaudhry","Matches":null,"Inns":3,"Not Outs":1,"Runs":8,"High Score":5,"Average":4.0,"Balls Faced":null,"Strike Rate":null,"100s":0,"50s":0,"Source":"Your sheet","HS Not Out":0},{"Season":2023,"Player":"Zain","Play-Cricket name":"Zain Javed","Matches":null,"Inns":2,"Not Outs":0,"Runs":0,"High Score":0,"Average":0.0,"Balls Faced":null,"Strike Rate":null,"100s":0,"50s":0,"Source":"Your sheet","HS Not Out":0},{"Season":2022,"Player":"Ali Yash","Play-Cricket name":"Ali Yashab","Matches":null,"Inns":17,"Not Outs":2,"Runs":541,"High Score":116,"Average":36.07,"Balls Faced":null,"Strike Rate":null,"100s":1,"50s":2,"Source":"Your sheet","HS Not Out":0},{"Season":2022,"Player":"Abbas","Play-Cricket name":"Mahammad Abbas Akhtar","Matches":null,"Inns":18,"Not Outs":1,"Runs":474,"High Score":66,"Average":27.88,"Balls Faced":null,"Strike Rate":null,"100s":0,"50s":3,"Source":"Your sheet","HS Not Out":0},{"Season":2022,"Player":"Umar","Play-Cricket name":"Umar Aziz / Omar Aziz","Matches":null,"Inns":11,"Not Outs":4,"Runs":302,"High Score":72,"Average":43.14,"Balls Faced":null,"Strike Rate":null,"100s":0,"50s":1,"Source":"Your sheet","HS Not Out":0},{"Season":2022,"Player":"Uffan","Play-Cricket name":"Uffan Salimi","Matches":null,"Inns":10,"Not Outs":2,"Runs":240,"High Score":69,"Average":30.0,"Balls Faced":null,"Strike Rate":null,"100s":0,"50s":1,"Source":"Your sheet","HS Not Out":0},{"Season":2022,"Player":"Ramos","Play-Cricket name":"Ramuz Maqsood","Matches":null,"Inns":12,"Not Outs":3,"Runs":210,"High Score":52,"Average":23.33,"Balls Faced":null,"Strike Rate":null,"100s":0,"50s":1,"Source":"Your sheet","HS Not Out":0},{"Season":2022,"Player":"Zahid","Play-Cricket name":"Zahid Hussain","Matches":null,"Inns":13,"Not Outs":3,"Runs":183,"High Score":27,"Average":18.3,"Balls Faced":null,"Strike Rate":null,"100s":0,"50s":0,"Source":"Your sheet","HS Not Out":0},{"Season":2022,"Player":"Habibullah","Play-Cricket name":"Habibullah Syed","Matches":null,"Inns":8,"Not Outs":1,"Runs":124,"High Score":36,"Average":17.71,"Balls Faced":null,"Strike Rate":null,"100s":0,"50s":0,"Source":"Your sheet","HS Not Out":0},{"Season":2022,"Player":"Mohsin","Play-Cricket name":"Moshin Khan","Matches":null,"Inns":7,"Not Outs":0,"Runs":113,"High Score":34,"Average":16.14,"Balls Faced":null,"Strike Rate":null,"100s":0,"50s":0,"Source":"Your sheet","HS Not Out":0},{"Season":2022,"Player":"Azaher","Play-Cricket name":"Azahar Sarwar","Matches":null,"Inns":8,"Not Outs":2,"Runs":86,"High Score":24,"Average":14.33,"Balls Faced":null,"Strike Rate":null,"100s":0,"50s":0,"Source":"Your sheet","HS Not Out":0},{"Season":2022,"Player":"Abdullah","Play-Cricket name":"Abdullah Syed","Matches":null,"Inns":11,"Not Outs":1,"Runs":79,"High Score":28,"Average":7.9,"Balls Faced":null,"Strike Rate":null,"100s":0,"50s":0,"Source":"Your sheet","HS Not Out":0},{"Season":2022,"Player":"Ahmad","Play-Cricket name":"Ahmad Syed","Matches":null,"Inns":9,"Not Outs":4,"Runs":76,"High Score":23,"Average":15.2,"Balls Faced":null,"Strike Rate":null,"100s":0,"50s":0,"Source":"Your sheet","HS Not Out":0},{"Season":2022,"Player":"Ali Hashmat","Play-Cricket name":"Ali Hashmat","Matches":null,"Inns":7,"Not Outs":1,"Runs":44,"High Score":21,"Average":7.33,"Balls Faced":null,"Strike Rate":null,"100s":0,"50s":0,"Source":"Your sheet","HS Not Out":0},{"Season":2022,"Player":"Faz","Play-Cricket name":"Farrakh Chaudhry","Matches":null,"Inns":3,"Not Outs":0,"Runs":23,"High Score":14,"Average":7.67,"Balls Faced":null,"Strike Rate":null,"100s":0,"50s":0,"Source":"Your sheet","HS Not Out":0},{"Season":2022,"Player":"Zain","Play-Cricket name":"Zain Javed","Matches":null,"Inns":4,"Not Outs":0,"Runs":3,"High Score":3,"Average":0.75,"Balls Faced":null,"Strike Rate":null,"100s":0,"50s":0,"Source":"Your sheet","HS Not Out":0}],"bowling":[{"Season":2026,"Player":"Zahid","Play-Cricket name":"Zahid Hussain","Overs":66.1,"Maidens":5,"Runs":318,"Wickets":23,"Best":"7/37","5W":2,"Average":13.83,"Economy":4.81,"Strike Rate":17.26,"Balls":397,"Source":"Play-Cricket"},{"Season":2026,"Player":"Abdullah","Play-Cricket name":"Abdullah Syed","Overs":58.4,"Maidens":3,"Runs":252,"Wickets":16,"Best":"4/28","5W":0,"Average":15.75,"Economy":4.3,"Strike Rate":22.0,"Balls":352,"Source":"Play-Cricket"},{"Season":2026,"Player":"Ahmad","Play-Cricket name":"Ahmad Syed","Overs":63.4,"Maidens":5,"Runs":295,"Wickets":15,"Best":"5/36","5W":1,"Average":19.67,"Economy":4.63,"Strike Rate":25.47,"Balls":382,"Source":"Play-Cricket"},{"Season":2026,"Player":"Hamza","Play-Cricket name":"Syed Ali","Overs":51.0,"Maidens":4,"Runs":201,"Wickets":11,"Best":"5/70","5W":1,"Average":18.27,"Economy":3.94,"Strike Rate":27.82,"Balls":306,"Source":"Play-Cricket"},{"Season":2026,"Player":"Rahul Chauhan","Play-Cricket name":"Rahul Chauhan","Overs":53.0,"Maidens":3,"Runs":222,"Wickets":9,"Best":"2/11","5W":0,"Average":24.67,"Economy":4.19,"Strike Rate":35.33,"Balls":318,"Source":"Play-Cricket"},{"Season":2026,"Player":"Uffan","Play-Cricket name":"Uffan Salimi","Overs":32.1,"Maidens":3,"Runs":148,"Wickets":8,"Best":"2/5","5W":0,"Average":18.5,"Economy":4.6,"Strike Rate":24.12,"Balls":193,"Source":"Play-Cricket"},{"Season":2026,"Player":"Ishan Sutar","Play-Cricket name":"Ishan Sutar","Overs":26.1,"Maidens":1,"Runs":113,"Wickets":5,"Best":"2/22","5W":0,"Average":22.6,"Economy":4.32,"Strike Rate":31.4,"Balls":157,"Source":"Play-Cricket"},{"Season":2026,"Player":"Ali Hashmat","Play-Cricket name":"Ali Hashmat","Overs":32.0,"Maidens":2,"Runs":127,"Wickets":4,"Best":"2/26","5W":0,"Average":31.75,"Economy":3.97,"Strike Rate":48.0,"Balls":192,"Source":"Play-Cricket"},{"Season":2026,"Player":"Ali Yash","Play-Cricket name":"Ali Yashab","Overs":14.3,"Maidens":0,"Runs":85,"Wickets":3,"Best":"2/13","5W":0,"Average":28.33,"Economy":5.86,"Strike Rate":29.0,"Balls":87,"Source":"Play-Cricket"},{"Season":2026,"Player":"Zain","Play-Cricket name":"Zain Javed","Overs":18.4,"Maidens":1,"Runs":111,"Wickets":2,"Best":"2/31","5W":0,"Average":55.5,"Economy":5.95,"Strike Rate":56.0,"Balls":112,"Source":"Play-Cricket"},{"Season":2026,"Player":"Aarush Garg","Play-Cricket name":"Aarush Garg","Overs":2.0,"Maidens":0,"Runs":12,"Wickets":1,"Best":"1/12","5W":0,"Average":12.0,"Economy":6.0,"Strike Rate":12.0,"Balls":12,"Source":"Play-Cricket"},{"Season":2026,"Player":"Diago Dsouza","Play-Cricket name":"Diago Dsouza","Overs":4.0,"Maidens":0,"Runs":17,"Wickets":1,"Best":"1/17","5W":0,"Average":17.0,"Economy":4.25,"Strike Rate":24.0,"Balls":24,"Source":"Play-Cricket"},{"Season":2026,"Player":"Faz","Play-Cricket name":"Farrakh Chaudhry","Overs":5.0,"Maidens":0,"Runs":30,"Wickets":1,"Best":"1/30","5W":0,"Average":30.0,"Economy":6.0,"Strike Rate":30.0,"Balls":30,"Source":"Play-Cricket"},{"Season":2026,"Player":"Sayed Bukhari","Play-Cricket name":"Sayed Bukhari","Overs":0.1,"Maidens":0,"Runs":3,"Wickets":0,"Best":"0/3","5W":0,"Average":null,"Economy":18.0,"Strike Rate":null,"Balls":1,"Source":"Play-Cricket"},{"Season":2026,"Player":"Abdul Qadir Syed","Play-Cricket name":"Abdul Qadir Syed","Overs":2.0,"Maidens":0,"Runs":11,"Wickets":0,"Best":"0/11","5W":0,"Average":null,"Economy":5.5,"Strike Rate":null,"Balls":12,"Source":"Play-Cricket"},{"Season":2026,"Player":"Usman","Play-Cricket name":"Usman Khan","Overs":2.0,"Maidens":0,"Runs":11,"Wickets":0,"Best":"0/3","5W":0,"Average":null,"Economy":5.5,"Strike Rate":null,"Balls":12,"Source":"Play-Cricket"},{"Season":2026,"Player":"Abbas","Play-Cricket name":"Mahammad Abbas Akhtar","Overs":1.5,"Maidens":0,"Runs":19,"Wickets":0,"Best":"0/1","5W":0,"Average":null,"Economy":10.36,"Strike Rate":null,"Balls":11,"Source":"Play-Cricket"},{"Season":2026,"Player":"Yuvraj Singh","Play-Cricket name":"Yuvraj Singh","Overs":3.0,"Maidens":0,"Runs":22,"Wickets":0,"Best":"0/22","5W":0,"Average":null,"Economy":7.33,"Strike Rate":null,"Balls":18,"Source":"Play-Cricket"},{"Season":2026,"Player":"Jashandeep Singh","Play-Cricket name":"Jashandeep Singh","Overs":4.1,"Maidens":0,"Runs":31,"Wickets":0,"Best":"0/13","5W":0,"Average":null,"Economy":7.44,"Strike Rate":null,"Balls":25,"Source":"Play-Cricket"},{"Season":2026,"Player":"Prabhdit Singh","Play-Cricket name":"Prabhdit Singh","Overs":3.0,"Maidens":0,"Runs":33,"Wickets":0,"Best":"0/7","5W":0,"Average":null,"Economy":11.0,"Strike Rate":null,"Balls":18,"Source":"Play-Cricket"},{"Season":2026,"Player":"Mayank Kumar","Play-Cricket name":"Mayank Kumar","Overs":13.0,"Maidens":0,"Runs":82,"Wickets":0,"Best":"0/10","5W":0,"Average":null,"Economy":6.31,"Strike Rate":null,"Balls":78,"Source":"Play-Cricket"},{"Season":2025,"Player":"Hamza","Play-Cricket name":"Syed Ali","Overs":115.4,"Maidens":23,"Runs":444,"Wickets":28,"Best":"6/53","5W":1,"Average":15.86,"Economy":3.84,"Strike Rate":24.79,"Balls":694,"Source":"Play-Cricket"},{"Season":2025,"Player":"Ali Hashmat","Play-Cricket name":"Ali Hashmat","Overs":109.1,"Maidens":14,"Runs":457,"Wickets":27,"Best":"6/19","5W":4,"Average":16.93,"Economy":4.19,"Strike Rate":24.26,"Balls":655,"Source":"Play-Cricket"},{"Season":2025,"Player":"Zahid","Play-Cricket name":"Zahid Hussain","Overs":67.2,"Maidens":8,"Runs":314,"Wickets":16,"Best":"4/21","5W":0,"Average":19.62,"Economy":4.66,"Strike Rate":25.25,"Balls":404,"Source":"Play-Cricket"},{"Season":2025,"Player":"Zain","Play-Cricket name":"Zain Javed","Overs":33.4,"Maidens":0,"Runs":224,"Wickets":11,"Best":"3/46","5W":0,"Average":20.36,"Economy":6.65,"Strike Rate":18.36,"Balls":202,"Source":"Play-Cricket"},{"Season":2025,"Player":"Ahmad","Play-Cricket name":"Ahmad Syed","Overs":53.3,"Maidens":4,"Runs":279,"Wickets":11,"Best":"3/18","5W":0,"Average":25.36,"Economy":5.21,"Strike Rate":29.18,"Balls":321,"Source":"Play-Cricket"},{"Season":2025,"Player":"Uffan","Play-Cricket name":"Uffan Salimi","Overs":44.0,"Maidens":3,"Runs":243,"Wickets":10,"Best":"3/45","5W":0,"Average":24.3,"Economy":5.52,"Strike Rate":26.4,"Balls":264,"Source":"Play-Cricket"},{"Season":2025,"Player":"Ali Yash","Play-Cricket name":"Ali Yashab","Overs":43.0,"Maidens":2,"Runs":234,"Wickets":8,"Best":"3/26","5W":0,"Average":29.25,"Economy":5.44,"Strike Rate":32.25,"Balls":258,"Source":"Play-Cricket"},{"Season":2025,"Player":"Hamza Iqbal","Play-Cricket name":"Hamza Iqbal","Overs":9.1,"Maidens":0,"Runs":66,"Wickets":3,"Best":"3/37","5W":0,"Average":22.0,"Economy":7.2,"Strike Rate":18.33,"Balls":55,"Source":"Play-Cricket"},{"Season":2025,"Player":"Faisal Shahzad","Play-Cricket name":"Faisal Shahzad","Overs":11.0,"Maidens":0,"Runs":53,"Wickets":1,"Best":"1/37","5W":0,"Average":53.0,"Economy":4.82,"Strike Rate":66.0,"Balls":66,"Source":"Play-Cricket"},{"Season":2025,"Player":"Abdullah","Play-Cricket name":"Abdullah Syed","Overs":27.3,"Maidens":0,"Runs":144,"Wickets":1,"Best":"1/21","5W":0,"Average":144.0,"Economy":5.24,"Strike Rate":165.0,"Balls":165,"Source":"Play-Cricket"},{"Season":2025,"Player":"Mohammad Adeel","Play-Cricket name":"Mohammad Adeel","Overs":0.3,"Maidens":0,"Runs":4,"Wickets":0,"Best":"0/4","5W":0,"Average":null,"Economy":8.0,"Strike Rate":null,"Balls":3,"Source":"Play-Cricket"},{"Season":2025,"Player":"Umar","Play-Cricket name":"Umar Aziz / Omar Aziz","Overs":3.0,"Maidens":0,"Runs":40,"Wickets":0,"Best":"0/20","5W":0,"Average":null,"Economy":13.33,"Strike Rate":null,"Balls":18,"Source":"Play-Cricket"},{"Season":2025,"Player":"Ramos","Play-Cricket name":"Ramuz Maqsood","Overs":9.0,"Maidens":0,"Runs":52,"Wickets":0,"Best":"0/14","5W":0,"Average":null,"Economy":5.78,"Strike Rate":null,"Balls":54,"Source":"Play-Cricket"},{"Season":2024,"Player":"Hamza","Play-Cricket name":"Syed Ali","Overs":126.0,"Maidens":null,"Runs":491,"Wickets":22,"Best":"5/9","5W":1,"Average":22.32,"Economy":3.9,"Strike Rate":34.36,"Balls":756,"Source":"Your sheet"},{"Season":2024,"Player":"Zahid","Play-Cricket name":"Zahid Hussain","Overs":101.2,"Maidens":null,"Runs":472,"Wickets":19,"Best":"4/37","5W":0,"Average":24.84,"Economy":4.66,"Strike Rate":32.0,"Balls":608,"Source":"Your sheet"},{"Season":2024,"Player":"Ali Hashmat","Play-Cricket name":"Ali Hashmat","Overs":33.0,"Maidens":null,"Runs":99,"Wickets":13,"Best":"6/43","5W":2,"Average":7.62,"Economy":3.0,"Strike Rate":15.23,"Balls":198,"Source":"Your sheet"},{"Season":2024,"Player":"Uffan","Play-Cricket name":"Uffan Salimi","Overs":56.0,"Maidens":null,"Runs":224,"Wickets":13,"Best":"4/25","5W":0,"Average":17.23,"Economy":4.0,"Strike Rate":25.85,"Balls":336,"Source":"Your sheet"},{"Season":2024,"Player":"Azaher","Play-Cricket name":"Azahar Sarwar","Overs":26.0,"Maidens":null,"Runs":128,"Wickets":10,"Best":"4/11","5W":0,"Average":12.8,"Economy":4.92,"Strike Rate":15.6,"Balls":156,"Source":"Your sheet"},{"Season":2024,"Player":"Ahmad","Play-Cricket name":"Ahmad Syed","Overs":48.0,"Maidens":null,"Runs":196,"Wickets":10,"Best":"3/25","5W":0,"Average":19.6,"Economy":4.08,"Strike Rate":28.8,"Balls":288,"Source":"Your sheet"},{"Season":2024,"Player":"Abdullah","Play-Cricket name":"Abdullah Syed","Overs":54.0,"Maidens":null,"Runs":226,"Wickets":10,"Best":"2/6","5W":0,"Average":22.6,"Economy":4.19,"Strike Rate":32.4,"Balls":324,"Source":"Your sheet"},{"Season":2024,"Player":"Pavan","Play-Cricket name":"Pratyaksh Patel","Overs":17.0,"Maidens":null,"Runs":86,"Wickets":9,"Best":"3/7","5W":0,"Average":9.56,"Economy":5.06,"Strike Rate":11.33,"Balls":102,"Source":"Your sheet"},{"Season":2024,"Player":"Zain","Play-Cricket name":"Zain Javed","Overs":21.0,"Maidens":null,"Runs":127,"Wickets":3,"Best":"1/6","5W":0,"Average":42.33,"Economy":6.05,"Strike Rate":42.0,"Balls":126,"Source":"Your sheet"},{"Season":2024,"Player":"Ali Yash","Play-Cricket name":"Ali Yashab","Overs":13.0,"Maidens":null,"Runs":89,"Wickets":1,"Best":"1/25","5W":0,"Average":89.0,"Economy":6.85,"Strike Rate":78.0,"Balls":78,"Source":"Your sheet"},{"Season":2023,"Player":"Ali Hashmat","Play-Cricket name":"Ali Hashmat","Overs":47.0,"Maidens":null,"Runs":182,"Wickets":23,"Best":"7/21","5W":1,"Average":7.91,"Economy":3.87,"Strike Rate":12.26,"Balls":282,"Source":"Your sheet"},{"Season":2023,"Player":"Zahid","Play-Cricket name":"Zahid Hussain","Overs":97.0,"Maidens":null,"Runs":410,"Wickets":22,"Best":"5/48","5W":1,"Average":18.64,"Economy":4.23,"Strike Rate":26.45,"Balls":582,"Source":"Your sheet"},{"Season":2023,"Player":"Uffan","Play-Cricket name":"Uffan Salimi","Overs":38.0,"Maidens":null,"Runs":191,"Wickets":16,"Best":"3/11","5W":0,"Average":11.94,"Economy":5.03,"Strike Rate":14.25,"Balls":228,"Source":"Your sheet"},{"Season":2023,"Player":"Ahmad","Play-Cricket name":"Ahmad Syed","Overs":70.0,"Maidens":null,"Runs":295,"Wickets":12,"Best":"3/27","5W":0,"Average":24.58,"Economy":4.21,"Strike Rate":35.0,"Balls":420,"Source":"Your sheet"},{"Season":2023,"Player":"Abdullah","Play-Cricket name":"Abdullah Syed","Overs":32.0,"Maidens":null,"Runs":138,"Wickets":8,"Best":"6/37","5W":1,"Average":17.25,"Economy":4.31,"Strike Rate":24.0,"Balls":192,"Source":"Your sheet"},{"Season":2023,"Player":"Zain","Play-Cricket name":"Zain Javed","Overs":26.3,"Maidens":null,"Runs":130,"Wickets":7,"Best":"3/49","5W":0,"Average":18.57,"Economy":4.91,"Strike Rate":22.71,"Balls":159,"Source":"Your sheet"},{"Season":2023,"Player":"Vinod","Play-Cricket name":"Vinod Kumar","Overs":37.0,"Maidens":null,"Runs":199,"Wickets":5,"Best":"2/38","5W":0,"Average":39.8,"Economy":5.38,"Strike Rate":44.4,"Balls":222,"Source":"Your sheet"},{"Season":2023,"Player":"Ramos","Play-Cricket name":"Ramuz Maqsood","Overs":17.1,"Maidens":null,"Runs":86,"Wickets":3,"Best":"2/26","5W":0,"Average":28.67,"Economy":5.01,"Strike Rate":34.33,"Balls":103,"Source":"Your sheet"},{"Season":2023,"Player":"Umar","Play-Cricket name":"Umar Aziz / Omar Aziz","Overs":7.0,"Maidens":null,"Runs":49,"Wickets":2,"Best":"2/49","5W":0,"Average":24.5,"Economy":7.0,"Strike Rate":21.0,"Balls":42,"Source":"Your sheet"},{"Season":2023,"Player":"Ali Yash","Play-Cricket name":"Ali Yashab","Overs":13.0,"Maidens":null,"Runs":62,"Wickets":2,"Best":"2/45","5W":0,"Average":31.0,"Economy":4.77,"Strike Rate":39.0,"Balls":78,"Source":"Your sheet"},{"Season":2022,"Player":"Zahid","Play-Cricket name":"Zahid Hussain","Overs":129.0,"Maidens":null,"Runs":531,"Wickets":33,"Best":"5/42","5W":1,"Average":16.09,"Economy":4.12,"Strike Rate":23.45,"Balls":774,"Source":"Your sheet"},{"Season":2022,"Player":"Ahmad","Play-Cricket name":"Ahmad Syed","Overs":106.0,"Maidens":null,"Runs":407,"Wickets":26,"Best":"6/15","5W":1,"Average":15.65,"Economy":3.84,"Strike Rate":24.46,"Balls":636,"Source":"Your sheet"},{"Season":2022,"Player":"Ali Hashmat","Play-Cricket name":"Ali Hashmat","Overs":100.0,"Maidens":null,"Runs":335,"Wickets":25,"Best":"4/21","5W":0,"Average":13.4,"Economy":3.35,"Strike Rate":24.0,"Balls":600,"Source":"Your sheet"},{"Season":2022,"Player":"Zain","Play-Cricket name":"Zain Javed","Overs":71.0,"Maidens":null,"Runs":448,"Wickets":21,"Best":"5/40","5W":1,"Average":21.33,"Economy":6.31,"Strike Rate":20.29,"Balls":426,"Source":"Your sheet"},{"Season":2022,"Player":"Umar","Play-Cricket name":"Umar Aziz / Omar Aziz","Overs":38.0,"Maidens":null,"Runs":154,"Wickets":13,"Best":"3/15","5W":0,"Average":11.85,"Economy":4.05,"Strike Rate":17.54,"Balls":228,"Source":"Your sheet"},{"Season":2022,"Player":"Ali Yash","Play-Cricket name":"Ali Yashab","Overs":30.0,"Maidens":null,"Runs":157,"Wickets":8,"Best":"3/26","5W":0,"Average":19.62,"Economy":5.23,"Strike Rate":22.5,"Balls":180,"Source":"Your sheet"},{"Season":2022,"Player":"Uffan","Play-Cricket name":"Uffan Salimi","Overs":20.0,"Maidens":null,"Runs":87,"Wickets":7,"Best":"3/33","5W":0,"Average":12.43,"Economy":4.35,"Strike Rate":17.14,"Balls":120,"Source":"Your sheet"}],"career":[{"Player":"Ali Yash","Play-Cricket name":"Ali Yashab","Seasons":5,"Inns":55,"Not Outs":5,"Runs":1589,"High Score":152,"Average":31.78,"100s":3,"50s":5,"Overs":113.3,"Runs Conceded":627,"Wickets":22,"Best":"3/26","Bowling Avg":28.5,"Economy":5.52,"Runs 2022":541,"Runs 2023":59,"Runs 2024":314,"Runs 2025":378,"Runs 2026":297,"Wkts 2022":8,"Wkts 2023":2,"Wkts 2024":1,"Wkts 2025":8,"Wkts 2026":3,"HS Not Out":1},{"Player":"Abbas","Play-Cricket name":"Mahammad Abbas Akhtar","Seasons":5,"Inns":69,"Not Outs":1,"Runs":1493,"High Score":69,"Average":21.96,"100s":0,"50s":8,"Overs":1.5,"Runs Conceded":19,"Wickets":0,"Best":"0/1","Bowling Avg":null,"Economy":10.36,"Runs 2022":474,"Runs 2023":338,"Runs 2024":194,"Runs 2025":171,"Runs 2026":316,"Wkts 2022":0,"Wkts 2023":0,"Wkts 2024":0,"Wkts 2025":0,"Wkts 2026":0,"HS Not Out":0},{"Player":"Uffan","Play-Cricket name":"Uffan Salimi","Seasons":5,"Inns":64,"Not Outs":12,"Runs":1397,"High Score":99,"Average":26.87,"100s":0,"50s":7,"Overs":190.1,"Runs Conceded":893,"Wickets":54,"Best":"4/25","Bowling Avg":16.54,"Economy":4.7,"Runs 2022":240,"Runs 2023":264,"Runs 2024":176,"Runs 2025":558,"Runs 2026":159,"Wkts 2022":7,"Wkts 2023":16,"Wkts 2024":13,"Wkts 2025":10,"Wkts 2026":8,"HS Not Out":0},{"Player":"Hamza","Play-Cricket name":"Syed Ali","Seasons":4,"Inns":41,"Not Outs":1,"Runs":1357,"High Score":210,"Average":33.92,"100s":2,"50s":7,"Overs":292.4,"Runs Conceded":1136,"Wickets":61,"Best":"6/53","Bowling Avg":18.62,"Economy":3.88,"Runs 2022":0,"Runs 2023":61,"Runs 2024":809,"Runs 2025":301,"Runs 2026":186,"Wkts 2022":0,"Wkts 2023":0,"Wkts 2024":22,"Wkts 2025":28,"Wkts 2026":11,"HS Not Out":0},{"Player":"Ramos","Play-Cricket name":"Ramuz Maqsood","Seasons":5,"Inns":54,"Not Outs":6,"Runs":1036,"High Score":110,"Average":21.58,"100s":1,"50s":3,"Overs":26.1,"Runs Conceded":138,"Wickets":3,"Best":"2/26","Bowling Avg":46.0,"Economy":5.27,"Runs 2022":210,"Runs 2023":343,"Runs 2024":197,"Runs 2025":214,"Runs 2026":72,"Wkts 2022":0,"Wkts 2023":3,"Wkts 2024":0,"Wkts 2025":0,"Wkts 2026":0,"HS Not Out":0},{"Player":"Umar","Play-Cricket name":"Umar Aziz / Omar Aziz","Seasons":5,"Inns":39,"Not Outs":7,"Runs":966,"High Score":119,"Average":30.19,"100s":1,"50s":4,"Overs":48.0,"Runs Conceded":243,"Wickets":15,"Best":"3/15","Bowling Avg":16.2,"Economy":5.06,"Runs 2022":302,"Runs 2023":152,"Runs 2024":88,"Runs 2025":221,"Runs 2026":203,"Wkts 2022":13,"Wkts 2023":2,"Wkts 2024":0,"Wkts 2025":0,"Wkts 2026":0,"HS Not Out":0},{"Player":"Habibullah","Play-Cricket name":"Habibullah Syed","Seasons":4,"Inns":28,"Not Outs":1,"Runs":438,"High Score":62,"Average":16.22,"100s":0,"50s":1,"Overs":0.0,"Runs Conceded":0,"Wickets":0,"Best":"","Bowling Avg":null,"Economy":null,"Runs 2022":124,"Runs 2023":0,"Runs 2024":131,"Runs 2025":120,"Runs 2026":63,"Wkts 2022":0,"Wkts 2023":0,"Wkts 2024":0,"Wkts 2025":0,"Wkts 2026":0,"HS Not Out":0},{"Player":"Abdullah","Play-Cricket name":"Abdullah Syed","Seasons":5,"Inns":54,"Not Outs":9,"Runs":432,"High Score":33,"Average":9.6,"100s":0,"50s":0,"Overs":172.1,"Runs Conceded":760,"Wickets":35,"Best":"6/37","Bowling Avg":21.71,"Economy":4.41,"Runs 2022":79,"Runs 2023":48,"Runs 2024":86,"Runs 2025":161,"Runs 2026":58,"Wkts 2022":0,"Wkts 2023":8,"Wkts 2024":10,"Wkts 2025":1,"Wkts 2026":16,"HS Not Out":0},{"Player":"Zahid","Play-Cricket name":"Zahid Hussain","Seasons":5,"Inns":46,"Not Outs":5,"Runs":407,"High Score":27,"Average":9.93,"100s":0,"50s":0,"Overs":460.5,"Runs Conceded":2045,"Wickets":113,"Best":"7/37","Bowling Avg":18.1,"Economy":4.44,"Runs 2022":183,"Runs 2023":70,"Runs 2024":55,"Runs 2025":34,"Runs 2026":65,"Wkts 2022":33,"Wkts 2023":22,"Wkts 2024":19,"Wkts 2025":16,"Wkts 2026":23,"HS Not Out":0},{"Player":"Pavan","Play-Cricket name":"Pratyaksh Patel","Seasons":3,"Inns":15,"Not Outs":0,"Runs":337,"High Score":56,"Average":22.47,"100s":0,"50s":1,"Overs":17.0,"Runs Conceded":86,"Wickets":9,"Best":"3/7","Bowling Avg":9.56,"Economy":5.06,"Runs 2022":0,"Runs 2023":183,"Runs 2024":151,"Runs 2025":3,"Runs 2026":0,"Wkts 2022":0,"Wkts 2023":0,"Wkts 2024":9,"Wkts 2025":0,"Wkts 2026":0,"HS Not Out":0},{"Player":"Ali Hashmat","Play-Cricket name":"Ali Hashmat","Seasons":5,"Inns":28,"Not Outs":4,"Runs":249,"High Score":35,"Average":10.38,"100s":0,"50s":0,"Overs":321.1,"Runs Conceded":1200,"Wickets":92,"Best":"7/21","Bowling Avg":13.04,"Economy":3.74,"Runs 2022":44,"Runs 2023":56,"Runs 2024":0,"Runs 2025":124,"Runs 2026":25,"Wkts 2022":25,"Wkts 2023":23,"Wkts 2024":13,"Wkts 2025":27,"Wkts 2026":4,"HS Not Out":0},{"Player":"Vinod","Play-Cricket name":"Vinod Kumar","Seasons":2,"Inns":14,"Not Outs":2,"Runs":220,"High Score":44,"Average":18.33,"100s":0,"50s":0,"Overs":37.0,"Runs Conceded":199,"Wickets":5,"Best":"2/38","Bowling Avg":39.8,"Economy":5.38,"Runs 2022":0,"Runs 2023":137,"Runs 2024":83,"Runs 2025":0,"Runs 2026":0,"Wkts 2022":0,"Wkts 2023":5,"Wkts 2024":0,"Wkts 2025":0,"Wkts 2026":0,"HS Not Out":0},{"Player":"Mohsin","Play-Cricket name":"Moshin Khan","Seasons":3,"Inns":15,"Not Outs":0,"Runs":205,"High Score":48,"Average":13.67,"100s":0,"50s":0,"Overs":0.0,"Runs Conceded":0,"Wickets":0,"Best":"","Bowling Avg":null,"Economy":null,"Runs 2022":113,"Runs 2023":66,"Runs 2024":26,"Runs 2025":0,"Runs 2026":0,"Wkts 2022":0,"Wkts 2023":0,"Wkts 2024":0,"Wkts 2025":0,"Wkts 2026":0,"HS Not Out":0},{"Player":"Rahul Chauhan","Play-Cricket name":"Rahul Chauhan","Seasons":1,"Inns":10,"Not Outs":1,"Runs":183,"High Score":36,"Average":20.33,"100s":0,"50s":0,"Overs":53.0,"Runs Conceded":222,"Wickets":9,"Best":"2/11","Bowling Avg":24.67,"Economy":4.19,"Runs 2022":0,"Runs 2023":0,"Runs 2024":0,"Runs 2025":0,"Runs 2026":183,"Wkts 2022":0,"Wkts 2023":0,"Wkts 2024":0,"Wkts 2025":0,"Wkts 2026":9,"HS Not Out":0},{"Player":"Lovepreet Singh","Play-Cricket name":"Lovepreet Singh","Seasons":1,"Inns":4,"Not Outs":0,"Runs":169,"High Score":129,"Average":42.25,"100s":1,"50s":0,"Overs":0.0,"Runs Conceded":0,"Wickets":0,"Best":"","Bowling Avg":null,"Economy":null,"Runs 2022":0,"Runs 2023":0,"Runs 2024":0,"Runs 2025":0,"Runs 2026":169,"Wkts 2022":0,"Wkts 2023":0,"Wkts 2024":0,"Wkts 2025":0,"Wkts 2026":0,"HS Not Out":0},{"Player":"Azaher","Play-Cricket name":"Azahar Sarwar","Seasons":3,"Inns":22,"Not Outs":3,"Runs":168,"High Score":24,"Average":8.84,"100s":0,"50s":0,"Overs":26.0,"Runs Conceded":128,"Wickets":10,"Best":"4/11","Bowling Avg":12.8,"Economy":4.92,"Runs 2022":86,"Runs 2023":31,"Runs 2024":51,"Runs 2025":0,"Runs 2026":0,"Wkts 2022":0,"Wkts 2023":0,"Wkts 2024":10,"Wkts 2025":0,"Wkts 2026":0,"HS Not Out":0},{"Player":"Jashandeep Singh","Play-Cricket name":"Jashandeep Singh","Seasons":1,"Inns":7,"Not Outs":0,"Runs":156,"High Score":51,"Average":22.29,"100s":0,"50s":1,"Overs":4.1,"Runs Conceded":31,"Wickets":0,"Best":"0/13","Bowling Avg":null,"Economy":7.44,"Runs 2022":0,"Runs 2023":0,"Runs 2024":0,"Runs 2025":0,"Runs 2026":156,"Wkts 2022":0,"Wkts 2023":0,"Wkts 2024":0,"Wkts 2025":0,"Wkts 2026":0,"HS Not Out":0},{"Player":"Ahmad","Play-Cricket name":"Ahmad Syed","Seasons":5,"Inns":35,"Not Outs":14,"Runs":136,"High Score":23,"Average":6.48,"100s":0,"50s":0,"Overs":341.1,"Runs Conceded":1472,"Wickets":74,"Best":"6/15","Bowling Avg":19.89,"Economy":4.31,"Runs 2022":76,"Runs 2023":13,"Runs 2024":14,"Runs 2025":10,"Runs 2026":23,"Wkts 2022":26,"Wkts 2023":12,"Wkts 2024":10,"Wkts 2025":11,"Wkts 2026":15,"HS Not Out":0},{"Player":"Faisal Jalaludin","Play-Cricket name":"Faisal Jalaludin","Seasons":1,"Inns":2,"Not Outs":0,"Runs":92,"High Score":90,"Average":46.0,"100s":0,"50s":1,"Overs":0.0,"Runs Conceded":0,"Wickets":0,"Best":"","Bowling Avg":null,"Economy":null,"Runs 2022":0,"Runs 2023":0,"Runs 2024":0,"Runs 2025":92,"Runs 2026":0,"Wkts 2022":0,"Wkts 2023":0,"Wkts 2024":0,"Wkts 2025":0,"Wkts 2026":0,"HS Not Out":0},{"Player":"Usman","Play-Cricket name":"Usman Khan","Seasons":3,"Inns":19,"Not Outs":0,"Runs":82,"High Score":28,"Average":4.32,"100s":0,"50s":0,"Overs":2.0,"Runs Conceded":11,"Wickets":0,"Best":"0/3","Bowling Avg":null,"Economy":5.5,"Runs 2022":0,"Runs 2023":0,"Runs 2024":8,"Runs 2025":28,"Runs 2026":46,"Wkts 2022":0,"Wkts 2023":0,"Wkts 2024":0,"Wkts 2025":0,"Wkts 2026":0,"HS Not Out":0},{"Player":"Mayank Kumar","Play-Cricket name":"Mayank Kumar","Seasons":1,"Inns":4,"Not Outs":1,"Runs":71,"High Score":39,"Average":23.67,"100s":0,"50s":0,"Overs":13.0,"Runs Conceded":82,"Wickets":0,"Best":"0/10","Bowling Avg":null,"Economy":6.31,"Runs 2022":0,"Runs 2023":0,"Runs 2024":0,"Runs 2025":0,"Runs 2026":71,"Wkts 2022":0,"Wkts 2023":0,"Wkts 2024":0,"Wkts 2025":0,"Wkts 2026":0,"HS Not Out":1},{"Player":"Prabhdit Singh","Play-Cricket name":"Prabhdit Singh","Seasons":1,"Inns":2,"Not Outs":0,"Runs":41,"High Score":26,"Average":20.5,"100s":0,"50s":0,"Overs":3.0,"Runs Conceded":33,"Wickets":0,"Best":"0/7","Bowling Avg":null,"Economy":11.0,"Runs 2022":0,"Runs 2023":0,"Runs 2024":0,"Runs 2025":0,"Runs 2026":41,"Wkts 2022":0,"Wkts 2023":0,"Wkts 2024":0,"Wkts 2025":0,"Wkts 2026":0,"HS Not Out":0},{"Player":"Ishan Sutar","Play-Cricket name":"Ishan Sutar","Seasons":1,"Inns":5,"Not Outs":1,"Runs":35,"High Score":15,"Average":8.75,"100s":0,"50s":0,"Overs":26.1,"Runs Conceded":113,"Wickets":5,"Best":"2/22","Bowling Avg":22.6,"Economy":4.32,"Runs 2022":0,"Runs 2023":0,"Runs 2024":0,"Runs 2025":0,"Runs 2026":35,"Wkts 2022":0,"Wkts 2023":0,"Wkts 2024":0,"Wkts 2025":0,"Wkts 2026":5,"HS Not Out":0},{"Player":"Faz","Play-Cricket name":"Farrakh Chaudhry","Seasons":4,"Inns":11,"Not Outs":2,"Runs":31,"High Score":14,"Average":3.44,"100s":0,"50s":0,"Overs":5.0,"Runs Conceded":30,"Wickets":1,"Best":"1/30","Bowling Avg":30.0,"Economy":6.0,"Runs 2022":23,"Runs 2023":8,"Runs 2024":0,"Runs 2025":0,"Runs 2026":0,"Wkts 2022":0,"Wkts 2023":0,"Wkts 2024":0,"Wkts 2025":0,"Wkts 2026":1,"HS Not Out":0},{"Player":"Faisal Shahzad","Play-Cricket name":"Faisal Shahzad","Seasons":1,"Inns":2,"Not Outs":0,"Runs":26,"High Score":26,"Average":13.0,"100s":0,"50s":0,"Overs":11.0,"Runs Conceded":53,"Wickets":1,"Best":"1/37","Bowling Avg":53.0,"Economy":4.82,"Runs 2022":0,"Runs 2023":0,"Runs 2024":0,"Runs 2025":26,"Runs 2026":0,"Wkts 2022":0,"Wkts 2023":0,"Wkts 2024":0,"Wkts 2025":1,"Wkts 2026":0,"HS Not Out":0},{"Player":"Sayed Bukhari","Play-Cricket name":"Sayed Bukhari","Seasons":1,"Inns":1,"Not Outs":0,"Runs":23,"High Score":23,"Average":23.0,"100s":0,"50s":0,"Overs":0.1,"Runs Conceded":3,"Wickets":0,"Best":"0/3","Bowling Avg":null,"Economy":18.0,"Runs 2022":0,"Runs 2023":0,"Runs 2024":0,"Runs 2025":0,"Runs 2026":23,"Wkts 2022":0,"Wkts 2023":0,"Wkts 2024":0,"Wkts 2025":0,"Wkts 2026":0,"HS Not Out":0},{"Player":"Asim","Play-Cricket name":"(no play-cricket match)","Seasons":1,"Inns":3,"Not Outs":0,"Runs":22,"High Score":13,"Average":7.33,"100s":0,"50s":0,"Overs":0.0,"Runs Conceded":0,"Wickets":0,"Best":"","Bowling Avg":null,"Economy":null,"Runs 2022":0,"Runs 2023":0,"Runs 2024":22,"Runs 2025":0,"Runs 2026":0,"Wkts 2022":0,"Wkts 2023":0,"Wkts 2024":0,"Wkts 2025":0,"Wkts 2026":0,"HS Not Out":0},{"Player":"Zain","Play-Cricket name":"Zain Javed","Seasons":5,"Inns":32,"Not Outs":10,"Runs":20,"High Score":5,"Average":0.91,"100s":0,"50s":0,"Overs":170.5,"Runs Conceded":1040,"Wickets":44,"Best":"5/40","Bowling Avg":23.64,"Economy":6.09,"Runs 2022":3,"Runs 2023":0,"Runs 2024":2,"Runs 2025":3,"Runs 2026":12,"Wkts 2022":21,"Wkts 2023":7,"Wkts 2024":3,"Wkts 2025":11,"Wkts 2026":2,"HS Not Out":0},{"Player":"Yuvraj Singh","Play-Cricket name":"Yuvraj Singh","Seasons":1,"Inns":3,"Not Outs":0,"Runs":16,"High Score":9,"Average":5.33,"100s":0,"50s":0,"Overs":3.0,"Runs Conceded":22,"Wickets":0,"Best":"0/22","Bowling Avg":null,"Economy":7.33,"Runs 2022":0,"Runs 2023":0,"Runs 2024":0,"Runs 2025":0,"Runs 2026":16,"Wkts 2022":0,"Wkts 2023":0,"Wkts 2024":0,"Wkts 2025":0,"Wkts 2026":0,"HS Not Out":0},{"Player":"Diago Dsouza","Play-Cricket name":"Diago Dsouza","Seasons":1,"Inns":1,"Not Outs":0,"Runs":15,"High Score":15,"Average":15.0,"100s":0,"50s":0,"Overs":4.0,"Runs Conceded":17,"Wickets":1,"Best":"1/17","Bowling Avg":17.0,"Economy":4.25,"Runs 2022":0,"Runs 2023":0,"Runs 2024":0,"Runs 2025":0,"Runs 2026":15,"Wkts 2022":0,"Wkts 2023":0,"Wkts 2024":0,"Wkts 2025":0,"Wkts 2026":1,"HS Not Out":0},{"Player":"Mohammad Adeel","Play-Cricket name":"Mohammad Adeel","Seasons":1,"Inns":1,"Not Outs":0,"Runs":8,"High Score":8,"Average":8.0,"100s":0,"50s":0,"Overs":0.3,"Runs Conceded":4,"Wickets":0,"Best":"0/4","Bowling Avg":null,"Economy":8.0,"Runs 2022":0,"Runs 2023":0,"Runs 2024":0,"Runs 2025":8,"Runs 2026":0,"Wkts 2022":0,"Wkts 2023":0,"Wkts 2024":0,"Wkts 2025":0,"Wkts 2026":0,"HS Not Out":0},{"Player":"Aarush Garg","Play-Cricket name":"Aarush Garg","Seasons":1,"Inns":1,"Not Outs":0,"Runs":6,"High Score":6,"Average":6.0,"100s":0,"50s":0,"Overs":2.0,"Runs Conceded":12,"Wickets":1,"Best":"1/12","Bowling Avg":12.0,"Economy":6.0,"Runs 2022":0,"Runs 2023":0,"Runs 2024":0,"Runs 2025":0,"Runs 2026":6,"Wkts 2022":0,"Wkts 2023":0,"Wkts 2024":0,"Wkts 2025":0,"Wkts 2026":1,"HS Not Out":0},{"Player":"Abdul Qadir Syed","Play-Cricket name":"Abdul Qadir Syed","Seasons":1,"Inns":1,"Not Outs":0,"Runs":3,"High Score":3,"Average":3.0,"100s":0,"50s":0,"Overs":2.0,"Runs Conceded":11,"Wickets":0,"Best":"0/11","Bowling Avg":null,"Economy":5.5,"Runs 2022":0,"Runs 2023":0,"Runs 2024":0,"Runs 2025":0,"Runs 2026":3,"Wkts 2022":0,"Wkts 2023":0,"Wkts 2024":0,"Wkts 2025":0,"Wkts 2026":0,"HS Not Out":0},{"Player":"Hamza Iqbal","Play-Cricket name":"Hamza Iqbal","Seasons":1,"Inns":3,"Not Outs":0,"Runs":1,"High Score":1,"Average":0.33,"100s":0,"50s":0,"Overs":9.1,"Runs Conceded":66,"Wickets":3,"Best":"3/37","Bowling Avg":22.0,"Economy":7.2,"Runs 2022":0,"Runs 2023":0,"Runs 2024":0,"Runs 2025":1,"Runs 2026":0,"Wkts 2022":0,"Wkts 2023":0,"Wkts 2024":0,"Wkts 2025":3,"Wkts 2026":0,"HS Not Out":0},{"Player":"Amrit Singh","Play-Cricket name":"Amrit Singh","Seasons":1,"Inns":2,"Not Outs":0,"Runs":1,"High Score":1,"Average":0.5,"100s":0,"50s":0,"Overs":0.0,"Runs Conceded":0,"Wickets":0,"Best":"","Bowling Avg":null,"Economy":null,"Runs 2022":0,"Runs 2023":0,"Runs 2024":0,"Runs 2025":0,"Runs 2026":1,"Wkts 2022":0,"Wkts 2023":0,"Wkts 2024":0,"Wkts 2025":0,"Wkts 2026":0,"HS Not Out":0},{"Player":"Easa Aziz","Play-Cricket name":"Easa Aziz","Seasons":1,"Inns":1,"Not Outs":1,"Runs":0,"High Score":0,"Average":null,"100s":0,"50s":0,"Overs":0.0,"Runs Conceded":0,"Wickets":0,"Best":"","Bowling Avg":null,"Economy":null,"Runs 2022":0,"Runs 2023":0,"Runs 2024":0,"Runs 2025":0,"Runs 2026":0,"Wkts 2022":0,"Wkts 2023":0,"Wkts 2024":0,"Wkts 2025":0,"Wkts 2026":0,"HS Not Out":1}],"updated":"10 October 2026"}</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.8.5/d3.min.js"></script>
+<script>
+(function () {
+  'use strict';
+  const D = JSON.parse(document.getElementById('data').textContent);
+  const BAT = D.batting, BOWL = D.bowling, CAR = D.career;
+  const PINK = '#FF0072', LIME = '#66FF00', YELLOW = '#FFED29', CYAN = '#00F0FF', WHITE = '#FFFFFF', INK = '#1E1E7B', VIOLET = '#361E7B';
+  const SERIES = [PINK, CYAN, LIME, YELLOW, WHITE];
+  const MUTED_FILL = 'rgba(255,255,255,0.22)';
+  const SEASONS = Array.from(new Set(BAT.map((r) => r.Season).concat(BOWL.map((r) => r.Season)))).sort((a, b) => a - b);
+  const SPAN = SEASONS[0] + '–' + SEASONS[SEASONS.length - 1];
+  const PLAYERS = CAR.map((r) => r.Player).sort((a, b) => a.localeCompare(b));
+  document.getElementById('updated').textContent = D.updated;
+
+  const fInt = d3.format(',');
+  const f2 = d3.format('.2f');
+  const f1 = d3.format('.1f');
+  const fPct = d3.format('.0%');
+  const fOv = (v) => (v === null || v === undefined ? '' : Number(v).toFixed(1));
+  const sum = (rows, k) => rows.reduce((t, r) => t + (r[k] || 0), 0);
+  const bestKey = (b) => { if (!b) return null; const p = String(b).split('/'); return Number(p[0]) * 1000 - Number(p[1]); };
+  const oversToBalls = (o) => (o ? Math.floor(o) * 6 + Math.round((o % 1) * 10) : 0);
+  const ballsToOvers = (b) => Math.floor(b / 6) + (b % 6) / 10;
+  const esc = (s) => String(s);
+
+  /* ---------- state ---------- */
+  const topOther = CAR.slice().sort((a, b) => b.Runs - a.Runs).find((r) => r.Player !== 'Uffan');
+  const state = {
+    season: 'all', player: 'all',
+    a: PLAYERS.indexOf('Uffan') >= 0 ? 'Uffan' : PLAYERS[0],
+    b: topOther ? topOther.Player : PLAYERS[1],
+    heat: 'runs', share: 'runs', table: 'batting', q: '',
+    sorts: { batting: { k: 'Runs', dir: -1 }, bowling: { k: 'Wickets', dir: -1 }, career: { k: 'Runs', dir: -1 } },
+  };
+  const set = (patch) => { Object.assign(state, patch); render(); };
+  const pick = (name) => set({ player: state.player === name ? 'all' : name });
+  const S = () => state.season;
+  const inScope = (r) => S() === 'all' || r.Season === S();
+  const scopeText = () => (S() === 'all' ? 'across ' + SPAN : 'in ' + S());
+
+  /* ---------- derived numbers ---------- */
+  function teamTotals(season) {
+    const b = BAT.filter((r) => season === 'all' || r.Season === season);
+    const w = BOWL.filter((r) => season === 'all' || r.Season === season);
+    return { runs: sum(b, 'Runs'), fifties: sum(b, '50s'), hundreds: sum(b, '100s'), wkts: sum(w, 'Wickets'), fivew: sum(w, '5W') };
+  }
+  function profile(name, season) {
+    const b = BAT.filter((r) => r.Player === name && (season === 'all' || r.Season === season));
+    const w = BOWL.filter((r) => r.Player === name && (season === 'all' || r.Season === season));
+    const inns = sum(b, 'Inns'), no = sum(b, 'Not Outs'), runs = sum(b, 'Runs');
+    let hs = null, hsNo = 0;
+    b.forEach((r) => { if (r['High Score'] !== null && (hs === null || r['High Score'] > hs || (r['High Score'] === hs && r['HS Not Out']))) { hs = r['High Score']; hsNo = r['HS Not Out']; } });
+    let srRuns = 0, srBalls = 0;
+    b.forEach((r) => { if (r['Strike Rate'] !== null && r['Balls Faced']) { srRuns += (r['Strike Rate'] * r['Balls Faced']) / 100; srBalls += r['Balls Faced']; } });
+    const balls = w.reduce((t, r) => t + oversToBalls(r.Overs), 0);
+    const wkts = sum(w, 'Wickets'), conc = sum(w, 'Runs');
+    let best = null;
+    w.forEach((r) => { if (r.Best && (best === null || bestKey(r.Best) > bestKey(best))) best = r.Best; });
+    return {
+      name: name, seasons: new Set(b.map((r) => r.Season).concat(w.map((r) => r.Season))).size,
+      inns: inns, no: no, runs: runs, avg: inns - no > 0 ? runs / (inns - no) : null, hs: hs, hsNo: hsNo,
+      fifties: sum(b, '50s'), hundreds: sum(b, '100s'), sr: srBalls > 0 ? (srRuns / srBalls) * 100 : null,
+      balls: balls, overs: ballsToOvers(balls), wkts: wkts, conc: conc, bowlAvg: wkts > 0 ? conc / wkts : null,
+      econ: balls > 0 ? conc / (balls / 6) : null, best: best, fivew: sum(w, '5W'),
+      batted: b.length > 0, bowled: w.length > 0,
+    };
+  }
+
+  /* ---------- small DOM helpers ---------- */
+  function el(tag, attrs, kids) {
+    const n = document.createElement(tag);
+    if (attrs) Object.keys(attrs).forEach((k) => { if (k === 'class') n.className = attrs[k]; else if (k === 'text') n.textContent = attrs[k]; else n.setAttribute(k, attrs[k]); });
+    (kids || []).forEach((c) => n.append(c));
+    return n;
+  }
+  function richText(node, parts) {
+    node.replaceChildren(...parts.map((p) => (typeof p === 'string' ? document.createTextNode(p) : el('b', { class: p.no ? 'no' : '', text: p.b }))));
+  }
+  function tipper(box) {
+    const tip = el('div', { class: 'tip' }); tip.hidden = true; box.append(tip);
+    return {
+      show(ev, lines) {
+        tip.replaceChildren(...lines.map((l, i) => el('div', { class: i === 0 ? 'k' : '', text: l })));
+        tip.hidden = false;
+        const r = box.getBoundingClientRect();
+        let x = ev.clientX - r.left + 14, y = ev.clientY - r.top + 14;
+        const tw = tip.offsetWidth, th = tip.offsetHeight;
+        if (x + tw > r.width) x = ev.clientX - r.left - tw - 14;
+        if (x < 0) x = 0;
+        if (y + th > r.height) y = Math.max(0, ev.clientY - r.top - th - 14);
+        tip.style.left = x + 'px'; tip.style.top = y + 'px';
+      },
+      hide() { tip.hidden = true; },
+    };
+  }
+  function svgIn(box, W, H, label) {
+    return d3.select(box).append('svg').attr('viewBox', '0 0 ' + W + ' ' + H).attr('role', 'img').attr('aria-label', label);
+  }
+  function textW(svg, strings, cls) {
+    const g = svg.append('g'); let w = 0;
+    strings.forEach((s) => { const t = g.append('text').attr('class', cls || null).text(s).node(); w = Math.max(w, t.getComputedTextLength()); });
+    g.remove(); return w;
+  }
+  const strip = (g) => g.attr('font-size', null).attr('font-family', null).attr('class', 'tick');
+  const message = (box, text) => box.append(el('div', { class: 'msg', text: text }));
+  const widthOf = (box) => Math.max(280, Math.floor(box.clientWidth));
+
+  /* ---------- filters ---------- */
+  const pills = document.getElementById('season-pills');
+  const pselect = document.getElementById('player-select');
+  const aSel = document.getElementById('a-select'), bSel = document.getElementById('b-select');
+  pselect.replaceChildren(new Option('All players', 'all'), ...PLAYERS.map((p) => new Option(p, p)));
+  aSel.replaceChildren(...PLAYERS.map((p) => new Option(p, p)));
+  bSel.replaceChildren(...PLAYERS.map((p) => new Option(p, p)));
+  pselect.addEventListener('change', () => set({ player: pselect.value }));
+  aSel.addEventListener('change', () => set({ a: aSel.value }));
+  bSel.addEventListener('change', () => set({ b: bSel.value }));
+  document.getElementById('clear').addEventListener('click', () => set({ season: 'all', player: 'all' }));
+  const toggle = (ids, key, values) => ids.forEach((id, i) => document.getElementById(id).addEventListener('click', () => set({ [key]: values[i] })));
+  toggle(['heat-runs', 'heat-wkts'], 'heat', ['runs', 'wkts']);
+  toggle(['share-runs', 'share-wkts'], 'share', ['runs', 'wkts']);
+  toggle(['tab-batting', 'tab-bowling', 'tab-career'], 'table', ['batting', 'bowling', 'career']);
+  document.getElementById('search').addEventListener('input', (e) => { state.q = e.target.value; renderTable(); });
+  const press = (id, on) => document.getElementById(id).setAttribute('aria-pressed', String(on));
+
+  function renderFilters() {
+    pills.replaceChildren(...['all'].concat(SEASONS).map((s) => {
+      const b = el('button', { class: 'pill', type: 'button', text: s === 'all' ? 'All seasons' : String(s), 'aria-pressed': String(s === S()) });
+      b.addEventListener('click', () => set({ season: s }));
+      return b;
+    }));
+    pselect.value = state.player;
+    document.getElementById('clear').hidden = S() === 'all' && state.player === 'all';
+    press('heat-runs', state.heat === 'runs'); press('heat-wkts', state.heat === 'wkts');
+    press('share-runs', state.share === 'runs'); press('share-wkts', state.share === 'wkts');
+    ['batting', 'bowling', 'career'].forEach((t) => press('tab-' + t, state.table === t));
+  }
+
+  /* ---------- tiles + takeaway ---------- */
+  function tile(n, label, value, sub, glow, notOut) {
+    const t = document.getElementById('tile-' + n);
+    t.style.setProperty('--glow', glow);
+    t.querySelector('.tile-label').textContent = label;
+    const v = t.querySelector('.tile-value'); v.textContent = value; v.classList.toggle('no', !!notOut);
+    richText(t.querySelector('.tile-sub'), sub);
+  }
+  function renderTop() {
+    const season = S(), P = state.player, take = document.getElementById('takeaway');
+    if (P === 'all') {
+      const T = teamTotals(season);
+      const profs = PLAYERS.map((p) => profile(p, season));
+      const tb = profs.slice().sort((a, b) => b.runs - a.runs)[0];
+      const tw = profs.slice().sort((a, b) => b.wkts - a.wkts || (a.bowlAvg || 999) - (b.bowlAvg || 999))[0];
+      const hsRow = BAT.filter(inScope).sort((a, b) => b['High Score'] - a['High Score'] || b['HS Not Out'] - a['HS Not Out'])[0];
+      richText(take, [season === 'all' ? 'Across ' + SPAN + ', ' : 'In ' + season + ', ', { b: tb.name }, ' scored the most runs (' + fInt(tb.runs) + ') and ', { b: tw.name }, ' took the most wickets (' + fInt(tw.wkts) + '). The team made ', { b: fInt(T.runs) }, ' runs and took ', { b: fInt(T.wkts) }, ' wickets.']);
+      tile(1, 'Team runs', fInt(T.runs), [{ b: fInt(T.fifties) }, ' fifties · ', { b: fInt(T.hundreds) }, ' hundreds'], PINK);
+      tile(2, 'Team wickets', fInt(T.wkts), [{ b: fInt(T.fivew) }, ' five-wicket hauls'], LIME);
+      tile(3, 'Top run-scorer', fInt(tb.runs), [{ b: tb.name }, tb.avg !== null ? ' · average ' + f2(tb.avg) : ''], CYAN);
+      tile(4, 'Top wicket-taker', fInt(tw.wkts), [{ b: tw.name }, tw.best ? ' · best ' + tw.best : ''], YELLOW);
+      tile(5, 'Highest score', fInt(hsRow['High Score']), [{ b: hsRow.Player }, season === 'all' ? ' in ' + hsRow.Season : ''], WHITE, hsRow['HS Not Out'] === 1);
+    } else {
+      const p = profile(P, season);
+      const parts = [{ b: P }];
+      if (p.batted) parts.push(' scored ', { b: fInt(p.runs) }, ' runs ' + scopeText() + (p.avg !== null ? ' at an average of ' + f2(p.avg) : ''));
+      else parts.push(" didn't bat " + scopeText());
+      if (p.bowled && p.wkts > 0) parts.push(p.batted ? ', and took ' : ', but took ', { b: fInt(p.wkts) }, ' wickets.');
+      else parts.push('.');
+      richText(take, parts);
+      tile(1, 'Runs', p.batted ? fInt(p.runs) : '–', p.batted ? [{ b: fInt(p.inns) }, ' innings · ', { b: fInt(p.no) }, ' not out'] : ["Didn't bat " + scopeText()], PINK);
+      tile(2, 'Batting average', p.avg !== null ? f2(p.avg) : '–', p.sr !== null ? ['Strike rate ', { b: f2(p.sr) }] : [p.batted ? 'Strike rate not recorded' : ''], CYAN);
+      tile(3, 'High score', p.hs !== null ? fInt(p.hs) : '–', p.batted ? [{ b: fInt(p.fifties) }, ' fifties · ', { b: fInt(p.hundreds) }, ' hundreds'] : [], WHITE, p.hsNo === 1);
+      tile(4, 'Wickets', p.bowled ? fInt(p.wkts) : '–', p.bowled ? [{ b: fOv(p.overs) }, ' overs'] : ["Didn't bowl " + scopeText()], LIME);
+      tile(5, 'Best bowling', p.best || '–', p.bowlAvg !== null ? ['Average ', { b: f2(p.bowlAvg) }, ' · economy ', { b: f2(p.econ) }] : [p.econ !== null ? 'Economy ' + f2(p.econ) : ''], YELLOW);
+    }
+  }
+
+  /* ---------- horizontal leader bars ---------- */
+  function hbars(box, items, o) {
+    box.replaceChildren();
+    if (!items.length) { message(box, o.empty); return; }
+    const W = widthOf(box), rowH = 32, barH = 16;
+    let y = 2; items.forEach((d) => { if (d.gap) y += 16; d.y = y; y += rowH; });
+    const H = y + 4;
+    const svg = svgIn(box, W, H, o.aria);
+    const nameW = Math.min(W * 0.36, textW(svg, items.map((d) => d.name)));
+    const valW = textW(svg, items.map((d) => d.label), 'big');
+    const left = nameW + 12;
+    const x = d3.scaleLinear([0, d3.max(items, (d) => d.value) || 1], [0, Math.max(40, W - left - valW - 14)]);
+    const anySel = items.some((d) => d.sel);
+    const tip = tipper(box);
+    const g = svg.append('g').attr('transform', 'translate(' + left + ',0)');
+    if (items.some((d) => d.gap)) {
+      const gy = items.find((d) => d.gap).y - 8;
+      g.append('line').attr('x1', -left).attr('x2', W - left).attr('y1', gy).attr('y2', gy).style('stroke', 'rgba(255,255,255,.25)').style('stroke-dasharray', '3 4');
+    }
+    const row = g.selectAll('g.row').data(items).join('g').attr('class', 'row').attr('transform', (d) => 'translate(0,' + d.y + ')');
+    row.append('rect').attr('x', -left).attr('width', W).attr('height', rowH).style('fill', 'transparent');
+    row.append('text').attr('class', (d) => 'name' + (d.sel ? ' strong' : '')).attr('x', -10).attr('y', rowH / 2).attr('dy', '0.35em').attr('text-anchor', 'end').text((d) => d.name);
+    row.append('rect').attr('class', 'gbar').attr('y', (rowH - barH) / 2).attr('height', barH).attr('rx', barH / 2)
+      .attr('width', (d) => Math.max(4, x(d.value)))
+      .style('fill', (d) => (anySel && !d.sel ? MUTED_FILL : o.color))
+      .style('filter', (d) => (!anySel || d.sel ? 'drop-shadow(0 0 6px ' + o.color + '88)' : null))
+      .style('animation-delay', (d, i) => i * 35 + 'ms');
+    row.append('text').attr('class', 'big').attr('x', (d) => Math.max(4, x(d.value)) + 8).attr('y', rowH / 2).attr('dy', '0.36em')
+      .style('fill', (d) => (anySel && !d.sel ? 'rgba(255,255,255,.6)' : o.color)).text((d) => d.label);
+    row.on('click', (ev, d) => pick(d.name)).on('pointermove', (ev, d) => tip.show(ev, d.tip)).on('pointerleave', () => tip.hide());
+  }
+  function renderLeaders() {
+    const season = S(), P = state.player;
+    const profs = PLAYERS.map((p) => profile(p, season));
+    const build = (key, mk) => {
+      const sorted = profs.filter((p) => p[key] > 0).sort((a, b) => b[key] - a[key]);
+      const items = sorted.slice(0, 10).map(mk);
+      if (P !== 'all' && !items.some((d) => d.name === P)) { const p = sorted.find((x) => x.name === P); if (p) { const it = mk(p); it.gap = true; items.push(it); } }
+      items.forEach((d) => { d.sel = d.name === P; });
+      return items;
+    };
+    hbars(document.getElementById('c-runs'), build('runs', (p) => ({ name: p.name, value: p.runs, label: fInt(p.runs),
+      tip: [p.name, fInt(p.runs) + ' runs from ' + fInt(p.inns) + ' innings', 'Average ' + (p.avg === null ? '–' : f2(p.avg)), 'High score ' + (p.hs === null ? '–' : fInt(p.hs) + (p.hsNo ? '*' : ''))] })),
+      { color: PINK, aria: 'Most runs ' + scopeText(), empty: 'No batting ' + scopeText() });
+    hbars(document.getElementById('c-wkts'), build('wkts', (p) => ({ name: p.name, value: p.wkts, label: fInt(p.wkts),
+      tip: [p.name, fInt(p.wkts) + ' wickets', 'Best ' + (p.best || '–'), 'Average ' + (p.bowlAvg === null ? '–' : f2(p.bowlAvg)), 'Economy ' + (p.econ === null ? '–' : f2(p.econ))] })),
+      { color: LIME, aria: 'Most wickets ' + scopeText(), empty: 'No bowling ' + scopeText() });
+    document.getElementById('runs-note').textContent = 'Top 10 ' + scopeText();
+    document.getElementById('wkts-note').textContent = 'Top 10 ' + scopeText();
+  }
+
+  /* ---------- head to head ---------- */
+  function renderH2H() {
+    const season = S();
+    const A = profile(state.a, season), B = profile(state.b, season);
+    aSel.value = state.a; bSel.value = state.b;
+    [['a', A], ['b', B]].forEach(([k, p]) => {
+      document.getElementById(k + '-initial').textContent = p.name.slice(0, 1).toUpperCase();
+      document.getElementById(k + '-name').textContent = p.name;
+      const c = CAR.find((r) => r.Player === p.name);
+      document.getElementById(k + '-sub').textContent = (c && c['Play-Cricket name'] !== p.name ? c['Play-Cricket name'] + ' · ' : '') + (season === 'all' ? p.seasons + (p.seasons === 1 ? ' season' : ' seasons') : String(season));
+    });
+    document.getElementById('h2h-note').textContent = 'Pick any two players. Showing ' + (season === 'all' ? 'all seasons, ' + SPAN : season) + ' (change the season at the top).';
+
+    const rows = [
+      { label: 'Innings', a: A.inns, b: B.inns, fmt: fInt, better: 'high' },
+      { label: 'Runs', a: A.runs, b: B.runs, fmt: fInt, better: 'high' },
+      { label: 'Average', a: A.avg, b: B.avg, fmt: f2, better: 'high' },
+      { label: 'High score', a: A.hs, b: B.hs, fmt: (v) => fInt(v), better: 'high', noA: A.hsNo, noB: B.hsNo },
+      { label: 'Strike rate', sub: 'from 2025', a: A.sr, b: B.sr, fmt: f2, better: 'high' },
+      { label: 'Fifties', a: A.fifties, b: B.fifties, fmt: fInt, better: 'high' },
+      { label: 'Hundreds', a: A.hundreds, b: B.hundreds, fmt: fInt, better: 'high' },
+      { label: 'Wickets', a: A.wkts, b: B.wkts, fmt: fInt, better: 'high' },
+      { label: 'Best bowling', a: A.best, b: B.best, fmt: (v) => v, better: 'best' },
+      { label: 'Bowling avg', sub: 'lower is better', a: A.bowlAvg, b: B.bowlAvg, fmt: f2, better: 'low' },
+      { label: 'Economy', sub: 'lower is better', a: A.econ, b: B.econ, fmt: f2, better: 'low' },
+    ];
+    let winsA = 0, winsB = 0, contested = 0;
+    const tape = document.getElementById('tape');
+    tape.replaceChildren(...rows.map((r) => {
+      const has = (v) => v !== null && v !== undefined && v !== '';
+      let wa = false, wb = false;
+      if (has(r.a) && has(r.b)) {
+        const ka = r.better === 'best' ? bestKey(r.a) : r.a, kb = r.better === 'best' ? bestKey(r.b) : r.b;
+        if (ka !== kb) { const aBetter = r.better === 'low' ? ka < kb : ka > kb; wa = aBetter; wb = !aBetter; }
+        contested += 1;
+      } else if (has(r.a) && r.better !== 'low') { wa = true; contested += 1; }
+      else if (has(r.b) && r.better !== 'low') { wb = true; contested += 1; }
+      if (wa) winsA += 1; if (wb) winsB += 1;
+      const numeric = r.better !== 'best';
+      const mx = numeric ? Math.max(has(r.a) ? r.a : 0, has(r.b) ? r.b : 0) : 0;
+      const pct = (v) => {
+        if (!numeric || !has(v) || !mx) return 0;
+        if (r.better === 'low') { const mn = Math.min(has(r.a) ? r.a : Infinity, has(r.b) ? r.b : Infinity); return Math.max(8, (mn / v) * 100); }
+        return Math.max(4, (v / mx) * 100);
+      };
+      const side = (k, v, win, no) => el('div', { class: 'side ' + k + (win ? ' win' : '') }, [
+        el('span', { class: 'val' + (no ? ' no' : ''), text: has(v) ? r.fmt(v) : '–' }),
+        el('div', { class: 'track' }, numeric ? [Object.assign(el('div', { class: 'bar' }), {})] : []),
+      ]);
+      const left = side('a', r.a, wa, r.noA === 1), right = side('b', r.b, wb, r.noB === 1);
+      if (numeric) { left.querySelector('.bar').style.width = pct(r.a) + '%'; right.querySelector('.bar').style.width = pct(r.b) + '%'; }
+      const lab = el('div', { class: 'tape-label', text: r.label }, r.sub ? [el('small', { text: r.sub })] : []);
+      return el('div', { class: 'tape-row' }, [left, lab, right]);
+    }));
+    const score = document.getElementById('h2h-score');
+    if (state.a === state.b) richText(score, ['Pick two different players to compare them.']);
+    else if (winsA === winsB) richText(score, [{ b: A.name }, ' and ', { b: B.name }, ' are level, ' + winsA + ' rows each.']);
+    else { const lead = winsA > winsB ? A : B; richText(score, [{ b: lead.name }, ' wins ' + Math.max(winsA, winsB) + ' of the ' + contested + ' rows ' + scopeText() + '.']); }
+
+    drawRadar(document.getElementById('c-radar'), A, B, season);
+    const seriesOf = (name, rows, key) => SEASONS.map((s) => { const r = rows.find((x) => x.Player === name && x.Season === s); return r ? r[key] : null; });
+    groupedBars(document.getElementById('c-h2h-runs'), [
+      { name: A.name, color: PINK, vals: seriesOf(A.name, BAT, 'Runs') },
+      { name: B.name, color: CYAN, vals: seriesOf(B.name, BAT, 'Runs') },
+    ], 'runs');
+    groupedBars(document.getElementById('c-h2h-wkts'), [
+      { name: A.name, color: PINK, vals: seriesOf(A.name, BOWL, 'Wickets') },
+      { name: B.name, color: CYAN, vals: seriesOf(B.name, BOWL, 'Wickets') },
+    ], 'wickets');
+  }
+
+  function drawRadar(box, A, B, season) {
+    box.replaceChildren();
+    const legend = document.getElementById('radar-legend');
+    legend.replaceChildren(
+      el('span', {}, [el('i', { class: 'dot', style: 'background:' + PINK }), document.createTextNode(A.name)]),
+      el('span', {}, [el('i', { class: 'dot', style: 'background:' + CYAN }), document.createTextNode(B.name)]));
+    const all = PLAYERS.map((p) => profile(p, season));
+    const maxOf = (key, ok) => d3.max(all.filter(ok), (p) => p[key]) || 1;
+    const minOf = (key, ok) => d3.min(all.filter(ok), (p) => p[key]);
+    const axes = [
+      { label: 'Runs', score: (p) => p.runs / maxOf('runs', () => true), show: (p) => fInt(p.runs) },
+      { label: 'Average', score: (p) => (p.avg === null ? 0 : p.avg / maxOf('avg', (q) => q.inns >= 5 && q.avg !== null)), show: (p) => (p.avg === null ? '–' : f2(p.avg)) },
+      { label: 'Strike rate', score: (p) => (p.sr === null ? 0 : p.sr / maxOf('sr', (q) => q.inns >= 3 && q.sr !== null)), show: (p) => (p.sr === null ? 'not recorded' : f2(p.sr)) },
+      { label: 'High score', score: (p) => (p.hs === null ? 0 : p.hs / maxOf('hs', (q) => q.hs !== null)), show: (p) => (p.hs === null ? '–' : fInt(p.hs) + (p.hsNo ? '*' : '')) },
+      { label: 'Wickets', score: (p) => p.wkts / maxOf('wkts', () => true), show: (p) => fInt(p.wkts) },
+      { label: 'Bowling avg', score: (p) => { const mn = minOf('bowlAvg', (q) => q.wkts >= 5 && q.bowlAvg !== null); return p.bowlAvg === null || !mn ? 0 : mn / p.bowlAvg; }, show: (p) => (p.bowlAvg === null ? '–' : f2(p.bowlAvg)) },
+      { label: 'Economy', score: (p) => { const mn = minOf('econ', (q) => q.balls >= 60 && q.econ !== null); return p.econ === null || !mn ? 0 : mn / p.econ; }, show: (p) => (p.econ === null ? '–' : f2(p.econ)) },
+    ];
+    const W = widthOf(box), H = Math.min(420, Math.max(300, W * 0.86));
+    const svg = svgIn(box, W, H, 'Player profile radar for ' + A.name + ' and ' + B.name);
+    const labW = textW(svg, axes.map((a) => a.label));
+    const R = Math.max(70, Math.min(W / 2 - labW - 14, H / 2 - 30));
+    const cx = W / 2, cy = H / 2;
+    const ang = (i) => (Math.PI * 2 * i) / axes.length - Math.PI / 2;
+    const tip = tipper(box);
+    [0.25, 0.5, 0.75, 1].forEach((t) => {
+      svg.append('polygon').attr('points', axes.map((a, i) => [cx + Math.cos(ang(i)) * R * t, cy + Math.sin(ang(i)) * R * t].join(',')).join(' '))
+        .style('fill', t === 1 ? 'rgba(255,255,255,.03)' : 'none').style('stroke', 'rgba(255,255,255,.12)');
+    });
+    axes.forEach((a, i) => {
+      svg.append('line').attr('x1', cx).attr('y1', cy).attr('x2', cx + Math.cos(ang(i)) * R).attr('y2', cy + Math.sin(ang(i)) * R).style('stroke', 'rgba(255,255,255,.12)');
+      const lx = cx + Math.cos(ang(i)) * (R + 12), ly = cy + Math.sin(ang(i)) * (R + 12);
+      const c = Math.cos(ang(i));
+      svg.append('text').attr('class', 'muted').attr('x', lx).attr('y', ly).attr('dy', '0.35em')
+        .attr('text-anchor', Math.abs(c) < 0.2 ? 'middle' : c > 0 ? 'start' : 'end').text(a.label);
+    });
+    [[A, PINK], [B, CYAN]].forEach(([p, col]) => {
+      const pts = axes.map((a, i) => { const s = Math.max(0.02, Math.min(1, a.score(p) || 0)); return [cx + Math.cos(ang(i)) * R * s, cy + Math.sin(ang(i)) * R * s]; });
+      svg.append('polygon').attr('class', 'gfade').attr('points', pts.map((q) => q.join(',')).join(' '))
+        .style('fill', col).style('fill-opacity', 0.22).style('stroke', col).style('stroke-width', 2.5).style('stroke-linejoin', 'round')
+        .style('filter', 'drop-shadow(0 0 8px ' + col + '99)');
+      svg.append('g').selectAll('circle').data(pts.map((q, i) => ({ q: q, a: axes[i] }))).join('circle')
+        .attr('cx', (d) => d.q[0]).attr('cy', (d) => d.q[1]).attr('r', 4).style('fill', col).style('stroke', INK).style('stroke-width', 1.5)
+        .on('pointermove', (ev, d) => tip.show(ev, [d.a.label, A.name + ': ' + d.a.show(A), B.name + ': ' + d.a.show(B)]))
+        .on('pointerleave', () => tip.hide());
+    });
+  }
+
+  function groupedBars(box, series, unit) {
+    box.replaceChildren();
+    const W = widthOf(box), H = 230, m = { t: 22, r: 4, b: 26, l: 4 };
+    const svg = svgIn(box, W, H, unit + ' by season');
+    const x = d3.scaleBand(SEASONS, [m.l, W - m.r]).padding(0.22);
+    const xi = d3.scaleBand(series.map((s, i) => i), [0, x.bandwidth()]).padding(0.12);
+    const mx = d3.max(series, (s) => d3.max(s.vals, (v) => v || 0)) || 1;
+    const y = d3.scaleLinear([0, mx * 1.08], [H - m.b, m.t]);
+    const tip = tipper(box);
+    svg.append('line').attr('class', 'base').attr('x1', m.l).attr('x2', W - m.r).attr('y1', H - m.b).attr('y2', H - m.b);
+    SEASONS.forEach((s, si) => {
+      const g = svg.append('g').attr('transform', 'translate(' + x(s) + ',0)');
+      series.forEach((ser, i) => {
+        const v = ser.vals[si];
+        if (v === null || v === undefined) {
+          g.append('text').attr('class', 'faint').attr('x', xi(i) + xi.bandwidth() / 2).attr('y', H - m.b - 6).attr('text-anchor', 'middle').text('–');
+          return;
+        }
+        g.append('rect').attr('class', 'gcol').attr('x', xi(i)).attr('width', xi.bandwidth()).attr('y', y(v)).attr('height', Math.max(1, H - m.b - y(v))).attr('rx', 4)
+          .style('fill', ser.color).style('filter', 'drop-shadow(0 0 5px ' + ser.color + '77)');
+        if (xi.bandwidth() > 18) g.append('text').attr('class', 'strong').attr('x', xi(i) + xi.bandwidth() / 2).attr('y', y(v) - 5).attr('text-anchor', 'middle').style('fill', ser.color).text(fInt(v));
+      });
+      g.append('text').attr('class', 'muted').attr('x', x.bandwidth() / 2).attr('y', H - 6).attr('text-anchor', 'middle').text(s);
+      g.append('rect').attr('x', -(x.step() - x.bandwidth()) / 2).attr('width', x.step()).attr('y', 0).attr('height', H).style('fill', 'transparent')
+        .on('pointermove', (ev) => tip.show(ev, [String(s)].concat(series.map((ser) => ser.name + ': ' + (ser.vals[si] === null ? "didn't play" : fInt(ser.vals[si]) + ' ' + unit)))))
+        .on('pointerleave', () => tip.hide());
+    });
+  }
+
+  /* ---------- seasons ---------- */
+  function seasonBars(box, key, color, unit) {
+    box.replaceChildren();
+    const P = state.player;
+    const team = SEASONS.map((s) => (key === 'runs' ? teamTotals(s).runs : teamTotals(s).wkts));
+    const mine = P === 'all' ? null : SEASONS.map((s) => { const r = (key === 'runs' ? BAT : BOWL).find((x) => x.Player === P && x.Season === s); return r ? (key === 'runs' ? r.Runs : r.Wickets) : null; });
+    const W = widthOf(box), H = 250, m = { t: 26, r: 4, b: mine ? 48 : 28, l: 4 };
+    const svg = svgIn(box, W, H, unit + ' each season');
+    const x = d3.scaleBand(SEASONS, [m.l, W - m.r]).padding(0.28);
+    const y = d3.scaleLinear([0, (d3.max(team) || 1) * 1.06], [H - m.b, m.t]);
+    const tip = tipper(box);
+    svg.append('line').attr('class', 'base').attr('x1', m.l).attr('x2', W - m.r).attr('y1', H - m.b).attr('y2', H - m.b);
+    SEASONS.forEach((s, i) => {
+      const g = svg.append('g');
+      const sel = S() === s;
+      g.append('rect').attr('class', 'gcol').attr('x', x(s)).attr('width', x.bandwidth()).attr('y', y(team[i])).attr('height', H - m.b - y(team[i])).attr('rx', 6)
+        .style('fill', mine ? 'rgba(255,255,255,.16)' : color).style('fill-opacity', mine ? 1 : S() === 'all' || sel ? 1 : 0.4)
+        .style('filter', !mine && (S() === 'all' || sel) ? 'drop-shadow(0 0 8px ' + color + '66)' : null);
+      g.append('text').attr('class', mine ? 'muted' : 'big').attr('x', x(s) + x.bandwidth() / 2).attr('y', y(team[i]) - 7).attr('text-anchor', 'middle')
+        .style('fill', mine ? null : color).text(fInt(team[i]));
+      if (mine) {
+        const bw = x.bandwidth() * 0.5, v = mine[i];
+        if (v !== null) g.append('rect').attr('class', 'gcol').attr('x', x(s) + (x.bandwidth() - bw) / 2).attr('width', bw).attr('y', y(v)).attr('height', Math.max(1, H - m.b - y(v))).attr('rx', 4)
+          .style('fill', color).style('filter', 'drop-shadow(0 0 6px ' + color + '88)');
+        g.append('text').attr('class', 'big').attr('x', x(s) + x.bandwidth() / 2).attr('y', H - m.b + 36).attr('text-anchor', 'middle').style('fill', color).text(v === null ? '–' : fInt(v));
+      }
+      g.append('text').attr('class', sel ? 'strong' : 'muted').attr('x', x(s) + x.bandwidth() / 2).attr('y', H - m.b + 17).attr('text-anchor', 'middle').text(s);
+      g.append('rect').attr('x', x(s) - (x.step() - x.bandwidth()) / 2).attr('width', x.step()).attr('height', H).style('fill', 'transparent').style('cursor', 'pointer')
+        .on('pointermove', (ev) => tip.show(ev, [String(s), 'Team: ' + fInt(team[i]) + ' ' + unit].concat(mine ? [P + ': ' + (mine[i] === null ? "didn't play" : fInt(mine[i]) + ' ' + unit)] : [])))
+        .on('pointerleave', () => tip.hide())
+        .on('click', () => set({ season: S() === s ? 'all' : s }));
+    });
+  }
+  function renderSeasons() {
+    const P = state.player;
+    seasonBars(document.getElementById('c-season-runs'), 'runs', PINK, 'runs');
+    seasonBars(document.getElementById('c-season-wkts'), 'wkts', LIME, 'wickets');
+    const n = P === 'all' ? 'Team total, all players. Tap a season to filter.' : P + ' in colour, against the team total.';
+    document.getElementById('sr-note').textContent = n; document.getElementById('sw-note').textContent = n;
+    renderForm(); renderHeat();
+  }
+
+  function renderForm() {
+    const box = document.getElementById('c-form'); box.replaceChildren();
+    const P = state.player;
+    const top = CAR.slice().sort((a, b) => b.Runs - a.Runs).slice(0, 5).map((r) => r.Player);
+    const extra = P !== 'all' && top.indexOf(P) < 0;
+    if (extra) top.push(P);
+    document.getElementById('form-note').textContent = 'Runs per season for the five leading career run-scorers' + (extra ? ', plus ' + P : '') + ". Gaps are seasons they didn't bat.";
+    const series = top.map((name) => ({ name: name, pts: SEASONS.map((s) => { const r = BAT.find((b) => b.Player === name && b.Season === s); return { s: s, v: r ? r.Runs : null }; }) }));
+    const W = widthOf(box), H = W < 500 ? 280 : 330;
+    const svg = svgIn(box, W, H, 'Runs per season for the leading run-scorers');
+    const y = d3.scaleLinear([0, d3.max(series, (s) => d3.max(s.pts, (p) => p.v || 0)) || 1], [H - 30, 14]).nice();
+    const ticks = y.ticks(5);
+    const lw = textW(svg, ticks.map(fInt));
+    const nameW = Math.min(W * 0.28, textW(svg, series.map((s) => s.name), 'strong'));
+    const m = { t: 14, r: nameW + 18, b: 30, l: lw + 10 };
+    const x = d3.scalePoint(SEASONS, [m.l, W - m.r]).padding(0.25);
+    svg.append('g').attr('transform', 'translate(' + m.l + ',0)').call(d3.axisLeft(y).tickValues(ticks).tickFormat(fInt).tickSize(-(W - m.l - m.r)).tickPadding(8)).call(strip);
+    svg.append('g').attr('transform', 'translate(0,' + (H - m.b) + ')').call(d3.axisBottom(x).tickSize(0).tickPadding(10)).call(strip);
+    const anySel = P !== 'all';
+    const colorOf = (s, i) => (anySel ? (s.name === P ? PINK : 'rgba(255,255,255,.28)') : i < SERIES.length ? SERIES[i] : CYAN);
+    const line = d3.line().defined((p) => p.v !== null).x((p) => x(p.s)).y((p) => y(p.v));
+    const tip = tipper(box);
+    series.map((s, i) => ({ s: s, i: i })).sort((a, b) => (a.s.name === P) - (b.s.name === P)).forEach(({ s, i }) => {
+      const c = colorOf(s, i), hot = !anySel || s.name === P;
+      svg.append('path').attr('class', 'gfade').attr('d', line(s.pts)).style('fill', 'none').style('stroke', c).style('stroke-width', s.name === P ? 3.5 : 2.5)
+        .style('stroke-linecap', 'round').style('stroke-linejoin', 'round').style('filter', hot ? 'drop-shadow(0 0 6px ' + c + '88)' : null);
+      svg.append('g').selectAll('circle').data(s.pts.filter((p) => p.v !== null)).join('circle').attr('class', 'gfade')
+        .attr('cx', (p) => x(p.s)).attr('cy', (p) => y(p.v)).attr('r', s.name === P ? 5 : 4).style('fill', c).style('stroke', INK).style('stroke-width', 2);
+    });
+    const labels = series.map((s, i) => { const last = s.pts.filter((p) => p.v !== null).slice(-1)[0]; return { s: s, i: i, y: last ? y(last.v) : y(0) }; }).sort((a, b) => a.y - b.y);
+    for (let k = 1; k < labels.length; k++) if (labels[k].y - labels[k - 1].y < 16) labels[k].y = labels[k - 1].y + 16;
+    const over = labels.length ? labels[labels.length - 1].y - (H - m.b) : 0;
+    if (over > 0) labels.forEach((l) => { l.y -= over; });
+    labels.forEach((l) => {
+      svg.append('text').attr('class', 'strong').attr('x', W - m.r + 12).attr('y', l.y).attr('dy', '0.35em').style('fill', colorOf(l.s, l.i)).style('cursor', 'pointer')
+        .text(l.s.name).on('click', () => pick(l.s.name));
+    });
+    const hits = series.flatMap((s) => s.pts.filter((p) => p.v !== null).map((p) => ({ name: s.name, s: p.s, v: p.v })));
+    svg.append('g').selectAll('circle').data(hits).join('circle').attr('cx', (h) => x(h.s)).attr('cy', (h) => y(h.v)).attr('r', 12).style('fill', 'transparent').style('cursor', 'pointer')
+      .on('pointermove', (ev, h) => tip.show(ev, [String(h.s), h.name + ': ' + fInt(h.v) + ' runs'])).on('pointerleave', () => tip.hide()).on('click', (ev, h) => pick(h.name));
+  }
+
+  function renderHeat() {
+    const box = document.getElementById('c-heat'); box.replaceChildren();
+    const isRuns = state.heat === 'runs';
+    const src = isRuns ? BAT : BOWL, key = isRuns ? 'Runs' : 'Wickets', color = isRuns ? PINK : LIME;
+    const totals = d3.rollup(src, (v) => d3.sum(v, (r) => r[key]), (r) => r.Player);
+    const names = Array.from(totals.entries()).filter((e) => e[1] > 0).sort((a, b) => b[1] - a[1]).map((e) => e[0]);
+    document.getElementById('heat-note').textContent = 'Every player with ' + (isRuns ? 'runs' : 'wickets') + ', brightest where they did best. Tap a row to focus on a player.';
+    const val = new Map(src.map((r) => [r.Player + '|' + r.Season, r[key]]));
+    const mx = d3.max(src, (r) => r[key]) || 1;
+    const W = widthOf(box), rowH = 28;
+    const tmp = svgIn(box, W, 10, '');
+    const nameW = Math.min(W * 0.32, textW(tmp, names, 'strong') + 12);
+    tmp.remove();
+    const totW = 46;
+    const cellW = Math.max(36, (W - nameW - totW) / SEASONS.length);
+    const Wd = nameW + cellW * SEASONS.length + totW;
+    const H = 26 + names.length * rowH;
+    const svg = svgIn(box, Wd, H, 'Season heatmap of ' + (isRuns ? 'runs' : 'wickets'));
+    const ramp = d3.interpolateRgb('#3A2A96', color);
+    const tip = tipper(box);
+    SEASONS.forEach((s, j) => svg.append('text').attr('class', S() === s ? 'strong' : 'muted').attr('x', nameW + cellW * j + cellW / 2).attr('y', 14).attr('text-anchor', 'middle').text(s));
+    svg.append('text').attr('class', 'muted').attr('x', nameW + cellW * SEASONS.length + totW / 2).attr('y', 14).attr('text-anchor', 'middle').text('Total');
+    names.forEach((name, i) => {
+      const y0 = 24 + i * rowH;
+      const g = svg.append('g').attr('class', 'row').on('click', () => pick(name));
+      const sel = state.player === name;
+      if (sel) g.append('rect').attr('x', 0).attr('y', y0).attr('width', Wd).attr('height', rowH).attr('rx', 6).style('fill', 'rgba(255,0,114,.16)');
+      g.append('text').attr('class', 'name' + (sel ? ' strong' : '')).attr('x', nameW - 10).attr('y', y0 + rowH / 2).attr('dy', '0.35em').attr('text-anchor', 'end').text(name);
+      SEASONS.forEach((s, j) => {
+        const v = val.get(name + '|' + s);
+        const x0 = nameW + cellW * j;
+        if (v === undefined) { g.append('text').attr('class', 'faint').attr('x', x0 + cellW / 2).attr('y', y0 + rowH / 2).attr('dy', '0.35em').attr('text-anchor', 'middle').text('·'); return; }
+        const t = Math.pow(v / mx, 0.6);
+        g.append('rect').attr('x', x0 + 2).attr('y', y0 + 2).attr('width', cellW - 4).attr('height', rowH - 4).attr('rx', 5).style('fill', v === 0 ? 'rgba(255,255,255,.05)' : ramp(t))
+          .style('stroke', S() === s ? 'rgba(255,255,255,.6)' : 'none')
+          .on('pointermove', (ev) => tip.show(ev, [name + ', ' + s, fInt(v) + (isRuns ? ' runs' : ' wickets')])).on('pointerleave', () => tip.hide());
+        g.append('text').attr('x', x0 + cellW / 2).attr('y', y0 + rowH / 2).attr('dy', '0.35em').attr('text-anchor', 'middle').style('pointer-events', 'none')
+          .style('fill', !isRuns && t > 0.62 ? INK : WHITE).style('font-weight', 600).text(fInt(v));
+      });
+      g.append('text').attr('class', 'big').attr('x', nameW + cellW * SEASONS.length + totW / 2).attr('y', y0 + rowH / 2).attr('dy', '0.36em').attr('text-anchor', 'middle').style('fill', color).text(fInt(totals.get(name)));
+    });
+  }
+
+  /* ---------- shares + milestones ---------- */
+  function renderShare() {
+    const box = document.getElementById('c-share'); box.replaceChildren();
+    const isRuns = state.share === 'runs';
+    document.getElementById('share-word').textContent = isRuns ? 'runs' : 'wickets';
+    const src = (isRuns ? BAT : BOWL).filter(inScope), key = isRuns ? 'Runs' : 'Wickets';
+    const by = Array.from(d3.rollup(src, (v) => d3.sum(v, (r) => r[key]), (r) => r.Player).entries()).filter((e) => e[1] > 0).sort((a, b) => b[1] - a[1]);
+    const total = d3.sum(by, (e) => e[1]);
+    document.getElementById('share-note').textContent = fInt(total) + ' ' + (isRuns ? 'runs' : 'wickets') + ' ' + scopeText() + '. Box size is each player’s share.';
+    if (!by.length) { message(box, 'Nothing recorded ' + scopeText()); return; }
+    const W = widthOf(box), H = W < 500 ? 340 : 380;
+    const svg = svgIn(box, W, H, 'Share of team ' + (isRuns ? 'runs' : 'wickets'));
+    const root = d3.hierarchy({ children: by.map((e) => ({ name: e[0], v: e[1] })) }).sum((d) => d.v || 0).sort((a, b) => b.value - a.value);
+    d3.treemap().size([W, H]).paddingInner(3).round(true)(root);
+    const P = state.player;
+    const accents = [PINK, CYAN, LIME, YELLOW, WHITE];
+    const purples = d3.interpolateRgb('#4B36A8', '#2C2287');
+    const leaves = root.leaves();
+    const tip = tipper(box);
+    const g = svg.selectAll('g').data(leaves).join('g').attr('class', 'row').attr('transform', (d) => 'translate(' + d.x0 + ',' + d.y0 + ')')
+      .on('click', (ev, d) => pick(d.data.name))
+      .on('pointermove', (ev, d) => tip.show(ev, [d.data.name, fInt(d.value) + (isRuns ? ' runs' : ' wickets'), fPct(d.value / total) + ' of the team'])).on('pointerleave', () => tip.hide());
+    const fillOf = (d, i) => (P !== 'all' ? (d.data.name === P ? PINK : purples(i / Math.max(1, leaves.length - 1))) : i < accents.length ? accents[i] : purples((i - accents.length) / Math.max(1, leaves.length - accents.length)));
+    const darkText = (c) => [CYAN, LIME, YELLOW, WHITE].indexOf(c) >= 0;
+    g.append('rect').attr('class', 'gfade').attr('width', (d) => Math.max(0, d.x1 - d.x0)).attr('height', (d) => Math.max(0, d.y1 - d.y0)).attr('rx', 6)
+      .style('fill', (d, i) => fillOf(d, i));
+    g.each(function (d, i) {
+      const w = d.x1 - d.x0, h = d.y1 - d.y0;
+      if (w < 44 || h < 28) return;
+      const c = fillOf(d, i), txt = darkText(c) ? INK : WHITE;
+      const sel = d3.select(this);
+      const big = w > 110 && h > 70;
+      sel.append('text').attr('x', 8).attr('y', big ? 24 : 16).style('fill', txt).style('font-weight', 700).style('font-size', big ? '15px' : '12px').text(d.data.name);
+      if (h > 44) sel.append('text').attr('x', 8).attr('y', big ? 50 : 32).style('fill', txt).style('font-family', 'var(--display)').style('font-weight', 800).style('font-size', big ? '26px' : '16px')
+        .text(fPct(d.value / total));
+      if (big && h > 86) sel.append('text').attr('x', 8).attr('y', 70).style('fill', txt).style('opacity', 0.85).text(fInt(d.value) + (isRuns ? ' runs' : ' wkts'));
+    });
+  }
+
+  function renderMiles() {
+    const box = document.getElementById('c-miles'); box.replaceChildren();
+    const P = state.player;
+    const rows = PLAYERS.map((name) => {
+      const b = BAT.filter((r) => r.Player === name && inScope(r)), w = BOWL.filter((r) => r.Player === name && inScope(r));
+      return { name: name, f: sum(b, '50s'), h: sum(b, '100s'), w: sum(w, '5W') };
+    }).filter((r) => r.f + r.h + r.w > 0).sort((a, b) => (b.f + b.h + b.w) - (a.f + a.h + a.w) || b.h - a.h || a.name.localeCompare(b.name));
+    document.getElementById('mile-note').textContent = 'Fifties, hundreds and five-wicket hauls ' + scopeText() + '.';
+    if (!rows.length) { message(box, 'No milestones ' + scopeText()); return; }
+    const W = widthOf(box), rowH = 30, H = rows.length * rowH + 6;
+    const svg = svgIn(box, W, H, 'Milestones by player');
+    const nameW = Math.min(W * 0.36, textW(svg, rows.map((r) => r.name)));
+    const left = nameW + 12;
+    const x = d3.scaleLinear([0, d3.max(rows, (r) => r.f + r.h + r.w) || 1], [0, W - left - 36]);
+    const tip = tipper(box);
+    const g = svg.selectAll('g').data(rows).join('g').attr('class', 'row').attr('transform', (d, i) => 'translate(' + left + ',' + (i * rowH + 3) + ')')
+      .on('click', (ev, d) => pick(d.name))
+      .on('pointermove', (ev, d) => tip.show(ev, [d.name, fInt(d.f) + ' fifties', fInt(d.h) + ' hundreds', fInt(d.w) + ' five-wicket hauls'])).on('pointerleave', () => tip.hide());
+    g.append('rect').attr('x', -left).attr('width', W).attr('height', rowH).style('fill', 'transparent');
+    g.append('text').attr('class', (d) => 'name' + (d.name === P ? ' strong' : '')).attr('x', -10).attr('y', rowH / 2).attr('dy', '0.35em').attr('text-anchor', 'end').text((d) => d.name);
+    const segs = [['f', YELLOW], ['h', PINK], ['w', LIME]];
+    g.each(function (d) {
+      let x0 = 0;
+      const sel = d3.select(this);
+      const dim = P !== 'all' && d.name !== P;
+      segs.forEach(([k, col]) => {
+        if (!d[k]) return;
+        const w = x(d[k]);
+        sel.append('rect').attr('class', 'gbar').attr('x', x0).attr('y', 7).attr('width', Math.max(2, w - 2)).attr('height', rowH - 14).attr('rx', 4)
+          .style('fill', col).style('opacity', dim ? 0.3 : 1);
+        if (w > 18) sel.append('text').attr('x', x0 + (w - 2) / 2).attr('y', rowH / 2).attr('dy', '0.35em').attr('text-anchor', 'middle').style('fill', INK).style('font-weight', 700).style('pointer-events', 'none').text(d[k]);
+        x0 += w;
+      });
+      sel.append('text').attr('class', 'big').attr('x', x0 + 8).attr('y', rowH / 2).attr('dy', '0.36em').text(d.f + d.h + d.w);
+    });
+  }
+
+  /* ---------- scatters ---------- */
+  function scatter(box, pts, o) {
+    box.replaceChildren();
+    if (!pts.length) { message(box, o.empty); return; }
+    const W = widthOf(box), H = W < 500 ? 320 : 360;
+    const svg = svgIn(box, W, H, o.aria);
+    const pad = (e, f) => { const s = (e[1] - e[0]) || e[1] || 1; return [Math.max(0, e[0] - s * f), e[1] + s * f]; };
+    const y = d3.scaleLinear(pad(d3.extent(pts, (p) => p.y), 0.14), [H - 42, 18]).nice();
+    const yt = y.ticks(5);
+    const lw = textW(svg, yt.map(String));
+    const m = { t: 18, r: 14, b: 42, l: lw + 12 };
+    const x = d3.scaleLinear(pad(d3.extent(pts, (p) => p.x), 0.12), [m.l, W - m.r]).nice();
+    const r = d3.scaleSqrt([0, d3.max(pts, (p) => p.size) || 1], [4, W < 500 ? 16 : 22]);
+    svg.append('g').attr('transform', 'translate(' + m.l + ',0)').call(d3.axisLeft(y).tickValues(yt).tickSize(-(W - m.l - m.r)).tickPadding(8)).call(strip);
+    svg.append('g').attr('transform', 'translate(0,' + (H - m.b) + ')').call(d3.axisBottom(x).ticks(Math.max(3, Math.floor(W / 90))).tickSize(-(H - m.b - m.t)).tickPadding(8)).call(strip);
+    svg.append('text').attr('class', 'muted').attr('x', W - m.r).attr('y', H - 4).attr('text-anchor', 'end').text(o.xLabel);
+    svg.append('text').attr('class', 'muted').attr('x', m.l + 6).attr('y', m.t + 10).text(o.yLabel);
+    svg.append('text').attr('x', o.hintRight ? W - m.r - 6 : m.l + 8).attr('y', o.hintTop ? m.t + 30 : H - m.b - 10).attr('text-anchor', o.hintRight ? 'end' : 'start').style('fill', YELLOW).style('font-weight', 600).text(o.hint);
+    const anySel = pts.some((p) => p.sel);
+    const tip = tipper(box);
+    svg.append('g').selectAll('circle').data(pts.slice().sort((a, b) => (a.sel - b.sel) || (b.size - a.size))).join('circle').attr('class', 'gfade')
+      .attr('cx', (p) => x(p.x)).attr('cy', (p) => y(p.y)).attr('r', (p) => r(p.size))
+      .style('fill', (p) => (anySel && !p.sel ? 'rgba(255,255,255,.18)' : p.color || o.color)).style('fill-opacity', (p) => (p.sel ? 0.95 : 0.55))
+      .style('stroke', (p) => (p.sel ? WHITE : anySel ? 'rgba(255,255,255,.3)' : p.color || o.color)).style('stroke-width', (p) => (p.sel ? 2.5 : 1.2)).style('cursor', 'pointer')
+      .on('pointermove', (ev, p) => tip.show(ev, p.tip)).on('pointerleave', () => tip.hide()).on('click', (ev, p) => pick(p.name));
+    const toLabel = pts.filter((p) => p.sel).concat(pts.filter((p) => !p.sel).sort((a, b) => b.size - a.size).slice(0, anySel ? 3 : W < 500 ? 4 : (o.maxLabels || 8)));
+    const placed = [];
+    toLabel.forEach((p) => {
+      const cx = x(p.x), cy = y(p.y), rr = r(p.size);
+      const t = svg.append('text').attr('class', p.sel ? 'strong' : 'muted').attr('x', cx + rr + 4).attr('y', cy).attr('dy', '0.35em').text(p.label);
+      let bb = t.node().getBBox();
+      if (bb.x + bb.width > W - m.r) { t.attr('x', cx - rr - 4).attr('text-anchor', 'end'); bb = t.node().getBBox(); }
+      const hit = placed.some((q) => !(bb.x + bb.width < q.x || q.x + q.width < bb.x || bb.y + bb.height < q.y || q.y + q.height < bb.y));
+      if (hit && !p.sel) t.remove(); else placed.push(bb);
+    });
+  }
+  function renderQuality() {
+    const P = state.player, all = S() === 'all';
+    const seasonColor = d3.scaleOrdinal(SEASONS, [WHITE, YELLOW, LIME, PINK, CYAN]);
+    const bp = BAT.filter((r) => inScope(r) && r.Inns >= 3 && r['Strike Rate'] !== null && r.Average !== null).map((r) => ({
+      season: r.Season, x: r['Strike Rate'], y: r.Average, size: r.Runs, name: r.Player, sel: r.Player === P, color: all ? (r.Season === SEASONS[SEASONS.length - 1] ? PINK : CYAN) : PINK,
+      label: all ? r.Player + ' ’' + String(r.Season).slice(2) : r.Player,
+      tip: [r.Player + ', ' + r.Season, fInt(r.Runs) + ' runs from ' + fInt(r.Inns) + ' innings', 'Average ' + f2(r.Average), 'Strike rate ' + f2(r['Strike Rate'])],
+    }));
+    const wp = BOWL.filter((r) => inScope(r) && r.Wickets >= 3 && r.Average !== null && r.Economy !== null).map((r) => ({
+      season: r.Season, x: r.Economy, y: r.Average, size: r.Wickets, name: r.Player, sel: r.Player === P, color: all ? seasonColor(r.Season) : LIME,
+      label: all ? r.Player + ' ’' + String(r.Season).slice(2) : r.Player,
+      tip: [r.Player + ', ' + r.Season, fInt(r.Wickets) + ' wickets, best ' + (r.Best || '–'), 'Average ' + f2(r.Average), 'Economy ' + f2(r.Economy)],
+    }));
+    const firstSR = d3.min(BAT.filter((r) => r['Strike Rate'] !== null), (r) => r.Season);
+    const lastS = SEASONS[SEASONS.length - 1];
+    const legendOf = (id, items) => document.getElementById(id).replaceChildren(...items.map(([c, t]) => el('span', {}, [el('i', { class: 'dot', style: 'background:' + c }), document.createTextNode(t)])));
+    const srSeasons = Array.from(new Set(bp.map((p) => p.season))).sort();
+    legendOf('bat-legend', all ? srSeasons.map((s) => [s === lastS ? PINK : CYAN, String(s)]) : []);
+    const wSeasons = Array.from(new Set(wp.map((p) => p.season))).sort();
+    legendOf('bowl-legend', all ? wSeasons.map((s) => [seasonColor(s), String(s)]) : []);
+    scatter(document.getElementById('c-bat-scatter'), bp, {
+      color: PINK, xLabel: 'Strike rate (runs per 100 balls) →', yLabel: '↑ Average', hint: 'Faster and harder to get out ↗', hintRight: true, hintTop: true,
+      aria: 'Batting average against strike rate',
+      empty: !all && S() < firstSR ? 'Strike rates are only recorded from ' + firstSR + '.' : 'No one had 3 or more innings ' + scopeText() + '.',
+    });
+    scatter(document.getElementById('c-bowl-scatter'), wp, {
+      color: LIME, xLabel: 'Economy (runs per over) →', yLabel: '↑ Bowling average', hint: '↙ Cheaper and more wickets', hintRight: false, hintTop: false,
+      maxLabels: 5, aria: 'Bowling average against economy', empty: 'No one took 3 or more wickets ' + scopeText() + '.',
+    });
+  }
+
+  /* ---------- tables ---------- */
+  const COLS = {
+    batting: [
+      { k: 'Season', t: 'text', cls: 'l' }, { k: 'Player', t: 'player', cls: 'l' }, { k: 'Matches', f: fInt, hide: true }, { k: 'Inns', f: fInt },
+      { k: 'Not Outs', label: 'NO', f: fInt, hide: true }, { k: 'Runs', f: fInt, bar: PINK }, { k: 'High Score', label: 'HS', f: fInt, no: 'HS Not Out' },
+      { k: 'Average', label: 'Avg', f: f2 }, { k: 'Strike Rate', label: 'SR', f: f2, hide: true }, { k: '100s', f: fInt, hide: true }, { k: '50s', f: fInt },
+    ],
+    bowling: [
+      { k: 'Season', t: 'text', cls: 'l' }, { k: 'Player', t: 'player', cls: 'l' }, { k: 'Overs', f: fOv }, { k: 'Maidens', label: 'Mdns', f: fInt, hide: true },
+      { k: 'Runs', f: fInt, hide: true }, { k: 'Wickets', label: 'Wkts', f: fInt, bar: LIME }, { k: 'Best', t: 'best' }, { k: '5W', f: fInt, hide: true },
+      { k: 'Average', label: 'Avg', f: f2 }, { k: 'Economy', label: 'Econ', f: f2 }, { k: 'Strike Rate', label: 'SR', f: f2, hide: true },
+    ],
+    career: [
+      { k: 'Player', t: 'player', cls: 'l' }, { k: 'Seasons', f: fInt, hide: true }, { k: 'Inns', f: fInt, hide: true }, { k: 'Runs', f: fInt, bar: PINK },
+      { k: 'High Score', label: 'HS', f: fInt, no: 'HS Not Out' }, { k: 'Average', label: 'Avg', f: f2 }, { k: '100s', f: fInt, hide: true }, { k: '50s', f: fInt, hide: true },
+      { k: 'Wickets', label: 'Wkts', f: fInt, bar: LIME }, { k: 'Best', t: 'best' }, { k: 'Bowling Avg', label: 'Bowl avg', f: f2 }, { k: 'Economy', label: 'Econ', f: f2, hide: true },
+    ],
+  };
+  const DATASETS = { batting: BAT, bowling: BOWL, career: CAR };
+  function renderTable() {
+    const name = state.table, cols = COLS[name], sort = state.sorts[name];
+    const table = document.getElementById('table');
+    const thead = table.querySelector('thead'), tbody = table.querySelector('tbody');
+    const tr = el('tr');
+    cols.forEach((c) => {
+      const th = el('th', { scope: 'col', class: (c.cls || '') + (c.hide ? ' hide-sm' : '') });
+      if (sort.k === c.k) th.setAttribute('aria-sort', sort.dir < 0 ? 'descending' : 'ascending');
+      const b = el('button', { type: 'button', text: c.label || c.k, title: 'Sort by ' + c.k });
+      b.addEventListener('click', () => {
+        state.sorts[name] = sort.k === c.k ? { k: c.k, dir: -sort.dir } : { k: c.k, dir: c.t === 'text' || c.t === 'player' ? 1 : -1 };
+        renderTable();
+      });
+      th.append(b); tr.append(th);
+    });
+    thead.replaceChildren(tr);
+    const q = state.q.trim().toLowerCase(), P = state.player;
+    let rows = DATASETS[name].filter((r) => (name === 'career' || inScope(r)) && (P === 'all' || r.Player === P));
+    if (q) rows = rows.filter((r) => (r.Player + ' ' + (r['Play-Cricket name'] || '')).toLowerCase().indexOf(q) >= 0);
+    const col = cols.find((c) => c.k === sort.k);
+    const sv = (r) => { const v = r[col.k]; if (col.t === 'best') return bestKey(v); if (v === null || v === undefined || v === '') return null; return v; };
+    rows = rows.slice().sort((a, b) => {
+      const va = sv(a), vb = sv(b);
+      if (va === null && vb === null) return 0; if (va === null) return 1; if (vb === null) return -1;
+      if (typeof va === 'string') return sort.dir * va.localeCompare(vb);
+      return sort.dir * (va - vb);
+    });
+    const max = {}; cols.filter((c) => c.bar).forEach((c) => { max[c.k] = d3.max(rows, (r) => r[c.k]) || 1; });
+    const frag = document.createDocumentFragment();
+    rows.forEach((r) => {
+      const row = el('tr', { class: r.Player === P ? 'sel' : '' });
+      cols.forEach((c) => {
+        const td = el('td', { class: (c.cls || '') + (c.hide ? ' hide-sm' : '') });
+        const v = r[c.k];
+        if (c.t === 'player') {
+          const b = el('button', { class: 'namebtn', type: 'button', text: v, title: r['Play-Cricket name'] || v });
+          b.addEventListener('click', () => pick(v)); td.append(b);
+        } else {
+          if (c.bar && v) { const bar = el('span', { class: 'cellbar' }); bar.style.width = (100 * v) / max[c.k] + '%'; bar.style.background = c.bar; td.append(bar); }
+          td.append(el('span', { class: 'cv' + (c.no && r[c.no] === 1 ? ' no' : ''), text: v === null || v === undefined || v === '' ? '' : c.f ? c.f(v) : String(v) }));
+        }
+        row.append(td);
+      });
+      frag.append(row);
+    });
+    if (!rows.length) { const e = el('tr', { class: 'empty' }); const td = el('td', { text: 'No rows match.' }); td.colSpan = cols.length; e.append(td); frag.append(e); }
+    tbody.replaceChildren(frag);
+  }
+
+  /* ---------- render loop ---------- */
+  let first = true;
+  function render() {
+    renderFilters(); renderTop(); renderLeaders(); renderH2H(); renderSeasons(); renderShare(); renderMiles(); renderQuality(); renderTable();
+    if (first) { first = false; document.body.classList.add('intro'); setTimeout(() => document.body.classList.remove('intro'), 1400); }
+  }
+  render();
+  let lastW = document.getElementById('app').clientWidth, timer = null;
+  window.addEventListener('resize', () => {
+    clearTimeout(timer);
+    timer = setTimeout(() => { const w = document.getElementById('app').clientWidth; if (w !== lastW) { lastW = w; render(); } }, 150);
+  });
+})();
+</script>
+</body>
+</html>
